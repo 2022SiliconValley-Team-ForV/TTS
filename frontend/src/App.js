@@ -3,6 +3,7 @@ import Main from "./Views/Main";
 import Detail from "./Views/Detail";
 import Make from "./Views/Make";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
 
 function App() {
   return (
