@@ -6,3 +6,8 @@
     background-color:#2F2E6F;
     color:white;
 }
+
+@font-face {
+    font-family: apple;
+    src: url(./Font/AppleSDGothicNeoM.ttf);
+}

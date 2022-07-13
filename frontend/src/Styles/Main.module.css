@@ -16,11 +16,12 @@ hr{
     width: auto;
 }
 #wrap{
-    width:985px;
+    width:1000px;
     height:1500px;
     height:auto;
     /* border-style: solid; */
     margin: 0px auto;
+    font-family: apple;
 }
 
 .logo{
@@ -37,6 +38,7 @@ hr{
     margin-top: 30px;
     /* border-style: solid; */
     font-size: 30px;
+    color:#2F2E6F;
 }
 
 .profiles{
@@ -53,17 +55,19 @@ hr{
     border-color:rgb(94, 94, 94);
     border-width: 1.5px;
     border-radius: 100px;
-    margin: 0px 55px 50px 0px;
+    margin: 0px 25px 50px 25px;
     width:150px;
     height:150px;
     background-color: #2F2E6F;
     background-image: url("../Images/download.jpg");
 }
+
 .name{
     /* border-style:solid; */
     text-align: center;
     margin-top: 175px;
     text-decoration:none;
+    color:#2F2E6F;
 }
 
 .tts{
@@ -73,7 +77,7 @@ hr{
     font-size: 16.5px;
     /* border-style: solid; */
 
-    margin-left: 300px;
+    margin-left: 350px;
     text-align: center;
 }
 

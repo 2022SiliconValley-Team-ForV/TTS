@@ -3,8 +3,14 @@ import Style from '../Styles/Main.module.css'
 import { Link } from 'react-router-dom';
 
 function Main() {
+  
+  const onClick=()=>{
+    console.log("clicked!");
+  };
+
   return (
     <div id={Style.master}>
+
       <div id={Style.wrap}>
 
         <div className={Style.member}>Member</div>
@@ -48,8 +54,9 @@ function Main() {
 
         <div className={Style.tts}>
           <div className={Style.maketext}>내 목소리로 TTS를 만들고 싶다면</div>
-          <button className={Style.maketts}
-          >
+          <button
+            className={Style.maketts}
+            onClick={onClick}>
             만들어 보기
             </button>
         </div>
@@ -61,7 +68,9 @@ function Main() {
           Copyright © 2022 Team ForV.All Right Reserved.
           </footer>
         </div>
+
       </div>
+
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import './App.css';
-import Main from "./Views/Main"
-import Detail from "./Views/Detail"
+import Main from "./Views/Main";
+import Detail from "./Views/Detail";
+import Make from "./Views/Make";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main/>}/>     
             <Route path="/detail/:id" element={<Detail/>}/>
+            <Route path="/maketts" element={<Make/>}/>
           </Routes>
         </Router>
     </div>
