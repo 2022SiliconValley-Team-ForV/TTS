@@ -14,7 +14,7 @@ function Main() {
       <div id={Style.wrap}>
 
         <div className={Style.member}>Member</div>
-        <div className={Style.logo}/>
+        <div className={Style.logo}>TVF</div>
         
         <hr/>
 
