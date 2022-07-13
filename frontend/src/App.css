@@ -1,0 +1,8 @@
+.App {
+
+}
+
+::selection{
+    background-color:#2F2E6F;
+    color:white;
+}
