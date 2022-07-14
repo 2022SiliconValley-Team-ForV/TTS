@@ -13,10 +13,10 @@ hr{
     border-style: solid;
     border-color: green;
     height: auto;
-    width: auto;
+    width: 62.5rem;
 }
 #wrap{
-    width:1000px;
+    width:62.5rem;
     height:1500px;
     height:auto;
     /* border-style: solid; */
@@ -48,20 +48,23 @@ hr{
     /* border-style: solid;
     border-color: green; */
     display: inline-block;
-    margin-top: 50px;
+    /* margin: 0px 25px 50px 25px; */
+    width: 70rem;
+    margin-left:2.2rem;
 }
+
 
 .circle{
     float: left;
+    display:block;
     border-style: solid;
     border-color:rgb(94, 94, 94);
     border-width: 1.5px;
     border-radius: 100px;
-    margin: 0px 25px 50px 25px;
+    
     width:150px;
     height:150px;
     background-color: #2F2E6F;
-    background-image: url("../Images/download.jpg");
 }
 
 .name{
@@ -107,17 +110,32 @@ hr{
 
 
 #first{
-
+    /* border-style: solid; */
+    width:150px;
+    display: inline-block;
+    margin-right:2.5rem;
 }
-#second{
 
+#second{
+    /* border-style: solid; */
+    width:150px;
+    display: inline-block;
+    margin-right:2.5rem;
 }
 #third{
-
+    /* border-style: solid; */
+    width:150px;
+    display: inline-block;
+    margin-right:2.5rem;
 }
 #fourth{
-
+    /* border-style: solid; */
+    width:150px;
+    display: inline-block;
+    margin-right:2.5rem;
 }
 #fifth{
-    margin-right:0px;
+    /* border-style: solid; */
+    width:150px;
+    display: inline-block;
 }
