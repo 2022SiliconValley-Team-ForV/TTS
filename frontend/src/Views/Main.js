@@ -61,32 +61,6 @@ function Main() {
               <div className={Style.name}>이수현</div>
             </div>    
           </Link>  
-
-                  
-
-           {/*<Link to = "/Detail/2">
-            <div id={Style.second} className={Style.circle}>
-              <div className={Style.name}>김혜진</div>
-            </div>          
-          </Link>           
-
-          <Link to = "/Detail/3">
-            <div id={Style.third} className={Style.circle}>
-              <div className={Style.name}>배준일</div>
-            </div>
-          </Link>
-
-          <Link to = "/Detail/4">
-            <div id={Style.fourth} className={Style.circle}>
-              <div className={Style.name}>최준혁</div>
-            </div>          
-          </Link>
-
-          <Link to = "/Detail/5">
-            <div id={Style.fifth} className={Style.circle}>
-              <div className={Style.name}>이수현</div>
-            </div>          
-          </Link>    */}
         </div>
 
 

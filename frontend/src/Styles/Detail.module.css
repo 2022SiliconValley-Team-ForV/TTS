@@ -5,10 +5,15 @@
     margin: 0 auto;
 }
 
+.logo{
+    font-family: space;
+    font-size: 5rem;
+    color:#2F2E6F;
+}
+
 #profilewrap{
     border-style: solid;
     border-color: red;
-    margin-top: 6rem;
 }
 
 .bigprofile{
@@ -16,6 +21,7 @@
     border-color: aquamarine;
     display: inline-block;
 }
+
 .bigprofile img{
     width: 25rem;
     height: 25rem;
@@ -27,12 +33,12 @@
     border-color: blue;
     display: inline-block;
     margin-left:27rem;
-    
     top:-25rem;
     
 }
+
 .write{
-    
+    margin-top: 1rem;
     width:30rem;
     height:2rem;
     font-size: 1.1rem;

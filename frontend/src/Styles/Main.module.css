@@ -15,6 +15,7 @@ hr{
     height: auto;
     width: 62.5rem;
 }
+
 #wrap{
     width:62.5rem;
     height:1500px;
@@ -28,7 +29,7 @@ hr{
     /* text-align: center; */
     width: 250px;
     height: 90px;
-    margin: 10px 0px;
+    margin: 1px 0px;
     
     font-family: space;
     font-size: 5rem;
