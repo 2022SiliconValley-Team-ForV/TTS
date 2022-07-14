@@ -1,6 +1,7 @@
 body{
     /*바꿀 예정*/
     background-color: whtie;
+    min-height: 10rem;
 }
 
 hr{
@@ -23,6 +24,7 @@ hr{
     /* border-style: solid; */
     margin: 0px auto;
     font-family: apple;
+    min-height: 10rem;;
 }
 
 .logo{

@@ -6,6 +6,9 @@ import profile from '../Images/bomb.png';
 
 function Main() {
   
+
+  //나중에 코드 더 짧게 바꿀 예정
+  //API 받아올 수 있을 때까진 이렇게 사용
   const onClick=()=>{
     console.log("clicked!");
   };

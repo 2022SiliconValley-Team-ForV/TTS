@@ -4,8 +4,13 @@ import profile from '../Images/images.jpg';
 
 function Detail() {
 
+// 데이터 베이스에서 받아온다.
+//나중에 Detail 함수에 변수 넣을 거임
+//지금은 테스트
+
   const name = "김혜진";
   const birth = "2000/02/17";
+  const tmi = "asdkjfalksdfj";
 
   return (
     <div>
@@ -18,10 +23,13 @@ function Detail() {
           <div className={style.bigprofile}>
             <img src={profile} alt="profile"></img>
           </div>
-
+          <hr/>
           <div className={style.info}>
             <div>이름 : {name}</div>
             <div>생년 월일 : {birth}</div>
+            <div>
+                tmi={tmi}
+            </div>
             <input placeholder="적고 싶은 말을 적으세요" className={style.write}/>
           </div>
 
