@@ -29,6 +29,7 @@ hr{
     width: 250px;
     height: 90px;
     margin: 10px 0px;
+    
     font-family: space;
     font-size: 5rem;
     color:#2F2E6F;
@@ -51,6 +52,7 @@ hr{
     /* margin: 0px 25px 50px 25px; */
     width: 70rem;
     margin-left:2.2rem;
+    margin-top:3rem;
 }
 
 
@@ -61,7 +63,6 @@ hr{
     border-color:rgb(94, 94, 94);
     border-width: 1.5px;
     border-radius: 100px;
-    
     width:150px;
     height:150px;
     background-color: #2F2E6F;
