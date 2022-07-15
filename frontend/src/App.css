@@ -1,5 +1,5 @@
 .App {
-
+    font-family: apple;
 }
 
 ::selection{
@@ -10,4 +10,9 @@
 @font-face {
     font-family: apple;
     src: url(./Font/AppleSDGothicNeoM.ttf);
+}
+
+@font-face {
+    font-family: space;
+    src: url(./Font/space\ age.ttf);
 }

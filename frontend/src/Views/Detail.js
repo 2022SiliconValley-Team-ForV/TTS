@@ -20,17 +20,23 @@ function Detail() {
         <hr className={style.hr}/>
 
         <div id={style.profilewrap}>
+
           <div className={style.bigprofile}>
             <img src={profile} alt="profile"></img>
           </div>
-          <hr/>
+
           <div className={style.info}>
+
             <div>이름 : {name}</div>
             <div>생년 월일 : {birth}</div>
-            <div>
-                tmi={tmi}
+            <div>tmi={tmi}</div>
+
+            <div className={style.playbar}>
+              {/* input button 수평 안맞음 */}
+              <input placeholder="적고 싶은 말을 적으세요" className={style.write}/>
+              <button className={style.play}></button>
             </div>
-            <input placeholder="적고 싶은 말을 적으세요" className={style.write}/>
+
           </div>
 
         </div>
