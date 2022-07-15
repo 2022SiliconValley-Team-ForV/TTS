@@ -1,6 +1,17 @@
 version: "3"
 
 services:
+  db:
+    image: mysql
+    command: --lower_case_table_names=1
+    container_name: ttsmysql # 컨테이너 이름 설정
+    ports:
+      - "3306:3306"
+    environment: # -e 옵션
+      - MYSQL_DATABASE=tts
+      - MYSQL_ROOT_PASSWORD=1234  # MYSQL 패스워드 설정 옵션
+      - TZ=Asia/Seoul
+   
   frontend:
     build:
       # context : 현재 폴더의 frontend 폴더에 있는 도커파일을 쓰겠다.
@@ -28,6 +39,10 @@ services:
     build:
     # context : 현재 폴더의 backend 폴더에 있는 도커파일을 쓰겠다.
       context: ./backend
+      args:
+        DJANGO_ALLOWED_HOSTS: "*"
+        DJANGO_SECRET_KEY: "*"
+        DJANGO_CORS_ORIGIN_WHITELIST: "*"
 
       
     # command : 컨테이너가 띄워질 때 실행하는 명령어 / 서버실행
