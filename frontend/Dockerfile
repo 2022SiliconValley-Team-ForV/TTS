@@ -1,4 +1,4 @@
-FROM node:18.4.0-alpine
+FROM node:16.10.0
 
 USER root 
 #USER : 명령을 실행하기 위한 특정 사용자를 지정하는 부분  (환경 설정 권한 등)

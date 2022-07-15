@@ -11,8 +11,3 @@
     font-family: apple;
     src: url(./Font/AppleSDGothicNeoM.ttf);
 }
-
-@font-face {
-    font-family: space;
-    src: url(./Font/space\ age.ttf);
-}
