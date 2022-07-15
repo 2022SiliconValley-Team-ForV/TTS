@@ -7,6 +7,10 @@ conda create -n tts python=3.8.5
 ~~~
 conda activate tts
 ~~~
+### 필요한 라이브러리 다운
+~~~
+pip install -r requirements.txt
+~~~
 
 ### backend 폴더에 들어가기
 ~~~
