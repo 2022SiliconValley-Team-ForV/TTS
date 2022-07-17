@@ -20,6 +20,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'members', views.MemberViewSet)
+router.register(r'modellinks', views.ModelLinkViewSet)
 
 
 urlpatterns = [
