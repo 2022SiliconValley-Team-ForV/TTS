@@ -8,7 +8,7 @@ class Member(models.Model):
     image_link = models.CharField(max_length=100, null=False, blank=False) # 프사링크
 
 class ModelLink(models.Model):
-    id = models.OneToOneField(Member, primary_key=True, on_delete=models.CASCADE, db_column="model_id", unique=True)
+    id = models.OneToOneField(Member, primary_key=True, on_delete=models.CASCADE, db_column="model_id", unique=True) # 1:1 관계
     glow_config = models.CharField(max_length=100, default='') 
     glow_pth = models.CharField(max_length=100, default='')
     hifi_config = models.CharField(max_length=100, default='')

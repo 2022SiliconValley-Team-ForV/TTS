@@ -4,6 +4,7 @@ from .models import Member, ModelLink
 from .serializers import MemberSerializer, ModelLinkSerializer
 from rest_framework import viewsets
 
+# ViewSet : Post, Get, Put, Delete 기본기능 내장
 class MemberViewSet(viewsets.ModelViewSet):
     queryset = Member.objects.all()  
     serializer_class = MemberSerializer  
