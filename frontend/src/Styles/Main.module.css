@@ -1,26 +1,24 @@
 body{
-    /*바꿀 예정*/
-    background-color: whtie;
-    min-height: 10rem;
+    background-color: white;
 }
 
 hr{
-    border-top:2.3px solid #2F2E6F;
+    border-top:1px solid #2F2E6F;
 }
 
-.master{
+/* .master{
     display: inline-block;
     margin: 0px auto;
     border-style: solid;
     border-color: green;
     height: auto;
     width: 62.5rem;
-}
+} */
 
 #wrap{
     width:62.5rem;
-    height:1500px;
-    height:auto;
+    height:30rem;
+    /* height:auto; */
     /* border-style: solid; */
     margin: 0px auto;
     min-height: 10rem;;
@@ -30,7 +28,7 @@ hr{
     /* text-align: center; */
     width: 250px;
     height: 90px;
-    margin: 1px 0px;
+    margin: 10px 0px;
     
     font-family: space;
     font-size: 5rem;
@@ -52,7 +50,7 @@ hr{
     border-color: green; */
     display: inline-block;
     /* margin: 0px 25px 50px 25px; */
-    width: 70rem;
+    width: 57rem;
     margin-left:2.2rem;
     margin-top:3rem;
 }

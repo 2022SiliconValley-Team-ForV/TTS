@@ -1,7 +1,7 @@
 #wrap{
     /* border-style: solid; */
     height: auto;
-    width: 65rem;
+    width: 62.5rem;
     margin: 0 auto;
 
 }
@@ -10,12 +10,70 @@
     font-family: space;
     font-size: 5rem;
     color:#2F2E6F;
-    margin: 9px 0; 
+    margin: 10px 0; 
+    width: 250px;
+    height: 90px;
+}
+
+.deco{
+    height:0.5rem;
+    background-color: #2F2E6E;
+}
+
+.position{
+    margin-top:2rem;
+    font-family:apple;
+    font-size:2.3rem;
 }
 
 #profilewrap{
     /* border-style: solid;
     border-color: red; */
+}
+
+.buttons{
+    /* border-style: solid; */
+    display: inline-block;
+    margin-left: 6rem;
+    margin-top: 0.5rem;
+}
+
+.botton{
+    margin-right:2rem;
+    height:3.5rem;
+    width:3.5rem;
+    border-style:none;
+    border-radius: 0.6rem;
+    background-color: #2F2E6E;
+    /* background-color: white; */
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#github{
+    background-image: url(../Images/github48W.png);
+}
+
+#instar{
+    background-image: url(../Images/instagram48W.png);
+}
+
+
+#blog{
+    margin-right:0;
+    background-image: url(../Images/blog48W.png);
+    /* background-position: cover;
+    background-repeat: no-repeat; */
+}
+
+
+
+#wrapdetail{
+    /* border-style: solid; */
+    display:flex;
+    margin-top:2rem;
 }
 
 .bigprofile{
@@ -27,25 +85,39 @@
 .bigprofile img{
     width: 25rem;
     height: 25rem;
-    border-color:grey;
-    border-width: 0.1rem;
+    background-color: #2F2E6E;
 }
 
 .info{
-    position: relative;
     /* border-style: solid;
     border-color: blue; */
+    position:relative;
     display: inline-block;
-    margin-left:27rem;
-    top:-25rem;
-    
+    height:25rem;
+    width:35rem;
+    font-size:1.1rem;
+    margin-left:2rem;
+ 
+}
+
+.wrapinfo{
+    /* border-style: solid; */
+    display:inline-block;
+    width: 25rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
 }
 
 .playbar{
     /* border-style: solid; */
+    margin-left:2.5rem;
+    vertical-align: middle;
+    position:absolute;
+    bottom:0;
+
 }
 .write{
-    width:30rem;
+    width:27rem;
     height:2rem;
     border-color:grey;
     border-width: 0.1rem;
@@ -55,10 +127,15 @@
 }
 
 .play{
-    width: 2.9rem;
-    height: 2.9rem;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
     border:none;
-    margin-left: 1rem;
-    background-image: url(../Images/play.jpg);
+    border-radius: 2rem;;
+    background-color: #2F2E6E;
+    background-image: url(../Images/play40.png);
+    margin-left: 0.8rem;
+    top:0.75rem;
+    color:white;
 
 }

@@ -6,9 +6,9 @@ import profile from '../Images/bomb.png';
 
 function Main() {
   
-
   //나중에 코드 더 짧게 바꿀 예정
   //API 받아올 수 있을 때까진 이렇게 사용
+
   const onClick=()=>{
     console.log("clicked!");
   };
@@ -25,13 +25,15 @@ function Main() {
 
         <div className={Style.profiles}>
 
+          {/* API 연결 되면 코드 고칠 예정 */}
+
           <Link to = "/Detail/1">
             <div id={Style.first} className={Style.profile}>
               <img className={Style.circle}
               src={profile} alt="profile"/>
               <div className={Style.name}>구지혜</div>
             </div>    
-          </Link> 
+          </Link>
 
           <Link to = "/Detail/2">
             <div id={Style.second} >
