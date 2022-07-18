@@ -9,9 +9,9 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 import django
 django.setup()
 
-from mainApp.models import Member, Model_link
-Member(_id=1, name='구지혜', birth='2022/07/16', tmi='휴학생', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
-Member(_id=2, name='김혜진', birth='2022/07/16', tmi='복학생', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
-Member(_id=3, name='배준일', birth='2022/07/16', tmi='4학년', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
-Member(_id=4, name='이수현', birth='2022/07/16', tmi='AI 부전공', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
-Member(_id=5, name='최준혁', birth='2022/07/16', tmi='sample 목소리 주인', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
+from mainApp.models import Member, ModelLink
+Member(id=1, name='구지혜', birth='2022/07/16', tmi='휴학생', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
+Member(id=2, name='김혜진', birth='2022/07/16', tmi='복학생', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
+Member(id=3, name='배준일', birth='2022/07/16', tmi='4학년', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
+Member(id=4, name='이수현', birth='2022/07/16', tmi='AI 부전공', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
+Member(id=5, name='최준혁', birth='2022/07/16', tmi='sample 목소리 주인', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg').save()
