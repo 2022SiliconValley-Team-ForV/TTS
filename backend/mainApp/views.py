@@ -8,8 +8,8 @@ from django.http import Http404
 
 # 세부 페이지 설명부분을 위해 일단 Member 테이블만 추가했습니다.
 # 모델 파일에 대한 테이블은 추후에 추가할 예정
-from .serializers import MemberSerializer
-from .models import Member
+from .serializers import MemberSerializer, ModelSerializer
+from .models import Member, ModelLink
 
 # Create your views here.
 class MemberList(APIView):  # 멤버들의 목록을 보여줌
@@ -51,40 +51,42 @@ class MemberDetail(APIView):
         member.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
-''' sample json data!!
-    {
-        "_id": 1,
-        "name": "구지혜",
-        "birth": "2022/07/16",
-        "tmi": "휴학생",
-        "image_link": "http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg"
-    },
-    {
-        "_id": 2,
-        "name": "김혜진",
-        "birth": "2022/07/16",
-        "tmi": "복학생",
-        "image_link": "http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg"
-    },
-    {
-        "_id": 3,
-        "name": "배준일",
-        "birth": "2022/07/16",
-        "tmi": "4학년",
-        "image_link": "http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg"
-    },
-    {
-        "_id": 4,
-        "name": "이수현",
-        "birth": "2022/07/16",
-        "tmi": "AI를 부전공",
-        "image_link": "http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg"
-    },
-    {
-        "_id": 5,
-        "name": "최준혁",
-        "birth": "2022/07/16",
-        "tmi": "sample 목소리 주인",
-        "image_link": "http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg"
-    }
-'''
+##############################################################################################################
+class ModelList(APIView):  # 모델들의 목록을 보여줌
+    def get(self, request): # 리스트 보여줄 때
+        models = ModelLink.objects.all()
+        
+        serializer = ModelSerializer(models, many=True)   # 여러 개 객체 serialize하려면 many=True
+        return Response(serializer.data)
+
+    def post(self, request):    # 세 맴버 추가 시
+        serializer = ModelSerializer(data=request.data)    # request.data는 사용자 입력 데이터
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+class ModelDetail(APIView):
+    def get_object(self, pk):
+        try:
+            return ModelLink.objects.get(pk=pk)
+        except ModelLink.DoesNotExist:
+            raise Http404
+        
+    def get(self, request, pk, format=None):    # Model detail 보기
+        model = self.get_object(pk)
+        serializer = ModelSerializer(model)
+        return Response(serializer.data)
+    
+    def put(self, request, pk, format=None):    # Model detail 수정하기
+        model = self.get_object(pk)
+        serializer = MemberSerializer(model, data=request.data)
+        if serializer.is_valid():   # 유효성 검사
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def delete(self, request, pk, format=None): # Model 삭제
+        model = self.get_object(pk)
+        model.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
