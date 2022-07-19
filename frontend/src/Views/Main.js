@@ -25,7 +25,7 @@ function Main() {
       <Profile 
         key={m.id} id={m.id} name={m.name} birth={m.birth}
         img={m.image_link} info={m.tmi}
-        style={{textDecoration:'none'}}
+        
       />
     ));
 
