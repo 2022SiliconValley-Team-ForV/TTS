@@ -6,90 +6,76 @@ hr{
     border-top:1px solid #2F2E6F;
 }
 
-/* .master{
-    display: inline-block;
-    margin: 0px auto;
-    border-style: solid;
-    border-color: green;
-    height: auto;
-    width: 62.5rem;
-} */
 
 #wrap{
+    position:relative;
     width:62.5rem;
-    height:30rem;
+    height:100vh;
     /* height:auto; */
     /* border-style: solid; */
     margin: 0px auto;
-    min-height: 10rem;;
 }
 
 .logo{
     /* text-align: center; */
-    width: 250px;
-    height: 90px;
+    /* width: 250px; */
+    /* height: 70px; */
     margin: 10px 0px;
-    
     font-family: space;
-    font-size: 5rem;
+    font-size: 4rem;
     color:#2F2E6F;
+    /* border-style: solid; */
+    display:inline-block;
+    margin-left:1rem;
 }
 
 .member{
-    position:absolute;
-    margin-left: 56rem;
-    margin-top: 30px;
+    /* position:absolute; */
+    /* margin: 0 auto; */
+    /* margin-left: 56rem;
+    margin-top: 1rem; */
     /* border-style: solid; */
     font-size: 30px;
     color:#2F2E6F;
+    display:inline-block;
+    position: absolute;
+    right:1rem;
+    top:2rem;
 }
 
 .profiles{
-    position:absolute;
+    /* position:absolute; */
     /* border-style: solid;
     border-color: green; */
+    /* width: 55rem; */
     display: inline-block;
+    width:fit-content;
+    /* margin-left:6.25rem; */
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
     /* margin: 0px 25px 50px 25px; */
-    width: 57rem;
-    margin-left:2.2rem;
+    /* width: 57rem;*/
+    margin-left:2.25rem;
     margin-top:3rem;
 }
 
-
-.circle{
-    float: left;
-    display:block;
-    border-style: solid;
-    border-color:rgb(94, 94, 94);
-    border-width: 1.5px;
-    border-radius: 100px;
-    width:150px;
-    height:150px;
-    background-color: #2F2E6F;
-}
-
-.name{
-    /* border-style:solid; */
-    text-align: center;
-    margin-top: 175px;
-    text-decoration:none;
-    color:#2F2E6F;
-}
-
 .tts{
-    position: fixed;
-    bottom: 100px;
-    width: 300px;
+    position: absolute;
+    bottom: 8rem;
+    width: 17.5rem;
     font-size: 16.5px;
     /* border-style: solid; */
 
-    margin-left: 350px;
+    margin-left: 22.5rem;
+    
     text-align: center;
 }
 
 .maketext{
-    margin-bottom: 10px;
+    bottom: 1rem;
     color:#2F2E6F;
+    margin-bottom:0.8rem;
 }
 .maketts{
     font-size: 17px;
@@ -102,41 +88,8 @@ hr{
 }
 
 .copyright{
-    position: fixed;
-    bottom: 10px;
-    width: 985px;
+    position:absolute;
+    bottom: 0.6rem;
+    width: 62.5rem;
     font-size: 10px;
-}
-
-
-
-#first{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
-    margin-right:2.5rem;
-}
-
-#second{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
-    margin-right:2.5rem;
-}
-#third{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
-    margin-right:2.5rem;
-}
-#fourth{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
-    margin-right:2.5rem;
-}
-#fifth{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
 }

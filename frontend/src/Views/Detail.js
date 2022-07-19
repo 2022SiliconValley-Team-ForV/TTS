@@ -1,21 +1,30 @@
-import React,  {useState} from 'react'
-import { Link } from 'react-router-dom';
+import React,  { useState,useEffect } from 'react'
+import { Link,useParams } from 'react-router-dom';
 import style from '../Styles/Detail.module.css';
-import profile from '../Images/bomb.png';
+import axios from "axios";
 
-function Detail() {
+function Detail({_id, name, position, birth, info}) {
 
-// 데이터 베이스에서 받아온다.
-//나중에 Detail 함수에 변수 넣을 거임
-//지금은 테스트
-
-  const name = "김혜진";
-  const birth = "2000/02/17";
-  const tmi = "포켓몬이랑 오구랑 커비 좋아함";
-  const position = "FRONTEND";
-
+  // input태그에 넣을거
   const [sentence, setSentence]=useState();
-  
+  const [getinfo, setGetinfo]=useState([]);
+
+  let { id } = useParams([]);
+
+  useEffect(()=>{
+    axios.get(`http://127.0.0.1:8000/members/${id}`)
+    .then((response)=>{
+      setGetinfo(response.data);
+      console.log(response.data);
+    })
+    .catch(function(error){
+      console.log(error);
+    });
+  },[])
+
+  console.log(getinfo);
+
+
   //input 태그에 적힌 글 sentence에 저장
   const onChange=(e)=>{
     const value=e.target.value
@@ -46,11 +55,11 @@ function Detail() {
         <hr/>
 
           <div id={style.profilewrap}>
-            <div class={style.position}>{position}</div>
+            <div class={style.position}>FRONTEND</div>
             <div id={style.wrapdetail}>
 
               <div className={style.bigprofile}>
-                <img src={profile} alt="profile"></img>
+                <img src={getinfo.image_link} alt="profile"></img>
                 <br/>
                 <div class={style.buttons}>
                   <button id={style.github} className={style.botton}></button>
@@ -63,10 +72,10 @@ function Detail() {
               <div className={style.info}>
                 <div className={style.deco}/>
                 <div className={style.wrapinfo}>
-                  <div style={{fontSize: '1.6rem', fontWeight:'bold'}}>{name}</div>
-                  <div>{birth}</div>
+                  <div style={{fontSize: '1.6rem', fontWeight:'bold'}}>{getinfo.name}</div>
+                  <div>{getinfo.birth}</div>
                   <br/>
-                  <div><br/> {tmi}</div>
+                  <div><br/>{getinfo.tmi}.</div>
                 </div>
 
 
@@ -83,7 +92,6 @@ function Detail() {
             </div>
 
           </div>
-        
 
       </div>
 

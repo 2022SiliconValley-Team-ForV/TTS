@@ -3,16 +3,15 @@
     height: auto;
     width: 62.5rem;
     margin: 0 auto;
-
 }
 
 .logo{
     font-family: space;
-    font-size: 5rem;
+    font-size: 4rem;
     color:#2F2E6F;
-    margin: 10px 0; 
+    margin: 10px 1rem; 
     width: 250px;
-    height: 90px;
+    height: 70px;
 }
 
 .deco{
@@ -22,6 +21,7 @@
 
 .position{
     margin-top:2rem;
+    margin-left:1rem;
     font-family:apple;
     font-size:2.3rem;
 }
@@ -34,7 +34,7 @@
 .buttons{
     /* border-style: solid; */
     display: inline-block;
-    margin-left: 6rem;
+    margin-left: 5.5rem;
     margin-top: 0.5rem;
 }
 
@@ -49,7 +49,6 @@
     background-position: cover;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
 #github{
@@ -68,24 +67,26 @@
     background-repeat: no-repeat; */
 }
 
-
-
 #wrapdetail{
     /* border-style: solid; */
     display:flex;
-    margin-top:2rem;
+    margin-top:rem;
 }
 
 .bigprofile{
     /* border-style: solid;
     border-color: aquamarine; */
     display: inline-block;
+    margin-left:1rem;
 }
 
 .bigprofile img{
     width: 25rem;
     height: 25rem;
     background-color: #2F2E6E;
+    background-repeat: no-repeat;
+    background-position: cover;
+    object-fit: cover;
 }
 
 .info{
@@ -94,10 +95,9 @@
     position:relative;
     display: inline-block;
     height:25rem;
-    width:35rem;
+    width:33.5rem;
     font-size:1.1rem;
     margin-left:2rem;
- 
 }
 
 .wrapinfo{
@@ -114,10 +114,10 @@
     vertical-align: middle;
     position:absolute;
     bottom:0;
-
 }
+
 .write{
-    width:27rem;
+    width:25rem;
     height:2rem;
     border-color:grey;
     border-width: 0.1rem;
@@ -137,5 +137,4 @@
     margin-left: 0.8rem;
     top:0.75rem;
     color:white;
-
 }
