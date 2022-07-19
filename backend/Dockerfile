@@ -12,6 +12,10 @@ WORKDIR /backend
 # 복사해서 도커 컨테이너의 backend 폴더에 넣겠다.
 COPY requirements.txt /backend/
 
+#RUN apk add libressl-dev libffi-dev libmysqlclient-dev gcc musl-dev gcc python3-dev musl-dev zlib-dev mysql-server mysql-client
+# mysql에 맞는 도커파일설정이 필요함
+
+
 # 리눅스 명령어를 실행하겠다 alpine : apk, ubuntu : sudo
 # 연결하기 위한 드라이버를 깔았다고 생각하면 된다.
 RUN pip install --upgrade pip

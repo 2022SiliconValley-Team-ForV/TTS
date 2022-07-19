@@ -4,6 +4,7 @@ services:
   db:
     image: mysql
     command: --lower_case_table_names=1
+    restart: always
     container_name: ttsmysql # 컨테이너 이름 설정
     ports:
       - "3306:3306"
@@ -18,6 +19,7 @@ services:
       context: ./frontend
    # command : 컨테이너가 띄워질 때 실행하는 명령어 / 서버실행
     command: [ "yarn", "start" ] 
+    restart: always
     ports:
     # 왼쪽이 도커 바깥(외부에서 접근할 포트번호) / 오른쪽이 도커 내부(컨테이너 내부)
       - 3000:3000
@@ -47,6 +49,7 @@ services:
       
     # command : 컨테이너가 띄워질 때 실행하는 명령어 / 서버실행
     command: python manage.py runserver 0.0.0.0:8000
+    restart: always
     ports:
     # 왼쪽이 도커 바깥(외부에서 접근할 포트번호) / 오른쪽이 도커 내부(컨테이너 내부)
       - 8000:8000
