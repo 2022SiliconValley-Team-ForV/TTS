@@ -10,7 +10,7 @@ function Profile({id, name, img}) {
     <Link to={{
       pathname: `/detail/${id}`,
       state:{id:id}
-    }}>
+    }} style={{textDecoration:'none'}}>
       <div id={style.wrapprofile}>
         <img src={PHOTO} alt="profile" className={style.photo}></img>
         <p>{name}</p>

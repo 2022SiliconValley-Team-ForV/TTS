@@ -1,0 +1,113 @@
+.master{
+    display: inline-block;
+    margin: 0px auto;
+    border-style: solid;
+    border-color: green;
+    height: auto;
+    width: 62.5rem;
+}
+
+hr{
+    border-top:2.3px solid #2F2E6F;
+}
+
+#wrap{
+    width:62.5rem;
+    height:1500px;
+    height:auto;
+    /* border-style: solid; */
+    margin: 0px auto;
+    min-height: 10rem;;
+}
+
+.logo{
+    font-family: space;
+    font-size: 4rem;
+    color:#2F2E6F;
+    margin: 10px 1rem; 
+    width: 250px;
+    height: 70px;
+}
+
+.upload_big_area{
+    display: flex;
+   /* border-style: solid;*/
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.upload_area{
+
+    border: 2.5px dashed #2F2E6F;
+    height: 230px;
+    width: 380px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+   
+}
+
+header{
+    font-size: 28px;
+    font-weight: bold;
+    color: #2F2E6F;
+}
+.convert{
+    color: #ffffff;
+    background-color: #2F2E6F;
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+    margin-top: 30px;
+
+
+    border: 0px ;
+    border-radius: 7px;
+}
+
+.convertEnd{
+
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.readyMakeTTS{
+  
+    margin-left: 130px;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    font-family: apple;
+    font-weight: bold;
+}
+
+.playbar{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.write{
+    width:43rem;
+    height:2.5rem;
+    border-color:#2F2E6F;
+    border-width: 0.1rem;
+    border-radius: 0.3rem;;
+    font-size: 1.1rem;
+    font-family: apple;
+}
+
+.play{
+    width: 2.9rem;
+    height: 2.9rem;
+    background-size:cover;
+    border-radius: 3rem;
+    border:none;
+    margin-left: 1rem;
+    background-image: url(../Images/play40.png);
+}

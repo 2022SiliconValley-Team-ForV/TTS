@@ -25,6 +25,7 @@ function Main() {
       <Profile 
         key={m.id} id={m.id} name={m.name} birth={m.birth}
         img={m.image_link} info={m.tmi}
+        style={{textDecoration:'none'}}
       />
     ));
 
@@ -55,8 +56,8 @@ function Main() {
         <div className={Style.copyright}>
           <hr/>
           <footer>
-          TUKorea 237, Sangideahakro, Sihungsi, Kungido, Republic of Korea TEL. 031-8041-1000<br/>
-          Copyright © 2022 Team ForV.All Right Reserved.
+            TUKorea 237, Sangideahakro, Sihungsi, Kungido, Republic of Korea TEL. 031-8041-1000<br/>
+            Copyright © 2022 Team ForV.All Right Reserved.
           </footer>
         </div>
 
