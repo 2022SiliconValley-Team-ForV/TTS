@@ -7,33 +7,34 @@ hr{
 }
 
 
+
+
 #wrap{
-    position:relative;
-    width:62.5rem;
-    height:100vh;
-    /* height:auto; */
     /* border-style: solid; */
+    position:relative;
+    /* width:62.5rem; */
+    /* height:60rem; */
+    width:80%;
+    height:100vh;
     margin: 0px auto;
+    min-height: 49rem;
+}
+
+#wraplogo{
+    /* border-style: solid; */
+    height:11%;
 }
 
 .logo{
-    /* text-align: center; */
-    /* width: 250px; */
-    /* height: 70px; */
+    /* border-style: solid; */
     margin: 10px 0px;
     font-family: space;
     font-size: 4rem;
     color:#2F2E6F;
-    /* border-style: solid; */
     display:inline-block;
     margin-left:1rem;
 }
-
 .member{
-    /* position:absolute; */
-    /* margin: 0 auto; */
-    /* margin-left: 56rem;
-    margin-top: 1rem; */
     /* border-style: solid; */
     font-size: 30px;
     color:#2F2E6F;
@@ -43,33 +44,64 @@ hr{
     top:2rem;
 }
 
+.wrapmiddle{
+    /* position: relative; */
+    /* border-style: solid;
+    border-color: blueviolet; */
+    /* display: inline-block; */
+    height:77%;
+}
+.profiletts{
+    /* border-style: solid;
+    border-color: blue; */
+}
+
 .profiles{
-    /* position:absolute; */
+    /* padding: 0 2rem;  */
+    width:93%;
+
+    /* display:flex; */
+    /* align-items: center;
+    justify-content: space-between; */
+
+    /* flex-wrap: wrap;
+    flex-direction: center; */
+
     /* border-style: solid;
     border-color: green; */
-    /* width: 55rem; */
-    display: inline-block;
-    width:fit-content;
-    /* margin-left:6.25rem; */
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    /* margin: 0px 25px 50px 25px; */
-    /* width: 57rem;*/
-    margin-left:2.25rem;
-    margin-top:3rem;
+
+    margin: 3rem auto 0 auto;
+    /* margin-top:3rem; */
+    text-align: center;
+    /* display: inline-block; */
+
+    
+    /* justify-content: space-between; */
+    /* margin-left:2.55rem; */
+    
 }
 
 .tts{
-    position: absolute;
-    bottom: 8rem;
-    width: 17.5rem;
+    
+    /* width: 17.5rem; */
+    /* margin-top:5rem; */
     font-size: 16.5px;
     /* border-style: solid; */
+    margin-top: 20%;
 
-    margin-left: 22.5rem;
-    
+    /* bottom:8rem; */
+    /* margin-left: 22.5rem; */
+    /* margin-bottom:2rem; */
     text-align: center;
+    /* margin: 0 auto; */
+    /* margin-top: 12rem; */
+
+    /* absolute일때 중앙정렬 */
+    /* position: absolute; */
+    /* transform: translate(-50%, -50%);
+    top:75%;
+    left:50%; */
+    
 }
 
 .maketext{
@@ -77,20 +109,94 @@ hr{
     color:#2F2E6F;
     margin-bottom:0.8rem;
 }
+
 .maketts{
     font-size: 17px;
     width: 300px;
     height: 60px;
     background-color: #2F2E6F;
     border-radius: 7px;
-    color:white;
-    
+    color:white;  
 }
 
-.copyright{
-    position:absolute;
-    
-    bottom: 0.6rem;
-    width: 62.5rem;
+#wrapcopyright{
+    /* position:absolute; */
+    /* border-style: solid; */
+    /* bottom: 0.4rem; */
+    width: 100%;
     font-size: 10px;
+    height:5%;
+}
+
+#wrapcopyright div{
+    /* border-style: solid; */
+    /* border-color: rebeccapurple; */
+    display:inline-block;
+    margin-left: 1rem;
+    
+    /* width: 100%; */
+}
+
+/* #wrapcopyright div{
+    /* border-style: solid;
+    border-color: red; */
+    /* display:inline-block; */
+    /* margin-left: 1rem; */
+    /* width: 100%; 
+} */
+
+@media all and (max-width:900px){
+    body{
+        background-color: aqua;
+    }
+    .member{
+        display: none;
+    }
+    #wrapcopyright{
+        width:100%;
+    }
+    #wrap{
+        width:100%;
+    }
+
+    #wrapcopyright{
+        position:static;
+        /* margin */
+        height:5%;
+        width:100%;
+    }
+    .wrapmiddle{
+        height:80%;
+    }
+    .tts{
+        margin-top:10rem;
+    }
+
+}
+@media all and (max-width:580px){
+    body{
+        background-color: violet;
+    }
+    #wrap{
+        min-width: 10rem;;
+    }
+    .tts{
+        margin:1rem auto;
+    }
+    .wrapmiddle{
+        height:fit-content;
+    }
+    #wrapcopyright{
+        /* position:absolute; */
+        /* border-style: solid; */
+        bottom: 0.4rem;
+        width: 100%;
+        font-size: 0.1%;
+        /* display: none; */
+    }
+    .tts{
+        margin: 1rem auto;
+    }
+
+
 }

@@ -15,7 +15,6 @@ hr{
     width:62.5rem;
     height:1500px;
     height:auto;
-    /* border-style: solid; */
     margin: 0px auto;
     min-height: 10rem;;
 }
@@ -31,7 +30,6 @@ hr{
 
 .upload_big_area{
     display: flex;
-   /* border-style: solid;*/
     align-items: center;
     justify-content: center;
     flex-direction: column;

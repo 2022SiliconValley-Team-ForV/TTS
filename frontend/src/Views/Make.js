@@ -6,12 +6,13 @@ import { AiOutlineCloudUpload } from "react-icons/ai";
 
 function Make() {
 
-
+  
 
   return (
     
   <div id={Style.master}>
     <div id={Style.wrap}>
+      
       {/* //로고 누르면 홈으로 돌아가게 구현 */}
       <Link to="/" style={{textDecoration:'none'}}>
         <div className={Style.logo}>TFV</div>

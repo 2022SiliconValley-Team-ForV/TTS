@@ -3,27 +3,31 @@ import { Link,useParams } from 'react-router-dom';
 import style from '../Styles/Detail.module.css';
 import axios from "axios";
 
-function Detail({_id, name, position, birth, info}) {
+function Detail() {
+
+  //loading 다 되면 setLoading에 false를 넣어서 보이게 해준다.
+  const [loading, setLoading] = useState(true);
 
   // input태그에 넣을거
   const [sentence, setSentence]=useState();
+
+  // id값 받아서 DB에서 가져온 데이터 넣는곳
   const [getinfo, setGetinfo]=useState([]);
 
+  //사이트 :id에서 id값 가져오기
   let { id } = useParams([]);
 
+  //url 한번만 부르기
   useEffect(()=>{
     axios.get(`http://127.0.0.1:8000/members/${id}`)
     .then((response)=>{
       setGetinfo(response.data);
-      console.log(response.data);
+      setLoading(false);
     })
     .catch(function(error){
       console.log(error);
     });
   },[])
-
-  console.log(getinfo);
-
 
   //input 태그에 적힌 글 sentence에 저장
   const onChange=(e)=>{
@@ -45,6 +49,8 @@ function Detail({_id, name, position, birth, info}) {
 
   return (
     <div>
+      {loading ? <></>:
+      
 
       <div id={style.wrap}>
 
@@ -63,8 +69,8 @@ function Detail({_id, name, position, birth, info}) {
                 <br/>
                 <div class={style.buttons}>
                   <button id={style.github} className={style.botton}></button>
-                  <button id={style.instar} className={style.botton}></button>
-                  <button id={style.blog} className={style.botton}></button>
+                  {/* <button id={style.instar} className={style.botton}></button>
+                  <button id={style.blog} className={style.botton}></button> */}
                 </div>
 
               </div>
@@ -94,7 +100,7 @@ function Detail({_id, name, position, birth, info}) {
           </div>
 
       </div>
-
+    }
     </div>
   )
 }
