@@ -1,17 +1,22 @@
 version: "3"
 
 services:
-  db:
+  ttsmysql:
     image: mysql
     command: --lower_case_table_names=1
-    restart: always
     container_name: ttsmysql # 컨테이너 이름 설정
     ports:
       - "3306:3306"
     environment: # -e 옵션
       - MYSQL_DATABASE=tts
+      - MYSQL_USER = root
       - MYSQL_ROOT_PASSWORD=1234  # MYSQL 패스워드 설정 옵션
       - TZ=Asia/Seoul
+
+    # mysql이 연결돼야 다음걸 실행
+    # healthcheck:
+    #   test: mysql ping -h 127.0.0.1 -u root --password=1234
+
    
   frontend:
     build:
@@ -48,8 +53,10 @@ services:
 
       
     # command : 컨테이너가 띄워질 때 실행하는 명령어 / 서버실행
-    command: python manage.py runserver 0.0.0.0:8000
-    restart: always
+    command: sh -c "/wait && python manage.py makemigrations && python manage.py migrate && python db_init.py && python manage.py runserver 0.0.0.0:8000"
+    
+    # restart : 실패하면 재시작
+    restart: on-failure
     ports:
     # 왼쪽이 도커 바깥(외부에서 접근할 포트번호) / 오른쪽이 도커 내부(컨테이너 내부)
       - 8000:8000
@@ -58,3 +65,10 @@ services:
      # 리눅스 컨테이너의 백엔드 폴더에 우리 컴퓨터의 백엔드 폴더를 공유하겠다.
      # 서로 바뀐 부분 적용됨
       - ./backend/:/backend/
+
+    # 이걸해야 db뜨고 백엔드가 실행됨
+    depends_on:
+      - ttsmysql
+
+# 도커파일은 빌드할때 반영
+# 도커컴포즈는 업할때 반영
