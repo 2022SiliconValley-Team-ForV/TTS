@@ -1,47 +1,110 @@
-import React from 'react'
-import {Link} from "react-router-dom";
-import Style from '../Styles/Make.module.css'
-import { AiOutlineCloudUpload } from "react-icons/ai";
+import React, { useRef } from 'react';
+import Style from '../Styles/Make.module.css';
+import { AiOutlineCloudUpload,AiFillCheckCircle } from "react-icons/ai";
+import{useState}from 'react';
+import { Link } from 'react-router-dom';
+import Loading from './Loading';
 
 
 function Make() {
+ 
+const[uploadClick,setuploadClick]=useState("Browser to upload");
+const[files,setfiles]=useState(null);
+
+const [iconsUpload,seticonsUpload ]=useState({display:"block"});
+const [iconsReady,  seticonsReady ]=useState({display:"none"});
+const [loading, setLoading] = useState(false);
+
+const fileInputInfo = useRef(null);
 
 
+   const onConvert=(e)=>{
+    if(files==null){
+      alert("음성파일을 업로드 해주세요");
+    }
+    else{
+      setLoading(!loading);
+
+    }
+   }
+
+  const onAudioBtnClick = (event) =>{
+    fileInputInfo.current.click();
+  }
+  const onAudioGet =(e)=>{
+
+    const  file = e.target.files;
+    console.log(file);
+    setfiles(file);
+    setuploadClick("Click the convert button");
+
+    
+    seticonsUpload({display:"none"});
+    seticonsReady({ display:"block"});
+ 
+
+  }
 
   return (
     
   <div id={Style.master}>
     <div id={Style.wrap}>
-      {/* //로고 누르면 홈으로 돌아가게 구현 */}
-      <Link to="/" style={{textDecoration:'none'}}>
-        <div className={Style.logo}>TFV</div>
-      </Link>
-      <hr/>
+    <Link to="/" style={{textDecoration:'none'}}>
+          <div className={Style.logo}>TFV</div>
+        </Link>
+        <hr/>
+      <div className={Style.upload_big_area}>    
 
-      <div className={Style.upload_big_area}>
-   
-       <div className={Style.upload_area}>
-             <AiOutlineCloudUpload 
+      <input 
+       ref={fileInputInfo}
+       type="file"
+       id="avatar" 
+       name="avatar"
+       style={{display:"none"}}
+       accept="audio/*"
+       onChange={onAudioGet}
+       ></input>
+        
+  
+       <div className={Style.upload_area}
+             onClick={onAudioBtnClick}>
+
+             <AiOutlineCloudUpload  
                size ="80" 
-               color="#2F2E6F"/><br/>
+               color="#2F2E6F"
+               style={iconsUpload}
+               />
 
-            <header >Browser to upload</header> 
-            <div>upload file and click button</div>
+              <AiFillCheckCircle  
+               size ="80" 
+               color="#2F2E6F"
+               style={iconsReady}
+               />
+
+            <br/><header>{uploadClick}</header> 
+            <div>upload file and click button</div>    
+                  
        </div>
-
-       <button className={Style.convert}>convert</button>
+       { loading && <Loading />}
+       <button className={Style.convert}
+               onClick={onConvert}>convert</button>
        
-      </ div>
+  </div>
 
-         <div className={Style.convertEnd}>
+         <div className={Style.convertEnd}
+              style={{display:"none"}}>
+                
             <h className={Style.readyMakeTTS}>Ready To TTS !</h>
               <div className={Style.playbar}>
                  <input placeholder=" 적고 싶은 말을 적으세요" className={Style.write}/>
                  <button className={Style.play}></button>
               </div>
          </div>
+    
 
-    </div>
+      
+
+ </div>
  </div>
    
   )

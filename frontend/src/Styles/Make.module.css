@@ -1,32 +1,32 @@
-.master{
-    display: inline-block;
-    margin: 0px auto;
-    border-style: solid;
-    border-color: green;
-    height: auto;
-    width: 62.5rem;
+body{
+    background-color: white;
 }
 
 hr{
-    border-top:2.3px solid #2F2E6F;
+    border-top:1px solid #2F2E6F;
 }
 
+
 #wrap{
+    position:relative;
     width:62.5rem;
-    height:1500px;
-    height:auto;
+    height:100vh;
+    /* height:auto; */
     /* border-style: solid; */
     margin: 0px auto;
-    min-height: 10rem;;
 }
 
 .logo{
+    /* text-align: center; */
+    /* width: 250px; */
+    /* height: 70px; */
+    margin: 10px 0px;
     font-family: space;
     font-size: 4rem;
     color:#2F2E6F;
-    margin: 10px 1rem; 
-    width: 250px;
-    height: 70px;
+    /* border-style: solid; */
+    display:inline-block;
+    margin-left:1rem;
 }
 
 .upload_big_area{
@@ -39,54 +39,57 @@ hr{
 }
 .upload_area{
 
-    border: 2.5px dashed #2F2E6F;
-    height: 230px;
-    width: 380px;
-    border-radius: 8px;
+    border: 0.09rem dashed #000000;
+    height: 14.375rem;
+    width: 23.75rem;
+    border-radius: 0.5rem;
     background-color: #ffffff;
+
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
+
+    margin-top: 3.75rem;
+    margin-bottom: 0.2rem;
    
 }
 
 header{
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: bold;
     color: #2F2E6F;
 }
 .convert{
     color: #ffffff;
     background-color: #2F2E6F;
-    font-size: 20px;
-    width: 300px;
-    height: 60px;
-    margin-top: 30px;
-
+    font-size: 1.25rem;
+    width: 18.7rem;
+    height: 3.75rem;
+    margin-top: 1.9rem;
 
     border: 0px ;
-    border-radius: 7px;
+    border-radius: 0.4rem;
 }
 
 .convertEnd{
 
-    margin-top: 30px;
+    margin-top: 1.9rem;
     display: flex;
     flex-direction: column;
 }
 
 .readyMakeTTS{
   
-    margin-left: 130px;
-    margin-bottom: 5px;
+    margin-left: 8rem;
+    margin-bottom: 0.3rem;
     font-size: 1.4rem;
     font-family: apple;
     font-weight: bold;
 }
 
 .playbar{
+   
      display: flex;
      align-items: center;
      justify-content: center;
@@ -95,7 +98,7 @@ header{
 .write{
     width:43rem;
     height:2.5rem;
-    border-color:#2F2E6F;
+    border-color:grey;
     border-width: 0.1rem;
     border-radius: 0.3rem;;
     font-size: 1.1rem;
@@ -103,11 +106,16 @@ header{
 }
 
 .play{
-    width: 2.9rem;
-    height: 2.9rem;
-    background-size:cover;
-    border-radius: 3rem;
+   
+    width: 2.5rem;
+    height: 2.5rem;
     border:none;
-    margin-left: 1rem;
-    background-image: url(../Images/play40.png);
+    border-radius: 2rem;;
+    background-color: #2F2E6E;
+    margin-left: 0.8rem;
+    top:0.75rem;
+    color:white;
+       background-image: url(../Images/play40.png);
+
 }
+
