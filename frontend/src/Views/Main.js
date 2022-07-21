@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Style from '../Styles/Main.module.css'
 import Profile from './Profile';
+import Header from './Header'
 import { Link } from 'react-router-dom';
 import axios from "axios";
 // import datas from './data.json';
@@ -33,45 +34,30 @@ function Main() {
 
   return (
       <div id={Style.wrap}>
-        <div id={Style.wraplogo}>
-            <div className={Style.logo}>TFV</div>
-            <div className={Style.member}>Member</div>
-          
-            <hr/>
-        </div>
 
+        <Header/>
 
-        <div className={Style.wrapmiddle}>
-          <div className={Style.profiletts}>
+        <div className={Style.wrap_middle}>
+
             <div className={Style.profiles}>{profile}</div>
 
             <div className={Style.tts}>
-              <div className={Style.maketext}>내 목소리로 TTS를 만들고 싶다면</div>
+              <div className={Style.tts_text}>내 목소리로 TTS를 만들고 싶다면</div>
                 <Link to="/maketts">
-                  <button className={Style.maketts}>
+                  <button className={Style.tts_button}>
                     만들어 보기
                   </button>
                 </Link>
-            </div> 
-
-          </div>
-
-
+          </div> 
         </div>
  
-
-
-        <div id={Style.wrapcopyright}>
-
-
+        <div id={Style.wrap_copyright}>
           <hr/>
           <div>
             TUKorea 237, Sangideahakro, Sihungsi, Kungido, Republic of Korea TEL. 031-8041-1000
             <br/>Copyright © 2022 Team ForV.All Right Reserved.
           </div>
         </div>
-
-
       </div>
 
   )

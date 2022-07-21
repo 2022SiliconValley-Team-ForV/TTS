@@ -36,22 +36,42 @@ function Detail() {
   }
 
   //playbutton 이벤트
+  //버튼 누르면 서버로 sentense 올라감
   const onClick=(e)=>{
-    //버튼 누르면 서버로 글씨 올리기 구현 해야함
+
     if(sentence==null || sentence ===""){
       alert("문장을 적어주세요.");
     }
     else{
-      console.log(sentence);
+      e.preventDefault();
+      axios.post(`http://127.0.0.1:8000/texts/${id}`,
+      {id:`${id}`, 
+      text:sentence})
+      .then((response)=>{
+        console.log(response);
+        console.log({id}, sentence);
+      })
+      .catch((error)=>{
+        console.log(error);
+      });
+
+      // axios.get(`http://127.0.0.1:8000/texts/${id}`)
+      // .then((response)=>{
+      //   console.log(response);
+      // })
+      // .catch((error)=>{
+      //   console.log(error);
+      // })
+
+      
+
     }
     
   }
 
   return (
     <div>
-      {loading ? <></>:
-      
-
+      {loading ? <></> :
       <div id={style.wrap}>
 
         {/* //로고 누르면 홈으로 돌아가게 구현 */}
