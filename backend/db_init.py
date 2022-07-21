@@ -9,7 +9,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 import django
 django.setup()
 
-from mainApp.models import Member, ModelLink
+from mainApp.models import *
 
 a = Member(id=1, name='구지혜', birth='2022/07/16', tmi='휴학생', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
 b = Member(id=2, name='김혜진', birth='2022/07/16', tmi='복학생', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
@@ -30,3 +30,5 @@ ModelLink(id=e,
           glow_pth='http://storage.googleapis.com/forv_bucket/g_checkpoint_30000.pth.tar', 
           hifi_config='http://storage.googleapis.com/forv_bucket/h_config.json', 
           hifi_pth='http://storage.googleapis.com/forv_bucket/h_checkpoint_305000.pth.tar').save()
+
+Text(id=e,text="경찰청창살 쇠창살").save()
