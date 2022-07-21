@@ -37,7 +37,7 @@ function Main() {
 
         <Header/>
 
-        <div className={Style.wrap_middle}>
+        <div id={Style.wrap_middle}>
 
             <div className={Style.profiles}>{profile}</div>
 

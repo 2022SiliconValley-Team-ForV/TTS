@@ -43,8 +43,9 @@ function Detail() {
       alert("문장을 적어주세요.");
     }
     else{
+      console.log(`http://127.0.0.1:8000/texts/${id}/`)
       e.preventDefault();
-      axios.post(`http://127.0.0.1:8000/texts/${id}`,
+      axios.put(`http://127.0.0.1:8000/texts/${id}/`,
       {id:`${id}`, 
       text:sentence})
       .then((response)=>{

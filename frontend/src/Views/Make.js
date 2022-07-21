@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import Style from '../Styles/Make.module.css'
+import Header from './Header'
 import { AiOutlineCloudUpload } from "react-icons/ai";
 
 
@@ -15,9 +16,8 @@ function Make() {
       
       {/* //로고 누르면 홈으로 돌아가게 구현 */}
       <Link to="/" style={{textDecoration:'none'}}>
-        <div className={Style.logo}>TFV</div>
+        <Header/>
       </Link>
-      <hr/>
 
       <div className={Style.upload_big_area}>
    
