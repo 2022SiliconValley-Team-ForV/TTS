@@ -10,9 +10,13 @@ class Member(models.Model): # id는 이미 장고에 있는 변수명이라 _id�
     image_link = models.CharField(max_length=100, null=False, default='')
     
 class ModelLink(models.Model):
-    id = models.OneToOneField(Member, primary_key=True, on_delete=models.CASCADE, db_column="id", unique=True)
+    id = models.OneToOneField(Member, primary_key=True, on_delete=models.CASCADE, db_column="id")
     # test 테이블이라서 아래 부분부터는 not null 옵션을 넣지 않았습니다.
     glow_config = models.CharField(max_length=100, default='')
     glow_pth = models.CharField(max_length=100, default='')
     hifi_config = models.CharField(max_length=100, default='')
     hifi_pth = models.CharField(max_length=100, default='')
+
+class Text(models.Model):
+    id = models.OneToOneField(Member, primary_key=True, on_delete=models.CASCADE, db_column="id")
+    text = models.CharField(max_length=100, default='')
