@@ -145,58 +145,16 @@ hr{
     /* width: 100%; 
 } */
 
-@media all and (max-width:900px){
-    body{
-        background-color: aqua;
+/*#wrap width:1200px로 바꿔주세요*/
+@media screen and (min-width:1024px){
+    /*PC 화면*/
+    
     }
-    .member{
-        display: none;
+    @media screen and (min-width:768px) and (max-width:1023px){
+    /*태블릿 화면*/
+    
     }
-    #wrapcopyright{
-        width:100%;
+    @media screen and (max-width:767px){
+    /*모바일 화면*/
     }
-    #wrap{
-        width:100%;
-    }
-
-    #wrapcopyright{
-        position:static;
-        /* margin */
-        height:5%;
-        width:100%;
-    }
-    .wrapmiddle{
-        height:80%;
-    }
-    .tts{
-        margin-top:10rem;
-    }
-
-}
-@media all and (max-width:580px){
-    body{
-        background-color: violet;
-    }
-    #wrap{
-        min-width: 10rem;;
-    }
-    .tts{
-        margin:1rem auto;
-    }
-    .wrapmiddle{
-        height:fit-content;
-    }
-    #wrapcopyright{
-        /* position:absolute; */
-        /* border-style: solid; */
-        bottom: 0.4rem;
-        width: 100%;
-        font-size: 0.1%;
-        /* display: none; */
-    }
-    .tts{
-        margin: 1rem auto;
-    }
-
-
-}
+    
