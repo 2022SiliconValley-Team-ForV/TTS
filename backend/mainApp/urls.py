@@ -16,12 +16,13 @@ schema_view = get_schema_view(
         default_version='v1', # API 버전
         description=
         '''
-        API 문서 설명
+        텍스트를 입력하면 팀원 5명의 목소리로 읽어주는 서비스
+        (Text to Speech)
 
         ''',
         terms_of_service='',
-        contact=openapi.Contact(name='이름', email='이메일'),
-        license=openapi.License(name='API 문서 이름')
+        contact=openapi.Contact(name='팀명', email='Team ForV'),
+        license=openapi.License(name='MIT License')
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
