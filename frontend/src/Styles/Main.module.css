@@ -6,22 +6,18 @@ hr{
     border-top:1px solid #2F2E6F;
 }
 
-
-
-
 #wrap{
-    border: solid red;
+    /* border: solid red; */
     position:relative;
     width:1024px;
     height:100vh;
     margin: 0px auto;
-    min-height: 30rem;
+    min-height: 770px;
+    min-width: 280px;
 }
 
-
-
 #wrap_middle{
-    border: solid blue;
+    /* border: solid blue; */
     height:calc(100%-133px);
     /* position: relative; */
     
@@ -30,16 +26,22 @@ hr{
 }
 
 .profiles{
-    border: solid green;
+    /* border: solid green; */
     padding: 1.2rem auto; 
     display:flex; 
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top:3rem;
 }
 
 .tts{
-    border: solid orange;
+    /* margin-top:15rem; */
+    /* border: solid orange; */
+    position:absolute;
+    bottom:10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 16.5px;
     text-align: center;
 }
@@ -62,7 +64,7 @@ hr{
 #wrap_copyright{
     position:absolute;
     bottom:2px;
-    border: solid purple;
+    /* border: solid purple; */
     width: 100%;
     
     font-size: 9px;
@@ -73,29 +75,47 @@ hr{
     /*PC 화면*/
     
 }
+
 @media screen and (min-width:768px) and (max-width:1023px){
     /*태블릿 화면*/
-    body{
+    /* body{
         background-color: darkgray;
-    }
+    } */
     #wrap{
         width:100%;
     }
     #wrap_copyright{
         display:none;
+    }
+    .tts{
+
+        bottom:20px;
+        transform: translate(-50%, -50%);
+    }
+    .tts_button{
+        width:270px;
     }
     
 }
 @media screen and (max-width:767px){
     /*모바일 화면*/
-    body{
+    /* body{
         background-color:dimgrey;
-    }
+    } */
     #wrap{
         width:100%;
+        padding-bottom:1rem;
     }
     #wrap_copyright{
         display:none;
+    }
+    .tts{
+        position:static;
+        margin-top:5rem;
+        transform: translate(0, 0);
+    }
+    .tts_button{
+        width:80%;
     }
 }
     
