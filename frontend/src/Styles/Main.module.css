@@ -71,6 +71,10 @@ hr{
     /* height:5%; */
 }
 
+#wrap_copyright div{
+    margin-left: 1rem;
+}
+
 @media screen and (min-width:1024px){
     /*PC 화면*/
     
@@ -88,9 +92,10 @@ hr{
         display:none;
     }
     .tts{
-
-        bottom:20px;
-        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        margin-bottom: 2rem;;
+        /* bottom:20px;
+        transform: translate(-50%, -50%); */
     }
     .tts_button{
         width:270px;
@@ -108,9 +113,14 @@ hr{
     #wrap_copyright{
         display:none;
     }
+    #wrap_middle{
+        box-sizing: border-box;
+        padding-bottom:2rem;
+    }
     .tts{
         position:static;
         margin-top:5rem;
+        /* bottom: 2rem; */
         transform: translate(0, 0);
     }
     .tts_button{
