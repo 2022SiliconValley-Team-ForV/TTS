@@ -97,11 +97,10 @@ hr{
     }
     
 }
+
 @media screen and (max-width:767px){
     /*모바일 화면*/
-    /* body{
-        background-color:dimgrey;
-    } */
+
     #wrap{
         width:100%;
         padding-bottom:1rem;
@@ -115,7 +114,7 @@ hr{
         transform: translate(0, 0);
     }
     .tts_button{
-        width:80%;
+        width:270px;
     }
 }
     
