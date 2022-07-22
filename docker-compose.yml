@@ -55,7 +55,8 @@ services:
 
       
     # command : 컨테이너가 띄워질 때 실행하는 명령어 / 서버실행
-    command: sh -c "/wait && python manage.py makemigrations && python manage.py migrate && python db_init.py && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "/wait && python manage.py makemigrations && python manage.py makemigrations mainApp && python manage.py migrate && python db_init.py && python manage.py runserver 0.0.0.0:8000"
+    
     # restart : 실패하면 재시작
     restart: on-failure
     ports:

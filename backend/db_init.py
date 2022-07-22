@@ -31,4 +31,8 @@ ModelLink(id=e,
           hifi_config='http://storage.googleapis.com/forv_bucket/h_config.json', 
           hifi_pth='http://storage.googleapis.com/forv_bucket/h_checkpoint_305000.pth.tar').save()
 
+Text(id=a,text="1").save()
+Text(id=b,text="2").save()
+Text(id=c,text="3").save()
+Text(id=d,text="4").save()
 Text(id=e,text="경찰청창살 쇠창살").save()
