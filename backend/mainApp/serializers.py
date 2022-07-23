@@ -10,12 +10,12 @@ from .models import Member, ModelLink, Text
 class MemberSerializer(serializers.ModelSerializer):
     class Meta:
         model = Member
-        fields = ('id', 'name', 'birth', 'tmi', 'image_link')
+        fields = '__all__'
         
 class ModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = ModelLink
-        fields = ('id', 'glow_config', 'glow_pth', 'hifi_config', 'hifi_pth')
+        fields = '__all__'
 
 class TextSerializer(serializers.ModelSerializer):
     class Meta:
