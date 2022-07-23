@@ -6,9 +6,9 @@ from drf_yasg import openapi
 from rest_framework import permissions
 
 router = routers.DefaultRouter()
-router.register(r'members', MemberViewSet)
-router.register(r'modellinks', ModelLinkViewSet)
-router.register(r'texts', TextViewSet)
+router.register(r'api/members', MemberViewSet)
+router.register(r'api/modellinks', ModelLinkViewSet)
+router.register(r'api/texts', TextViewSet)
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -34,7 +34,7 @@ urlpatterns = [
 
 # API 작성에 필요한 url 경로
 urlpatterns += [
-    path('swagger<str:format>', schema_view.without_ui(cache_timeout=0), name='schema-json'),
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('docs/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('api/swagger<str:format>', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+    path('api/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('api/docs/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

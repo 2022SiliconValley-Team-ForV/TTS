@@ -1,0 +1,26 @@
+#wrapprofile{
+    position:relative;
+    width:auto;
+    display:inline-block;
+    text-decoration: none;
+    color:"#2f2e6e";
+    margin:0 1.2rem;
+    
+}
+
+.photo{
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-color: #2F2E6F;
+    border-width: 0.1rem;
+    border-radius: 5rem;
+    object-fit: cover;
+    height:9rem;
+    width:9rem;
+}
+
+#wrapprofile p{
+    text-align: center;
+    color:#2F2E6F;
+    text-decoration:'none';
+}
