@@ -11,7 +11,7 @@ function Make() {
 
   return (
     
-  <div id={Style.master}>
+  // <div id={Style.master}>
     <div id={Style.wrap}>
       
       {/* //로고 누르면 홈으로 돌아가게 구현 */}
@@ -30,20 +30,21 @@ function Make() {
             <div>upload file and click button</div>
        </div>
 
-       <button className={Style.convert}>convert</button>
+       <button className={Style.convert}>Upload</button>
        
       </ div>
 
          <div className={Style.convertEnd}>
-            <h className={Style.readyMakeTTS}>Ready To TTS !</h>
+            <div className={Style.readyMakeTTS}>Ready To TTS !</div>
               <div className={Style.playbar}>
                  <input placeholder=" 적고 싶은 말을 적으세요" className={Style.write}/>
-                 <button className={Style.play}></button>
+                 <button className={Style.play}>Play</button>
               </div>
+              
          </div>
 
     </div>
- </div>
+//  </div>
    
   )
 }

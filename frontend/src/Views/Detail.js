@@ -19,7 +19,7 @@ function Detail() {
 
   //url 한번만 부르기
   useEffect(()=>{
-    axios.get(`http://127.0.0.1:8000/members/${id}`)
+    axios.get(`http://127.0.0.1:8000/api/members/${id}`)
     .then((response)=>{
       setGetinfo(response.data);
       setLoading(false);
@@ -45,7 +45,7 @@ function Detail() {
     else{
       console.log(`http://127.0.0.1:8000/texts/${id}/`)
       e.preventDefault();
-      axios.put(`http://127.0.0.1:8000/texts/${id}/`,
+      axios.put(`http://127.0.0.1:8000/api/texts/${id}/`,
       {id:`${id}`, 
       text:sentence})
       .then((response)=>{

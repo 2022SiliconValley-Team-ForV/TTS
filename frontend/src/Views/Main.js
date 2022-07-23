@@ -14,7 +14,7 @@ function Main() {
 
   //url에서 데이터를 한번만 받아온다.
   useEffect(()=>{
-    axios.get("http://127.0.0.1:8000/members/")
+    axios.get("http://127.0.0.1:8000/api/members/")
     .then((response)=>{
       setMember([...response.data]);
     })
@@ -22,6 +22,8 @@ function Main() {
       console.log(error);
     });
   },[])
+
+  console.log(member);
 
   // map를 사용해서 Profile 컴포넌트에 하나씩 넣어준다.
   const profile = member.map((m)=>(
