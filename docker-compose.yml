@@ -3,26 +3,6 @@
 version: "3"
 
 services:
-  ttsmysql:
-    image: mysql
-    command: --lower_case_table_names=1
-    container_name: ttsmysql # 컨테이너 이름 설정
-    ports:
-      - "3306:3306"
-    environment: # -e 옵션
-      - MYSQL_DATABASE=tts
-      - MYSQL_USER = root
-      - MYSQL_ROOT_PASSWORD=1234  # MYSQL 패스워드 설정 옵션
-      - TZ=Asia/Seoul
-    # 가상 네트워크 연결
-    networks:
-      - tts
-
-    # mysql이 연결돼야 다음걸 실행
-    # healthcheck:
-    #   test: mysql ping -h 127.0.0.1 -u root --password=1234
-
-   
   frontend:
     build:
       # context : 현재 폴더의 frontend 폴더에 있는 도커파일을 쓰겠다.
@@ -48,9 +28,8 @@ services:
       - CHOKIDAR_USEPOLLING=true
       - REACT_APP_BACKEND_URL=http://localhost:5000
     tty: true
-
-
-  backend:
+  
+  apiServer:
     build:
     # context : 현재 폴더의 backend 폴더에 있는 도커파일을 쓰겠다.
       context: ./backend
@@ -78,6 +57,34 @@ services:
     # 이걸해야 db뜨고 백엔드가 실행됨
     depends_on:
       - ttsmysql
+
+  modelServer:
+    platform: linux/amd64
+    build: .
+    command: flask run --host=0.0.0.0
+    ports:
+      - 8000:5000
+    volumes:
+      - ./:/app
+
+  ttsmysql:
+    image: mysql
+    command: --lower_case_table_names=1
+    container_name: ttsmysql # 컨테이너 이름 설정
+    ports:
+      - "3306:3306"
+    environment: # -e 옵션
+      - MYSQL_DATABASE=tts
+      - MYSQL_USER = root
+      - MYSQL_ROOT_PASSWORD=1234  # MYSQL 패스워드 설정 옵션
+      - TZ=Asia/Seoul
+    # 가상 네트워크 연결
+    networks:
+      - tts
+
+    # mysql이 연결돼야 다음걸 실행
+    # healthcheck:
+    #   test: mysql ping -h 127.0.0.1 -u root --password=1234
 
   rabbit:
       hostname: tts_host
@@ -119,6 +126,7 @@ services:
     command: ["celery","-A", "rabbitcelery.celery", "worker", "--loglevel=info"]  
     volumes:
       - ./backend:/usr/src/app
+
 
 networks:
   tts:
