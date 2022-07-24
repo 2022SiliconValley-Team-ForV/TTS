@@ -29,10 +29,10 @@ services:
       - REACT_APP_BACKEND_URL=http://localhost:5000
     tty: true
   
-  apiServer:
+  apiserver:
     build:
     # context : 현재 폴더의 backend 폴더에 있는 도커파일을 쓰겠다.
-      context: ./backend
+      context: ./backend/apiserver
       args:
         DJANGO_ALLOWED_HOSTS: "*"
         DJANGO_SECRET_KEY: "*"
@@ -50,7 +50,7 @@ services:
      # 왼쪽이 우리 컴퓨터, 오른쪽이 도커 컨테이너
      # 리눅스 컨테이너의 백엔드 폴더에 우리 컴퓨터의 백엔드 폴더를 공유하겠다.
      # 서로 바뀐 부분 적용됨
-      - ./backend/:/backend/
+      - ./backend/apiserver/:/backend/apiserver/
     # 가상 네트워크 연결
     networks:
       - tts
@@ -58,14 +58,14 @@ services:
     depends_on:
       - ttsmysql
 
-  modelServer:
-    platform: linux/amd64
-    build: .
-    command: flask run --host=0.0.0.0
-    ports:
-      - 8000:5000
-    volumes:
-      - ./:/app
+#   modelserver:
+#     platform: linux/amd64
+#     build: .
+#     command: flask run --host=0.0.0.0
+#     ports:
+#       - 8000:5000
+#     volumes:
+#       - ./:/app
 
   ttsmysql:
     image: mysql
@@ -81,10 +81,6 @@ services:
     # 가상 네트워크 연결
     networks:
       - tts
-
-    # mysql이 연결돼야 다음걸 실행
-    # healthcheck:
-    #   test: mysql ping -h 127.0.0.1 -u root --password=1234
 
   rabbit:
       hostname: tts_host
@@ -110,7 +106,7 @@ services:
 
   celery:
     build:
-      context: ./backend
+      context: ./backend/apiserver
       dockerfile: Dockerfile
     # 컨테이너를 stop 시키기 전까지 항상 재시작
     restart: unless-stopped
@@ -119,7 +115,7 @@ services:
     #   - ./settings/.env
     depends_on:
       - rabbit
-      - backend
+      - apiserver
     # 가상 네트워크 연결
     networks:
       - tts
