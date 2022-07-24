@@ -14,6 +14,9 @@ services:
       - MYSQL_USER = root
       - MYSQL_ROOT_PASSWORD=1234  # MYSQL 패스워드 설정 옵션
       - TZ=Asia/Seoul
+    # 가상 네트워크 연결
+    networks:
+      - tts
 
     # mysql이 연결돼야 다음걸 실행
     # healthcheck:
@@ -30,6 +33,9 @@ services:
     ports:
     # 왼쪽이 도커 바깥(외부에서 접근할 포트번호) / 오른쪽이 도커 내부(컨테이너 내부)
       - 3000:3000
+    # 가상 네트워크 연결
+    networks:
+      - tts
     volumes:
       # 왼쪽이 우리 컴퓨터, 오른쪽이 도커 컨테이너
       # 리눅스 컨테이너의 프론트엔드 폴더에 우리 컴퓨터의 프론트엔드 폴더를 공유하겠다.
@@ -52,7 +58,6 @@ services:
         DJANGO_ALLOWED_HOSTS: "*"
         DJANGO_SECRET_KEY: "*"
         DJANGO_CORS_ORIGIN_WHITELIST: "*"
-
       
     # command : 컨테이너가 띄워질 때 실행하는 명령어 / 서버실행
     command: sh -c "/wait && python manage.py makemigrations && python manage.py makemigrations mainApp && python manage.py migrate && python db_init.py && python manage.py runserver 0.0.0.0:8000"
@@ -67,29 +72,35 @@ services:
      # 리눅스 컨테이너의 백엔드 폴더에 우리 컴퓨터의 백엔드 폴더를 공유하겠다.
      # 서로 바뀐 부분 적용됨
       - ./backend/:/backend/
-
+    # 가상 네트워크 연결
+    networks:
+      - tts
     # 이걸해야 db뜨고 백엔드가 실행됨
     depends_on:
       - ttsmysql
 
-  # 페이지는 뜹니다.
   rabbit:
-      hostname: rabbit
+      hostname: tts_host
       image: rabbitmq:3-management
       command: rabbitmq-server
       #컨테이너를 stop 시키기 전까지 항상 재시작
       restart: unless-stopped
       # 환경변수 설정 - 설정하면 접속이 안되서 주석처리.
-      # environment:
-      #   - RABBITMQ_DEFAULT_USER=admin
-      #   - RABBITMQ_DEFAULT_PASS=mypass
+      environment:
+        - RABBITMQ_DEFAULT_USER=tts
+        - RABBITMQ_DEFAULT_PASS=tts123
+        - RABBITMQ_DEFAULT_VHOST=tts_host
       ports:
         - 5672:5672    # 이 포트로는 접속 안됨. 나중에 더 알아보고 추가할 예정
         - 15672:15672  # 이 포트로 접근해서 guest/guest 입력
+      volumes:
+      - ./backend:/var/lib/rabbitmq
+      # 가상 네트워크 연결
+      networks:
+        - tts
       depends_on:
         - backend
 
-  # 샐러리가 작동되는 지는 모르겠어요..
   celery:
     build:
       context: ./backend
@@ -100,8 +111,15 @@ services:
     # env_file:
     #   - ./settings/.env
     depends_on:
-      - "rabbit"
-      - "backend"
+      - rabbit
+      - backend
+    # 가상 네트워크 연결
+    networks:
+      - tts
     command: ["celery","-A", "rabbitcelery.celery", "worker", "--loglevel=info"]  
     volumes:
       - ./backend:/usr/src/app
+
+networks:
+  tts:
+    driver: bridge
