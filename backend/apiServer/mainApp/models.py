@@ -17,8 +17,10 @@ class ModelLink(models.Model):
     # test 테이블이라서 아래 부분부터는 not null 옵션을 넣지 않았습니다.
     glow_config = models.CharField(max_length=100, default='', null=False)
     glow_pth = models.CharField(max_length=100, default='', null=False)
+    g_scale_stats = models.CharField(max_length=100, default='', null=False)
     hifi_config = models.CharField(max_length=100, default='', null=False)
     hifi_pth = models.CharField(max_length=100, default='', null=False)
+    h_scale_stats = models.CharField(max_length=100, default='', null=False)
     created_at = models.DateTimeField(auto_now_add=True) # 해당 레코드 생성시 현재 시간 자동저장
     updated_at = models.DateTimeField(auto_now=True) # 해당 레코드 갱신시 현재 시간 자동저장
 
