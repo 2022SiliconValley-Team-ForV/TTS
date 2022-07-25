@@ -1,6 +1,12 @@
+hr{
+    border-top:1px solid #2F2E6F;
+}
+
 #wrap_logo{
+    /* border-style: solid; */
     width:1024px;
 }
+
 .logo{
     margin: 10px 0px;
     font-family: space;
@@ -9,6 +15,7 @@
     display:inline-block;
     margin-left:1rem;
 }
+
 .member{
     font-size: 30px;
     color:#2F2E6F;

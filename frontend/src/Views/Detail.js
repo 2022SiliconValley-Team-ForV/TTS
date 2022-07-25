@@ -50,57 +50,53 @@ function Detail() {
 
   return (
 
-
+    <div>
+      {loading ? <></>:
       <div id={style.wrap}>
         <Link to="/" style={{textDecoration:'none'}}>
           <Header/>
         </Link>
-       
+      
 
-          <div id={style.profilewrap}>
-            <div class={style.position}>FRONTEND</div>
-            <div id={style.wrapdetail}>
+        <div id={style.profilewrap}>
+          <div class={style.position}>FRONTEND</div>
+          <div id={style.wrapdetail}>
 
-              <div className={style.bigprofile}>
-                <img src={getinfo.image_link} alt="profile"></img>
-              </div>
+            <div className={style.bigprofile}>
+              <img src={getinfo.image_link} alt="profile"></img>
+            </div>
 
-              <div className={style.info}> 
-            
+            <div className={style.info}> 
+           
               <div className={style.deco}></div>  
-             <div className={style.gitinfo}>
-               <div className={style.wrapinfo}>
-                    <div style={{fontSize: '1.6rem', fontWeight:'bold'}}>{getinfo.name}</div>
-                     <br/>
-                    <div>{getinfo.birth}</div>
-                     <div>{getinfo.tmi}.</div> 
-                  {/* <button id={style.instar} className={style.botton}></button>
-                  <button id={style.blog} className={style.botton}></button> */}
-               </div> 
+              <div className={style.gitinfo}>
+                <div className={style.wrapinfo}>
+                  <div style={{fontSize: '1.6rem', fontWeight:'bold'}}>{getinfo.name}</div>
+                  <br/>
+                  <div>{getinfo.birth}</div>
+                  <div>{getinfo.tmi}.</div> 
+                </div> 
 
                 <div class={style.buttons}>
                   <button id={style.github} className={style.botton}></button>
                 </div>
-            </div>
+              </div>
+              
+               
+
+              <div className={style.playbar}>
+                <input placeholder=" 적고 싶은 말을 적으세요" className={style.write}
+                  onChange={onChange}></input>
+                <button onClick={onClick} className={style.play}></button>
+              </div>
                
                 
-
-                <div className={style.playbar}>
-                  <input placeholder=" 적고 싶은 말을 적으세요" className={style.write}
-                  onChange={onChange}></input>
-                  <button onClick={onClick} className={style.play}></button>
-                </div>
-                
-                 
-              </div>
-                </div>
-
-      
-
-          </div>  
-
-      </div>
- 
+            </div>
+          </div>
+        </div>
+      </div>}
+    </div>
+     
   )
 }
 

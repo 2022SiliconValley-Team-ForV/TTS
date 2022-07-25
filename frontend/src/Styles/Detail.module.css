@@ -1,28 +1,19 @@
-
 #wrap{
     /* border-style: solid; */
     position:relative;
-    /* width:62.5rem; */
-    /* height:60rem; */
     width:1024px;
     height:100vh;
     margin: 0px auto;
-    /* max-width: 1024px; */
 }
-
 
 .deco{
     height:1.3%;
     background-color: #2F2E6E;
 }
 
-
 #profilewrap{
-    
     height: 80%;
-  
 }
-
 
 .position{
    padding-top: 50pX;
@@ -32,12 +23,10 @@
     font-size:2.3rem;
 }
 
-
 #wrapdetail{
     display:flex;
     width: 100%;
     height: 65%;
-    /* margin-top:rem; */
 }
 
 .bigprofile{
@@ -55,23 +44,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
-    
 }
 
-
 .gitinfo{
-
     width: 100%;
     height: 86%;
     border-color: aqua;
     display:flex;
 }
 
-
-
 .info{
     align-items:center;
-
     width: 50%;
     height: 100%;
     font-size:1.1rem;
@@ -79,28 +62,21 @@
 }
 
 .wrapinfo{
-   margin-top: 12%;
-   
+    margin-top: 12%;
     text-align: left;
     margin-left: 12%;
     width: 35%;
     height: auto;
 }
 
-
 .buttons{
- 
     display:inline-block;
     width: 100%;
     margin-top: 12%;
     margin-left: 48%;
-   
-    
-    /* margin-left: 5.5rem; */
-    
 }
+
 .botton{
-    /* margin-right:2rem; */
     height:2.67rem;
     width:2.67rem;
     border-style:none;
@@ -115,18 +91,11 @@
     background-image: url(../Images/github48W.png);
 }
 
-
-
-
-
 .playbar{
-  
     position:absolute;
     text-align: center;
-     height:auto;
-     width:48%;
-     
-
+    height:auto;
+    width:48%;  
 }
 
 .write{
@@ -163,174 +132,138 @@
     
     }*/
     
-    @media screen and (max-width:1023px) and (min-width:768px){
-        #wrap{
-         
-            width:100%;
-            height:150vh;
-        }
-        
-        body{
-            overflow-x: hidden;
-   
-
-        }
-       
-  
-        .deco{
-            display: none;
-        }
-  
-        
-        .position{
-            display: none;
-            margin-top: 6.8%;
-            height: 5%;
-            
-        }
-                
-        #wrapdetail{     
-             margin-top: 10%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-          
-            width: 100%;
-            height: 50%;
-
-            /* margin-top:rem; */
-        }
-        
-        .bigprofile{
-       
-            width: 100%;
-            height: 120%;
-        }
-        
-        .info{
-         
-            width: 90%;
-            height: 30%;
-
-        }
-        .wrapinfo{
-              
-            margin-left: 10%;
-            margin-top: 15%;
-        }
-        .buttons{
-            
-            display:inline-block;
-            width: 100%;
-            margin-top: 16%;
-            margin-left: 60%;
-            
-            /* margin-left: 5.5rem; */
-            
-        }
-        .write{
-            margin-bottom: 20px;
-           
-        }
-        
-        .playbar{
-            
-            margin-left: 8%;
-            height:auto;
-            width:100%;
-            margin-top: 18%;
-            
-        
-        }
-        
+@media screen and (max-width:1023px) and (min-width:768px){
+    #wrap{
+        width:100%;
+        height:150vh;
     }
-    @media screen and (max-width:767px){
-        #wrap{
-         
-            width:100%;
-            height:100%;
-        }
         
-        body{
-            overflow-x: hidden;
-   
-
-        }
+    body{
+        overflow-x: hidden;
+    }
        
-  
-        .deco{
-            display: none;
-        }
+    .deco{
+        display: none;
+    }
   
         
-        .position{
-            display: none;
-            margin-top: 6.8%;
-            height: 5%;
-            
-        }
+    .position{
+        display: none;
+        margin-top: 6.8%;
+        height: 5%;   
+    }
                 
-        #wrapdetail{     
-            margin-top: 10%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-          
-            width: 100%;
-            height: 50%;
-
+    #wrapdetail{     
+        margin-top: 10%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 50%;
             /* margin-top:rem; */
-        }
+    }
         
-        .bigprofile{
-       
-            width: 100%;
-            height: 120%;
-        }
+    .bigprofile{
+        width: 100%;
+        height: 120%;
+    }
         
-        .info{
-            font-size:0.96rem;
-            width: 90%;
-            height: 30%;
+    .info{
+        width: 90%;
+        height: 30%;
+    }
 
-        }
-        .wrapinfo{
-              
-            margin-left: 10%;
-            margin-top: 15%;
-        }
-        .botton{
-            /* margin-right:2rem; */
-            height:2.55rem;
-            width:2.55rem;
-            margin-top: 15%;
-        }
-    
-    .playbar
-    {  
+    .wrapinfo{
+        margin-left: 10%;
+        margin-top: 15%;
+    }
+
+    .buttons{
+        display:inline-block;
+        width: 100%;
+        margin-top: 16%;
+        margin-left: 60%;
+        /* margin-left: 5.5rem; */  
+    }
+
+    .write{
+        margin-bottom: 20px;  
+    }
+        
+    .playbar{   
+        margin-left: 8%;
+        height:auto;
+        width:100%;
+        margin-top: 18%; 
+    }
+        
+}
+
+@media screen and (max-width:767px){
+    #wrap{
+        width:100%;
+        height:100%;
+    }
+        
+    body{
+        overflow-x: hidden;
+    }
+       
+    .deco{
+        display: none;
+    }
   
+    .position{
+        display: none;
+        margin-top: 6.8%;
+        height: 5%;
+    }
+                
+    #wrapdetail{     
+        margin-top: 10%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 50%;
+        /* margin-top:rem; */
+    }
+        
+    .bigprofile{
+        width: 100%;
+        height: 120%;
+    }
+        
+    .info{
+        font-size:0.96rem;
+        width: 90%;
+        height: 30%;
+    }
+
+    .wrapinfo{
+        margin-left: 10%;
+        margin-top: 15%;
+    }
+
+    .botton{
+        /* margin-right:2rem; */
+        height:2.55rem;
+        width:2.55rem;
+        margin-top: 15%;
+    }
+    
+    .playbar{  
         height:auto;
         width:90%;
     }
     
     .write{
         margin-bottom: 20px;
-       
     }
-    
-   
 
+    .play{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
 
-
-.play{
-    width: 2.4rem;
-    height: 2.4rem;
-    
 }
-
-
-
-    }
-      
-    
-    
