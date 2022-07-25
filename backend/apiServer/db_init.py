@@ -25,11 +25,50 @@ e.save()
 
 
 # ModelLink의 id에는 Model 객체가 전달되어야 함!
+ModelLink(id=a, 
+          glow_config='http://storage.googleapis.com/forv_bucket/5g_config.json', 
+          glow_pth='http://storage.googleapis.com/forv_bucket/5g_checkpoint_30000.pth.tar',
+          glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
+          hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
+          hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
+          ).save()
+
+ModelLink(id=b, 
+          glow_config='http://storage.googleapis.com/forv_bucket/5g_config.json', 
+          glow_pth='http://storage.googleapis.com/forv_bucket/5g_checkpoint_30000.pth.tar',
+          glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
+          hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
+          hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
+          ).save()
+
+ModelLink(id=c, 
+          glow_config='http://storage.googleapis.com/forv_bucket/5g_config.json', 
+          glow_pth='http://storage.googleapis.com/forv_bucket/5g_checkpoint_30000.pth.tar',
+          glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
+          hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
+          hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
+          ).save()
+
+ModelLink(id=d, 
+          glow_config='http://storage.googleapis.com/forv_bucket/5g_config.json', 
+          glow_pth='http://storage.googleapis.com/forv_bucket/5g_checkpoint_30000.pth.tar',
+          glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
+          hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
+          hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
+          ).save()
+
 ModelLink(id=e, 
-          glow_config='http://storage.googleapis.com/forv_bucket/g_config.json', 
-          glow_pth='http://storage.googleapis.com/forv_bucket/g_checkpoint_30000.pth.tar', 
-          hifi_config='http://storage.googleapis.com/forv_bucket/h_config.json', 
-          hifi_pth='http://storage.googleapis.com/forv_bucket/h_checkpoint_305000.pth.tar').save()
+          glow_config='http://storage.googleapis.com/forv_bucket/5g_config.json', 
+          glow_pth='http://storage.googleapis.com/forv_bucket/5g_checkpoint_30000.pth.tar',
+          glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
+          hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
+          hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
+          ).save()
 
 Text(id=a,text="1").save()
 Text(id=b,text="2").save()
