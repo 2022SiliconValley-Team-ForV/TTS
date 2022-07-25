@@ -19,9 +19,9 @@ RUN apt-get install python3-setuptools
 RUN apt-get install -y default-jdk default-jre
 # mecab end
 
-RUN mkdir app
+# RUN mkdir app
 
-WORKDIR /app
+WORKDIR /backend/apiserver
 
 # volumes로 로컬 ./ 경로랑 컨테이너 /app 경로랑 공유하는데 왜 copy가 필요한가..
 COPY requirements.txt .
