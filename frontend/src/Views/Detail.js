@@ -20,7 +20,7 @@ function Detail() {
 
   //url 한번만 부르기
   useEffect(()=>{
-    axios.get(`http://127.0.0.1:8000/members/${id}`)
+    axios.get(`http://127.0.0.1:8000/api/members/${id}`)
     .then((response)=>{
       setGetinfo(response.data);
       setLoading(false);
