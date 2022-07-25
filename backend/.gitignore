@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/django,macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,macos,windows
 
+### docker에서 rabbitmq 돌릴 때 나오는것 ###
+mnesia/
+.erlang.cookie
+
 ### Django ###
 *.log
 *.pot

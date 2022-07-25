@@ -1,96 +1,69 @@
-import React from 'react'
+
+import React, { useState, useEffect } from 'react'
 import Style from '../Styles/Main.module.css'
+import Profile from './Profile';
+import Header from './Header'
 import { Link } from 'react-router-dom';
-import profile from '../Images/bomb.png';
+import axios from "axios";
+// import datas from './data.json';
 
 
 function Main() {
-  
 
-  //나중에 코드 더 짧게 바꿀 예정
-  //API 받아올 수 있을 때까진 이렇게 사용
-  const onClick=()=>{
-    console.log("clicked!");
-  };
+  // DB에 받아온 데이터들을 넣는 곳
+  const [member, setMember] = useState([]);
+
+  //url에서 데이터를 한번만 받아온다.
+  useEffect(()=>{
+    axios.get("http://127.0.0.1:8000/api/members/")
+    .then((response)=>{
+      setMember([...response.data]);
+    })
+    .catch(function(error){
+      console.log(error);
+    });
+  },[])
+
+  console.log(member);
+
+  // map를 사용해서 Profile 컴포넌트에 하나씩 넣어준다.
+  const profile = member.map((m)=>(
+      <Profile 
+        key={m.id} id={m.id} name={m.name} birth={m.birth}
+        img={m.image_link} info={m.tmi}
+        
+      />
+    ));
 
   return (
-    <div id={Style.master}>
-
       <div id={Style.wrap}>
 
-        <div className={Style.member}>Member</div>
-        <div className={Style.logo}>TFV</div>
-        
-        <hr/>
+        <Header/>
 
-        <div className={Style.profiles}>
+        <div id={Style.wrap_middle}>
 
-          <Link to = "/Detail/1">
-            <div id={Style.first} className={Style.profile}>
-              <img className={Style.circle}
-              src={profile} alt="profile"/>
-              <div className={Style.name}>구지혜</div>
-            </div>    
-          </Link> 
+          <div className={Style.profiles}>{profile}</div>
 
-          <Link to = "/Detail/2">
-            <div id={Style.second} >
-              <img className={Style.circle}
-              src={profile} alt="profile"/>
-              <div className={Style.name}>김혜진</div>
-            </div>    
-          </Link>  
-
-          <Link to = "/Detail/3">
-            <div id={Style.third} >
-              <img className={Style.circle}
-              src={profile} alt="profile"/>
-              <div className={Style.name}>배준일</div>
-            </div>    
-          </Link>  
-
-          <Link to = "/Detail/4">
-            <div id={Style.fourth} >
-              <img className={Style.circle}
-              src={profile} alt="profile"/>
-              <div className={Style.name}>최준혁</div>
-            </div>    
-          </Link>  
-
-          <Link to = "/Detail/5">
-            <div id={Style.fifth} >
-              <img className={Style.circle}
-              src={profile} alt="profile"/>
-              <div className={Style.name}>이수현</div>
-            </div>    
-          </Link>  
+          <div className={Style.tts}>
+            <div className={Style.tts_text}>내 목소리로 TTS를 만들고 싶다면</div>
+              <Link to="/maketts">
+                <button className={Style.tts_button}>
+                  만들어 보기
+                </button>
+              </Link>
+          </div> 
         </div>
-
-
-        <div className={Style.tts}>
-          <div className={Style.maketext}>내 목소리로 TTS를 만들고 싶다면</div>
-            <Link to="/maketts">
-              <button
-              className={Style.maketts}
-              onClick={onClick}>
-              만들어 보기
-              </button>
-            </Link>
-
-        </div>
-
-        <div className={Style.copyright}>
+ 
+        <div id={Style.wrap_copyright}>
           <hr/>
-          <footer>
-          TUKorea 237, Sangideahakro, Sihungsi, Kungido, Republic of Korea TEL. 031-8041-1000<br/>
-          Copyright © 2022 Team ForV.All Right Reserved.
-          </footer>
+          <div>
+            TUKorea 237, Sangideahakro, Sihungsi, Kungido, Republic of Korea TEL. 031-8041-1000
+            <br/>Copyright © 2022 Team ForV.All Right Reserved.
+          </div>
         </div>
-
       </div>
 
-    </div>
   )
 }
 
-export default Main
+export default Main;

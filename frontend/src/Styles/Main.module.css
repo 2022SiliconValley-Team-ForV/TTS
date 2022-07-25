@@ -1,144 +1,133 @@
 body{
-    /*바꿀 예정*/
-    background-color: whtie;
-    min-height: 10rem;
+    background-color: white;
 }
 
 hr{
-    border-top:2.3px solid #2F2E6F;
-}
-
-.master{
-    display: inline-block;
-    margin: 0px auto;
-    border-style: solid;
-    border-color: green;
-    height: auto;
-    width: 62.5rem;
+    border-top:1px solid #2F2E6F;
 }
 
 #wrap{
-    width:62.5rem;
-    height:1500px;
-    height:auto;
-    /* border-style: solid; */
+    /* border: solid red; */
+    position:relative;
+    width:1024px;
+    height:100vh;
     margin: 0px auto;
-    min-height: 10rem;;
+    min-height: 770px;
+    min-width: 280px;
 }
 
-.logo{
-    /* text-align: center; */
-    width: 250px;
-    height: 90px;
-    margin: 1px 0px;
+#wrap_middle{
+    /* border: solid blue; */
+    height:calc(100%-133px);
+    /* position: relative; */
     
-    font-family: space;
-    font-size: 5rem;
-    color:#2F2E6F;
-}
-
-.member{
-    position:absolute;
-    margin-left: 56rem;
-    margin-top: 30px;
-    /* border-style: solid; */
-    font-size: 30px;
-    color:#2F2E6F;
+    /* display: inline-block; */
+    /* height:77%; */
 }
 
 .profiles{
-    position:absolute;
-    /* border-style: solid;
-    border-color: green; */
-    display: inline-block;
-    /* margin: 0px 25px 50px 25px; */
-    width: 70rem;
-    margin-left:2.2rem;
+    /* border: solid green; */
+    padding: 1.2rem auto; 
+    display:flex; 
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top:3rem;
 }
 
-
-.circle{
-    float: left;
-    display:block;
-    border-style: solid;
-    border-color:rgb(94, 94, 94);
-    border-width: 1.5px;
-    border-radius: 100px;
-    width:150px;
-    height:150px;
-    background-color: #2F2E6F;
-}
-
-.name{
-    /* border-style:solid; */
-    text-align: center;
-    margin-top: 175px;
-    text-decoration:none;
-    color:#2F2E6F;
-}
-
 .tts{
-    position: fixed;
-    bottom: 100px;
-    width: 300px;
+    /* margin-top:15rem; */
+    /* border: solid orange; */
+    position:absolute;
+    bottom:10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 16.5px;
-    /* border-style: solid; */
-
-    margin-left: 350px;
     text-align: center;
 }
 
-.maketext{
-    margin-bottom: 10px;
+.tts_text{
+    bottom: 1rem;
     color:#2F2E6F;
+    margin-bottom:0.8rem;
 }
-.maketts{
+
+.tts_button{
     font-size: 17px;
     width: 300px;
     height: 60px;
     background-color: #2F2E6F;
     border-radius: 7px;
-    color:white;
+    color:white;  
+}
+
+#wrap_copyright{
+    position:absolute;
+    bottom:2px;
+    /* border: solid purple; */
+    width: 100%;
+    font-size: 9px;
+
+}
+
+#wrap_copyright div{
+    margin-left: 1rem;
+}
+
+@media screen and (min-width:1024px){
+    /*PC 화면*/
     
 }
 
-.copyright{
-    position: fixed;
-    bottom: 10px;
-    width: 985px;
-    font-size: 10px;
+@media screen and (min-width:768px) and (max-width:1023px){
+    /*태블릿 화면*/
+    /* body{
+        background-color: darkgray;
+    } */
+    #wrap{
+        width:100%;
+        padding-bottom:1rem;
+    }
+    #wrap_copyright{
+        display:none;
+    }
+    #wrap_middle{
+        box-sizing: border-box;
+        padding-bottom:2rem;
+    }
+    .tts{
+        position:static;
+        margin-top:5rem;
+        /* bottom: 2rem; */
+        transform: translate(0, 0);
+    }
+    .tts_button{
+        width:270px;
+    }
+    
 }
 
+@media screen and (max-width:767px){
+    /*모바일 화면*/
 
-
-#first{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
-    margin-right:2.5rem;
-}
-
-#second{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
-    margin-right:2.5rem;
-}
-#third{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
-    margin-right:2.5rem;
-}
-#fourth{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
-    margin-right:2.5rem;
-}
-#fifth{
-    /* border-style: solid; */
-    width:150px;
-    display: inline-block;
+    #wrap{
+        width:100%;
+        padding-bottom:1rem;
+    }
+    #wrap_copyright{
+        display:none;
+    }
+    #wrap_middle{
+        box-sizing: border-box;
+        padding-bottom:2rem;
+    }
+    .tts{
+        position:static;
+        margin-top:5rem;
+        /* bottom: 2rem; */
+        transform: translate(0, 0);
+    }
+    .tts_button{
+        width:270px;
+    }
 }
