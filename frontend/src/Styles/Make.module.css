@@ -20,7 +20,7 @@ hr{
 }
 .upload_area{
 
-    border: 2.5px dashed #2F2E6F;
+    border: 0.09rem dashed #000000;
     height: 230px;
     width: 380px;
     border-radius: 8px;
@@ -29,16 +29,22 @@ hr{
     justify-content: center;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0.4rem;
     margin-top: 5rem;
    
 }
+.loadingArea{
+    overflow: hidden;
+    width: 380px;
 
+}
 header{
     font-size: 28px;
     font-weight: bold;
     color: #2F2E6F;
 }
 .convert{
+    
     color: #ffffff;
     background-color: #2F2E6F;
     font-size: 20px;
@@ -115,6 +121,7 @@ header{
         width:80%;
         margin: 0 auto;
     }
+    
     .playbar{
         width:90%;
         margin: 0 auto;
@@ -128,6 +135,7 @@ header{
         width:85%;
     }
     
+    
 }
 
 @media screen and (max-width:768px){
@@ -136,7 +144,7 @@ header{
     /* body{
         background-color: dimgrey;
     } */
-
+   
     #wrap{
         width:100%;
     }
@@ -146,7 +154,7 @@ header{
     }
 
     .upload_area{
-        
+        padding: 5%;
         width:60%;
         height:100%;
     }
@@ -157,6 +165,11 @@ header{
 
     .upload_area div{
         text-align: center;
+    }
+    .loadingArea{
+        overflow: hidden;
+        width: 70%;
+    
     }
 
     .convert{

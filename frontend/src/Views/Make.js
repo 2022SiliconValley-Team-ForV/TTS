@@ -71,24 +71,29 @@ import Header from './Header';
       
           <div className={Style.upload_area} onClick={onAudioBtnClick}>
             <AiOutlineCloudUpload  
-              size ="80" 
-              color="#2F2E6F"
-              style={iconsUpload}
+			  style={iconsUpload}
+			  size ="70" 
+			  color="#2F2E6F"
+             
             />
     
 
               <AiFillCheckCircle  
-                size ="80" 
-                color="#2F2E6F"
-                style={iconsReady}
-              />
+                   size ="70" 
+	               color="#2F2E6F"
+	               style={iconsReady}
+	               />
 
               <br/><header>{uploadClick}</header> 
               <div>upload file and click button</div>    
                     
             </div>
+		
 
-          { loading && <Loading />}
+		   <div className={Style.loadingArea}>{ loading && <Loading />}
+		   </div>
+
+      
           <button className={Style.convert} onClick={onConvert}>convert</button> 
 	      </div>
 	
@@ -102,7 +107,7 @@ import Header from './Header';
 	      </div>
 
 	    </div>
-	
+		
 	  )
 	}
 	
