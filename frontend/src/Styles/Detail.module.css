@@ -1,51 +1,105 @@
 #wrap{
     /* border-style: solid; */
-    height: auto;
-    width: 65rem;
-    margin: 0 auto;
-
+    position:relative;
+    width:1024px;
+    height:100vh;
+    margin: 0px auto;
 }
 
-.logo{
-    font-family: space;
-    font-size: 5rem;
-    color:#2F2E6F;
-    margin: 9px 0; 
+.deco{
+    height:1.3%;
+    background-color: #2F2E6E;
 }
 
 #profilewrap{
-    /* border-style: solid;
-    border-color: red; */
+    height: 80%;
+}
+
+.position{
+   padding-top: 50pX;
+   padding-bottom: 18pX;
+    height: 5%;
+    font-family:space;
+    font-size:2.3rem;
+}
+
+#wrapdetail{
+    display:flex;
+    width: 100%;
+    height: 65%;
 }
 
 .bigprofile{
-    /* border-style: solid;
-    border-color: aquamarine; */
-    display: inline-block;
+    /* border-style: solid; */
+    text-align: center;
+    display: flex;
+    width: 50%;
+    height: 100%;
 }
 
 .bigprofile img{
-    width: 25rem;
-    height: 25rem;
-    border-color:grey;
-    border-width: 0.1rem;
+    width: 100%;
+    height: 100%;
+    background-color: #2F2E6E;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.gitinfo{
+    width: 100%;
+    height: 86%;
+    border-color: aqua;
+    display:flex;
 }
 
 .info{
-    position: relative;
-    /* border-style: solid;
-    border-color: blue; */
-    display: inline-block;
-    margin-left:27rem;
-    top:-25rem;
-    
+    align-items:center;
+    width: 50%;
+    height: 100%;
+    font-size:1.1rem;
+    margin-left:2rem;
+}
+
+.wrapinfo{
+    margin-top: 12%;
+    text-align: left;
+    margin-left: 12%;
+    width: 35%;
+    height: auto;
+}
+
+.buttons{
+    display:inline-block;
+    width: 100%;
+    margin-top: 12%;
+    margin-left: 48%;
+}
+
+.botton{
+    height:2.67rem;
+    width:2.67rem;
+    border-style:none;
+    border-radius: 3rem;
+    background-color: #2F2E6E;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#github{
+    background-image: url(../Images/github48W.png);
 }
 
 .playbar{
-    /* border-style: solid; */
+    position:absolute;
+    text-align: center;
+    height:auto;
+    width:48%;  
 }
+
 .write{
-    width:30rem;
+    width:70%;
     height:2rem;
     border-color:grey;
     border-width: 0.1rem;
@@ -55,10 +109,161 @@
 }
 
 .play{
-    width: 2.9rem;
-    height: 2.9rem;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
     border:none;
-    margin-left: 1rem;
-    background-image: url(../Images/play.jpg);
+    border-radius: 2rem;
+    background-color: #2F2E6E;
+    background-image: url(../Images/play40.png);
+    margin-left: 0.8rem;
+    top:0.75rem;
+    color:white;
+}
+
+.space{
+    display: none;
+    width:100%;
+    height:20%;
+}
+
+/*@media screen and (min-width:1024px){
+    PC 화면
+    
+    }*/
+    
+@media screen and (max-width:1023px) and (min-width:768px){
+    #wrap{
+        width:100%;
+        height:150vh;
+    }
+        
+    body{
+        overflow-x: hidden;
+    }
+       
+    .deco{
+        display: none;
+    }
+  
+        
+    .position{
+        display: none;
+        margin-top: 6.8%;
+        height: 5%;   
+    }
+                
+    #wrapdetail{     
+        margin-top: 10%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 50%;
+            /* margin-top:rem; */
+    }
+        
+    .bigprofile{
+        width: 100%;
+        height: 120%;
+    }
+        
+    .info{
+        width: 90%;
+        height: 30%;
+    }
+
+    .wrapinfo{
+        margin-left: 10%;
+        margin-top: 15%;
+    }
+
+    .buttons{
+        display:inline-block;
+        width: 100%;
+        margin-top: 16%;
+        margin-left: 60%;
+        /* margin-left: 5.5rem; */  
+    }
+
+    .write{
+        margin-bottom: 20px;  
+    }
+        
+    .playbar{   
+        margin-left: 8%;
+        height:auto;
+        width:100%;
+        margin-top: 18%; 
+    }
+        
+}
+
+@media screen and (max-width:767px){
+    #wrap{
+        width:100%;
+        height:100%;
+    }
+        
+    body{
+        overflow-x: hidden;
+    }
+       
+    .deco{
+        display: none;
+    }
+  
+    .position{
+        display: none;
+        margin-top: 6.8%;
+        height: 5%;
+    }
+                
+    #wrapdetail{     
+        margin-top: 10%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 50%;
+        /* margin-top:rem; */
+    }
+        
+    .bigprofile{
+        width: 100%;
+        height: 120%;
+    }
+        
+    .info{
+        font-size:0.96rem;
+        width: 90%;
+        height: 30%;
+    }
+
+    .wrapinfo{
+        margin-left: 10%;
+        margin-top: 15%;
+    }
+
+    .botton{
+        /* margin-right:2rem; */
+        height:2.55rem;
+        width:2.55rem;
+        margin-top: 15%;
+    }
+    
+    .playbar{  
+        height:auto;
+        width:90%;
+    }
+    
+    .write{
+        margin-bottom: 20px;
+    }
+
+    .play{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
 
 }
