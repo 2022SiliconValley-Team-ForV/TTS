@@ -66,9 +66,8 @@ hr{
     bottom:2px;
     /* border: solid purple; */
     width: 100%;
-    
     font-size: 9px;
-    /* height:5%; */
+
 }
 
 #wrap_copyright div{
@@ -94,8 +93,6 @@ hr{
     .tts{
         box-sizing: border-box;
         margin-bottom: 2rem;;
-        /* bottom:20px;
-        transform: translate(-50%, -50%); */
     }
     .tts_button{
         width:270px;
