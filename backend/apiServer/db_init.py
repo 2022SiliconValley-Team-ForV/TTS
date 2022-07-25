@@ -31,7 +31,7 @@ ModelLink(id=a,
           glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
           hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
           hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
-          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json'
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
           ).save()
 
 ModelLink(id=b, 
@@ -40,7 +40,7 @@ ModelLink(id=b,
           glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
           hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
           hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
-          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json'
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
           ).save()
 
 ModelLink(id=c, 
@@ -49,7 +49,7 @@ ModelLink(id=c,
           glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
           hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
           hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
-          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json'
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
           ).save()
 
 ModelLink(id=d, 
@@ -58,7 +58,7 @@ ModelLink(id=d,
           glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
           hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
           hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
-          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json'
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
           ).save()
 
 ModelLink(id=e, 
@@ -67,7 +67,7 @@ ModelLink(id=e,
           glow_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json',
           hifi_config='http://storage.googleapis.com/forv_bucket/5h_config.json', 
           hifi_pth='http://storage.googleapis.com/forv_bucket/5h_checkpoint_305000.pth.tar',
-          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5g_config.json'
+          hifi_scale_stats = 'http://storage.googleapis.com/forv_bucket/5h_config.json'
           ).save()
 
 Text(id=a,text="1").save()
