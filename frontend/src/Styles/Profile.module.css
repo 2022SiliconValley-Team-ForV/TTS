@@ -1,8 +1,5 @@
 #wrapprofile{
     position:relative;
-    /* border-style: solid;
-    border-color:brown; */
-    /* height:14rem; */
     width:auto;
     display:inline-block;
     text-decoration: none;
@@ -18,18 +15,12 @@
     border-width: 0.1rem;
     border-radius: 5rem;
     object-fit: cover;
-    /* text-align: center; */
     height:9rem;
     width:9rem;
-    /* border-style: solid;
-    border-color:grey; */
-    /* margin-bottom:-3px; */
-    /* vertical-align: bottom; */
 }
 
 #wrapprofile p{
-    /* border-style: solid; */
     text-align: center;
-    color:"#2f2e6e";
+    color:#2F2E6F;
     text-decoration:'none';
 }

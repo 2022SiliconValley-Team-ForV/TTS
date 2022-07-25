@@ -2,28 +2,33 @@ import React,  { useState,useEffect } from 'react'
 import { Link,useParams } from 'react-router-dom';
 import style from '../Styles/Detail.module.css';
 import axios from "axios";
+import Header from './Header'
 
-function Detail({_id, name, position, birth, info}) {
+function Detail() {
+
+  //loading 다 되면 setLoading에 false를 넣어서 보이게 해준다.
+  const [loading, setLoading] = useState(true);
 
   // input태그에 넣을거
   const [sentence, setSentence]=useState();
+
+  // id값 받아서 DB에서 가져온 데이터 넣는곳
   const [getinfo, setGetinfo]=useState([]);
 
+  //사이트 :id에서 id값 가져오기
   let { id } = useParams([]);
 
+  //url 한번만 부르기
   useEffect(()=>{
     axios.get(`http://127.0.0.1:8000/members/${id}`)
     .then((response)=>{
       setGetinfo(response.data);
-      console.log(response.data);
+      setLoading(false);
     })
     .catch(function(error){
       console.log(error);
     });
   },[])
-
-  console.log(getinfo);
-
 
   //input 태그에 적힌 글 sentence에 저장
   const onChange=(e)=>{
@@ -44,15 +49,13 @@ function Detail({_id, name, position, birth, info}) {
   }
 
   return (
-    <div>
+
 
       <div id={style.wrap}>
-
-        {/* //로고 누르면 홈으로 돌아가게 구현 */}
         <Link to="/" style={{textDecoration:'none'}}>
-          <div className={style.logo}>TFV</div>
+          <Header/>
         </Link>
-        <hr/>
+       
 
           <div id={style.profilewrap}>
             <div class={style.position}>FRONTEND</div>
@@ -60,42 +63,44 @@ function Detail({_id, name, position, birth, info}) {
 
               <div className={style.bigprofile}>
                 <img src={getinfo.image_link} alt="profile"></img>
-                <br/>
-                <div class={style.buttons}>
-                  <button id={style.github} className={style.botton}></button>
-                  <button id={style.instar} className={style.botton}></button>
-                  <button id={style.blog} className={style.botton}></button>
-                </div>
-
               </div>
 
-              <div className={style.info}>
-                <div className={style.deco}/>
-                <div className={style.wrapinfo}>
-                  <div style={{fontSize: '1.6rem', fontWeight:'bold'}}>{getinfo.name}</div>
-                  <div>{getinfo.birth}</div>
-                  <br/>
-                  <div><br/>{getinfo.tmi}.</div>
-                </div>
+              <div className={style.info}> 
+            
+              <div className={style.deco}></div>  
+             <div className={style.gitinfo}>
+               <div className={style.wrapinfo}>
+                    <div style={{fontSize: '1.6rem', fontWeight:'bold'}}>{getinfo.name}</div>
+                     <br/>
+                    <div>{getinfo.birth}</div>
+                     <div>{getinfo.tmi}.</div> 
+                  {/* <button id={style.instar} className={style.botton}></button>
+                  <button id={style.blog} className={style.botton}></button> */}
+               </div> 
 
+                <div class={style.buttons}>
+                  <button id={style.github} className={style.botton}></button>
+                </div>
+            </div>
+               
+                
 
                 <div className={style.playbar}>
-
                   <input placeholder=" 적고 싶은 말을 적으세요" className={style.write}
                   onChange={onChange}></input>
                   <button onClick={onClick} className={style.play}></button>
-
+                </div>
+                
+                 
+              </div>
                 </div>
 
-              </div>
+      
 
-            </div>
-
-          </div>
+          </div>  
 
       </div>
-
-    </div>
+ 
   )
 }
 

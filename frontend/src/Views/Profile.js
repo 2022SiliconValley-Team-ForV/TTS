@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 function Profile({id, name, img}) {
 
   const PHOTO = img;
-  const ID=id;
+  
   return (
     <Link to={{
       pathname: `/detail/${id}`,
