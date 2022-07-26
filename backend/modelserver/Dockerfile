@@ -21,7 +21,7 @@ RUN apt-get install -y default-jdk default-jre
 
 # RUN mkdir app
 
-WORKDIR /backend/apiserver
+WORKDIR /backend/modelserver
 
 # volumes로 로컬 ./ 경로랑 컨테이너 /app 경로랑 공유하는데 왜 copy가 필요한가..
 COPY requirements.txt .

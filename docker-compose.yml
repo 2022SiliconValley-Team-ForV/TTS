@@ -58,14 +58,14 @@ services:
     depends_on:
       - ttsmysql
 
-  # modelserver:
-  #   platform: linux/amd64
-  #   build: ./backend/modelserver
-  #   command: flask run --host=0.0.0.0
-  #   ports:
-  #     - 5000:5000
-  #   volumes:
-  #     - ./backend/modelserver/:/backend/modelserver/
+  modelserver:
+    platform: linux/amd64
+    build: ./backend/modelserver
+    command: flask run --host=0.0.0.0
+    ports:
+      - 5000:5000
+    volumes:
+      - ./backend/modelserver/:/backend/modelserver/
 
   ttsmysql:
     image: mysql
