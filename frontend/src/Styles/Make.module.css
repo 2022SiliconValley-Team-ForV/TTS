@@ -38,8 +38,10 @@ hr{
     width: 380px;
 
 }
+
 header{
-    font-size: 28px;
+
+    font-size: 30px;
     font-weight: bold;
     color: #2F2E6F;
 }
@@ -52,51 +54,56 @@ header{
     height: 60px;
     margin-top: 30px;
 
-
     border: 0px ;
     border-radius: 7px;
 }
 
+
+
 .convertEnd{
-    /* border: solid red; */
-    width:fit-content;
-    margin: 2rem auto;
+    align-items: center;
+    width:100%;
+    margin: 4rem auto;
 }
 
 .readyMakeTTS{
+  
+    margin-left: 12%;
     font-size: 1.4rem;
     font-family: apple;
     font-weight: bold;
 }
 
 .playbar{
+    display: inline-block;
+    width:100%;
+    height:  auto;
+    margin: 0 auto;
+    
     /* border: solid green; */
     text-align: center;
 }
 
-.write{
-
-    width:43rem;
-    height:2.5rem;
-    border-color:#2F2E6F;
+.write{  
+    width:70%;
+    height:2rem;
+    border-color:grey;
     border-width: 0.1rem;
     border-radius: 0.3rem;;
     font-size: 1.1rem;
     font-family: apple;
 }
-
 .play{
-    /* border: burlywood solid ; */
-    font-size: 0;
-    border : none #2F2E6F 0.4rem;
-    width: 2.9rem;
-    height: 2.9rem;
-    background-size:cover;
-    border-radius: 3rem;
-    margin-left: 1rem;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border:none;
+    border-radius: 2rem;
+    background-color: #2F2E6E;
     background-image: url(../Images/play40.png);
-    position:relative;
-    top:-5px;
+    margin-left: 0.8rem;
+    top:0.75rem;
+    color:white;
 }
 
 @media screen and (min-width:1024px){
@@ -113,38 +120,22 @@ header{
     #wrap{
         width:100%;
     }
-    .convertEnd{
-        width:80%;
-    }
-    .readyMakeTTS{
-        position: static;
-        width:80%;
-        margin: 0 auto;
-    }
-    
-    .playbar{
-        width:90%;
-        margin: 0 auto;
-    }
-    .play{
-        bottom:-13px;
-        left:3%;
-        margin-left:0;
-    }
-    .write{
-        width:85%;
-    }
     
     
+   
 }
-
 @media screen and (max-width:768px){
     /*모바일 화면*/
 
     /* body{
         background-color: dimgrey;
     } */
-   
+    header{ 
+    
+        font-size: 26px;
+        font-weight: bold;
+        color: #2F2E6F;
+    }
     #wrap{
         width:100%;
     }
@@ -155,7 +146,7 @@ header{
 
     .upload_area{
         padding: 5%;
-        width:60%;
+        width:53%;
         height:100%;
     }
 
@@ -178,45 +169,28 @@ header{
         height:50px;
         margin-top: 20px;
     }
-
-    .convertEnd{
-        width:100%;
-        height:fit-content;
-        margin-top:3rem;
-    }
-
     .readyMakeTTS{
-        position: static;
-        width:80%;
-        margin: 0 auto;
+        margin-left: 10.8%;
         font-size: 1rem;
     }
-
     .playbar{
-        width:80%;
-        height:120px;
-        margin: 0 auto;
-        margin-top:0.3rem;
-    }
-
-    .play{
-        background-image: none;
-        background-color: #2F2E6F;
         
-        border-radius: 0.4rem;
-        width:150px;
-        height:40px;
-        margin-top:16px;
-        margin-left:0;
-        bottom:0px;
-        font-size: 1rem;
-        font-family: apple;
-        color:#ffffff;
+        height:auto;
+
+        
     }
-    
-    .write{
-        width:98%;
-        height:35px;
+    .play{
+      
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 1.5rem;
+        
+    }
+    .write{  
+       
+        height:1.5rem;
         font-size: 0.9rem;
+       
     }
 }
+

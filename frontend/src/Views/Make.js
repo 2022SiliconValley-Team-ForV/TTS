@@ -99,7 +99,7 @@ import Header from './Header';
 	
 
 	      <div className={Style.convertEnd} style={{display:"none"}}>   
-	        <h className={Style.readyMakeTTS}>Ready To TTS !</h>
+	        <h className={Style.readyMakeTTS}>Ready To TTS !</h> <br/>
 	        <div className={Style.playbar}>
 	          <input placeholder=" 적고 싶은 말을 적으세요" className={Style.write}/>
 	          <button className={Style.play}></button>
