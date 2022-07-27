@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import Style from '../Styles/Make.module.css';
 import { AiOutlineCloudUpload, AiFillCheckCircle } from "react-icons/ai";
 import{useState}from 'react';
-import { Link } from 'react-router-dom';
 import Loading from './Loading';
 import Header from './Header';
 	
@@ -51,9 +50,7 @@ import Header from './Header';
 	  return (
 	    
 	    <div id={Style.wrap}>
-	      <Link to="/" style={{textDecoration:'none'}}>
-	        <Header/>
-	      </Link>
+	      <Header/>
 	      <div className={Style.upload_big_area}>    
 	
 
@@ -71,35 +68,30 @@ import Header from './Header';
       
           <div className={Style.upload_area} onClick={onAudioBtnClick}>
             <AiOutlineCloudUpload  
-			  style={iconsUpload}
-			  size ="70" 
-			  color="#2F2E6F"
-             
+              size ="67" 
+              color="#2F2E6F"
+              style={iconsUpload}
             />
     
 
               <AiFillCheckCircle  
-                   size ="70" 
-	               color="#2F2E6F"
-	               style={iconsReady}
-	               />
+                size ="67" 
+                color="#2F2E6F"
+                style={iconsReady}
+              />
 
               <br/><header>{uploadClick}</header> 
               <div>upload file and click button</div>    
                     
             </div>
-		
-
-		   <div className={Style.loadingArea}>{ loading && <Loading />}
+			<div className={Style.loadingArea}>{ loading && <Loading />}
 		   </div>
-
-      
           <button className={Style.convert} onClick={onConvert}>convert</button> 
 	      </div>
 	
 
-	      <div className={Style.convertEnd} style={{display:"none"}}>   
-	        <h className={Style.readyMakeTTS}>Ready To TTS !</h> <br/>
+	      <div className={Style.convertEnd}>   
+	        <h className={Style.readyMakeTTS}>Ready To TTS !</h>
 	        <div className={Style.playbar}>
 	          <input placeholder=" 적고 싶은 말을 적으세요" className={Style.write}/>
 	          <button className={Style.play}></button>
@@ -107,7 +99,7 @@ import Header from './Header';
 	      </div>
 
 	    </div>
-		
+	
 	  )
 	}
 	

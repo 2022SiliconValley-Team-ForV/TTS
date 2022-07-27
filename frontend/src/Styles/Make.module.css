@@ -2,6 +2,7 @@ hr{
     border-top:2.3px solid #2F2E6F;
 }
 
+
 #wrap{
     /* border: solid; */
     width:1024px;
@@ -132,7 +133,7 @@ header{
     } */
     header{ 
     
-        font-size: 26px;
+        font-size: 23px;
         font-weight: bold;
         color: #2F2E6F;
     }
@@ -159,7 +160,7 @@ header{
     }
     .loadingArea{
         overflow: hidden;
-        width: 70%;
+        width: 63%;
     
     }
 
@@ -193,4 +194,3 @@ header{
        
     }
 }
-

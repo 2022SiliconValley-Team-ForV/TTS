@@ -1,5 +1,5 @@
 import React,  { useState,useEffect } from 'react'
-import { Link,useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import style from '../Styles/Detail.module.css';
 import axios from "axios";
 import Header from './Header'
@@ -66,10 +66,8 @@ function Detail() {
     <div>
       {loading ? <></>:
       <div id={style.wrap}>
-        <Link to="/" style={{textDecoration:'none'}}>
-          <Header/>
-        </Link>
-      
+    
+        <Header/>
 
         <div id={style.profilewrap}>
           <div class={style.position}>FRONTEND</div>
@@ -82,25 +80,25 @@ function Detail() {
             <div className={style.info}> 
            
               <div className={style.deco}></div>  
-              <div className={style.gitinfo}>
-                <div className={style.wrapinfo}>
-                  <div style={{fontSize: '1.6rem', fontWeight:'bold'}}>{getinfo.name}</div>
-                  <br/>
-                  <div>{getinfo.birth}</div>
-                  <div>{getinfo.tmi}.</div> 
-                </div> 
-
-                <div class={style.buttons}>
-                  <button id={style.github} className={style.botton}></button>
+              <div className={style.wrapinfo}>
+                <div className={style.info_name} style={{fontSize: '1.6rem', fontWeight:'bold'}}> 
+                    {getinfo.name} 
+                    <button onClick={onClickGit} id={style.github} className={style.botton}></button>
+                   
                 </div>
-              </div>
+                <div>{getinfo.birth}</div>
+                <br/>
+                <br/>
+                  
+                <div className={style.tmi_txt} style={{wordBreak:"keep-all"}}>{getinfo.tmi}.</div> 
+              </div> 
               
                
 
               <div className={style.playbar}>
                 <input placeholder=" 적고 싶은 말을 적으세요" className={style.write}
                   onChange={onChange}></input>
-                <button onClick={onClick} className={style.play}></button>
+                <button onClick={onClick} className={style.play}>play</button>
               </div>
                
                 

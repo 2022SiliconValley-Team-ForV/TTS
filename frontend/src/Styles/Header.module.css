@@ -1,5 +1,7 @@
+
 hr{
     border-top:1px solid #2F2E6F;
+    width:100%;
 }
 
 #wrap_logo{
@@ -15,14 +17,14 @@ hr{
     display:inline-block;
     margin-left:1rem;
 }
-
 .member{
-    font-size: 30px;
+    font-size: 28px;
     color:#2F2E6F;
-    display:inline-block;
-    position: absolute;
-    right:1rem;
-    top:2rem;
+    float:right;
+    display:inline-flex;
+    /* position: absolute; */
+    margin-right:1rem;
+    margin-top:2rem;
 }
 
 @media screen and (min-width:1024px){
@@ -31,6 +33,9 @@ hr{
 }
 @media screen and (min-width:768px) and (max-width:1023px){
     /*태블릿 화면*/
+    hr{
+        width: 90%;
+        }
     #wrap_logo{
         width:100%;
         text-align: center;
@@ -44,13 +49,18 @@ hr{
 
     
 }
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
+    hr{
+    width: 90%;
+    }
     /*모바일 화면*/
     #wrap_logo{
+  
         width:100%;
         text-align: center;
     }
     .logo{
+     
         font-size: 3rem;
     }
     .member{

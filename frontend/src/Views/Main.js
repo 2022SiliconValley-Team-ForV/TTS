@@ -43,6 +43,7 @@ function Main() {
         <div id={Style.wrap_middle}>
 
           <div className={Style.profiles}>{profile}</div>
+         {/*
 
           <div className={Style.tts}>
             <div className={Style.tts_text}>내 목소리로 TTS를 만들고 싶다면</div>
@@ -52,16 +53,22 @@ function Main() {
                 </button>
               </Link>
           </div> 
-        </div>
- 
-        <div id={Style.wrap_copyright}>
-          <hr/>
-          <div>
+      
+       */} 
+       <hr/> <div id={Style.wrap_copyright}>
+          
+  
+          <div className={Style.long}>
             TUKorea 237, Sangideahakro, Sihungsi, Kungido, Republic of Korea TEL. 031-8041-1000
             <br/>Copyright © 2022 Team ForV.All Right Reserved.
           </div>
+          <div className={Style.short}>
+           © 2022 Team ForV, Inc.
+
+          </div>
+
         </div>
-      </div>
+      </div>  </div>
 
   )
 }
