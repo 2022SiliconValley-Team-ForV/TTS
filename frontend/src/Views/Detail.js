@@ -45,7 +45,7 @@ function Detail() {
       console.log(sentence);
       // e.preventDefatul();
       const data={id:`${id}`, text:sentence};
-      axios.put(`http://0.0.0.0:8000/api/texts/${id}/`, data)
+      axios.put(`http://127.0.0.1:8000/api/texts/${id}/`, data)
       .then((response)=>{
         console.log(response);
         console.log({id}, sentence);

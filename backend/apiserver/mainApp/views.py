@@ -1,10 +1,15 @@
+from tkinter.tix import Tree
 from django.shortcuts import render
+import requests
 
 # 세부 페이지 설명부분을 위해 일단 Member 테이블만 추가했습니다.
 # 모델 파일에 대한 테이블은 추후에 추가할 예정
 from .serializers import MemberSerializer, ModelSerializer, TextSerializer
 from .models import Member, ModelLink, Text
 from rest_framework import viewsets
+from rest_framework.decorators import action
+from config.celery import app
+from rest_framework.response import Response
 
 # Create your views here.
 
@@ -20,3 +25,14 @@ class ModelLinkViewSet(viewsets.ModelViewSet):
 class TextViewSet(viewsets.ModelViewSet):
     queryset = Text.objects.all()  
     serializer_class = TextSerializer
+
+    @app.task
+    def update(request, pk=None):
+        id = request.data['id']
+        text = request.data['text']
+        print(id, text)
+         
+        url = 'http://127.0.0.1:5000/api/texts'
+        params = {'id': id, 'text':text}
+        requests.post(url, data=params)
+        return Response(data=params)
