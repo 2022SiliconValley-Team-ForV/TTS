@@ -66,6 +66,8 @@ services:
       - 5000:5000
     volumes:
       - ./backend/modelserver/:/backend/modelserver/
+    environment:
+      - FLASK_ENV=development
 
   ttsmysql:
     image: mysql

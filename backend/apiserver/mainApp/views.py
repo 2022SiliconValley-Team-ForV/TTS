@@ -31,20 +31,18 @@ class TextViewSet(viewsets.ModelViewSet):
     queryset = Text.objects.all()  
     serializer_class = TextSerializer
 
-    def update(self,request, pk=None):
-        id = request.data['id']
-        text = request.data['text']
-        print(id, text)
+    # def update(self,request, pk=None):
+    #     id = request.data['id']
+    #     text = request.data['text']
+    #     # print(id, text)
 
-        try :
-         
-            url = 'http://0.0.0.0:5000/api/texts'
-            params = {'id': id, 'text':text}
-            requests.post(url, data=params)
-            return Response(data=params)
-        except:
-            time.sleep(2)
-            url = 'http://0.0.0.0:5000/api/texts'
-            params = {'id': id, 'text':text}
-            requests.post(url, data=params)
-            return Response(data=params)
+        # try :
+            
+        #     url = 'http://172.20.0.2:5000/api/texts'
+        #     params = {'id': id, 'text':text}
+        #     print(id, text)
+        #     requests.post(url, json=params)
+        #     return requests.Response
+        # except:
+        #     print('except')
+        

@@ -40,21 +40,22 @@ def hello_world():
 @app.route('/api/texts', methods = ['POST','GET'])
 def get_text():
     if request.method == 'POST':
-        print('asdf')
-        id = request.form['id']
+        params = request.get_json()
+        print(params)
+        id = params['id']
         print(id)
-        text = request.form['text']
+        text = params['text']
         print(text)
-        a = add.delay(id, text)
-        print(a.id)
-        return jsonify({"id": id})
+        # a = add.delay(id, text)
+        # print(a.id)
+        return (params)
         
     elif request.method == 'GET':
-        print('get')
-        return('겟겟')
+        
+        return('get')
         
 
-
+# front에서 셀러리가 일을 다 했는지 확인 -> 주기적으로 flask에 요청을 보내면서 체크 (작업이 걸리는 시간을 고려해서 작업끝나기 30초 전부터 보낸다)
 
 # @app.route('/mecab')
 # def get_mecab():
