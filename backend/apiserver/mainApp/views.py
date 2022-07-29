@@ -1,4 +1,7 @@
+from time import sleep
+import time
 from tkinter.tix import Tree
+from celery import Celery
 from django.shortcuts import render
 import requests
 
@@ -7,11 +10,13 @@ import requests
 from .serializers import MemberSerializer, ModelSerializer, TextSerializer
 from .models import Member, ModelLink, Text
 from rest_framework import viewsets
-from rest_framework.decorators import action
-from config.celery import app
 from rest_framework.response import Response
 
 # Create your views here.
+celery = Celery('celery',
+             broker='amqp://tts:tts123@rabbit/tts_host',
+             backend='rpc://',
+             )
 
 # ViewSet : Post, Get, Put, Delete 기본기능 내장
 class MemberViewSet(viewsets.ModelViewSet):
@@ -26,13 +31,20 @@ class TextViewSet(viewsets.ModelViewSet):
     queryset = Text.objects.all()  
     serializer_class = TextSerializer
 
-    @app.task
-    def update(request, pk=None):
+    def update(self,request, pk=None):
         id = request.data['id']
         text = request.data['text']
         print(id, text)
+
+        try :
          
-        url = 'http://127.0.0.1:5000/api/texts'
-        params = {'id': id, 'text':text}
-        requests.post(url, data=params)
-        return Response(data=params)
+            url = 'http://0.0.0.0:5000/api/texts'
+            params = {'id': id, 'text':text}
+            requests.post(url, data=params)
+            return Response(data=params)
+        except:
+            time.sleep(2)
+            url = 'http://0.0.0.0:5000/api/texts'
+            params = {'id': id, 'text':text}
+            requests.post(url, data=params)
+            return Response(data=params)

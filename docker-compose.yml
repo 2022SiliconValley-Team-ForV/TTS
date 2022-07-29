@@ -105,8 +105,8 @@ services:
         - backend
 
   celery:
-    build:
-      context: ./backend/apiserver
+    platform: linux/amd64
+    build: ./backend/modelserver
       # dockerfile: Dockerfile
     # 컨테이너를 stop 시키기 전까지 항상 재시작
     restart: unless-stopped
@@ -115,13 +115,12 @@ services:
     #   - ./settings/.env
     depends_on:
       - rabbit
-      - apiserver
     # 가상 네트워크 연결
     networks:
       - tts
-    command: ["celery","-A", "rabbitcelery.celery", "worker", "--loglevel=info"]  
+    command: ["celery","-A", "simple_task", "worker", "--loglevel=info"]
     volumes:
-      - ./backend/apiserver:/backend/apiserver
+      - ./backend:/backend
 
 
 networks:

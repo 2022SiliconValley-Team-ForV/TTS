@@ -32,12 +32,14 @@ COPY requirements_air.txt .
 RUN pip install -r requirements.txt
 RUN pip install -r requirements_air.txt
 
+RUN pip install celery
 RUN pip install nltk==3.6.7
 RUN pip install konlpy==0.6.0
 RUN pip install mecab-ko==1.0.0
 RUN pip install mecab-python==1.0.0
 RUN pip install python-mecab-ko==1.0.14
 RUN pip install g2pk==0.9.4
+
 
 # mecab start
 # RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
@@ -51,3 +53,4 @@ ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
 
 COPY . .
+

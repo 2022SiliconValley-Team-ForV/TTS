@@ -10,15 +10,23 @@ cd /content/g2pK
 !pip install -q --no-cache-dir "konlpy" "jamo" "nltk" "python-mecab-ko"
 !pip install -q --no-cache-dir -e .
 '''
+from celery import Celery
 from flask import Flask, jsonify, request
 from importlib_metadata import method_cache
 import requests
 # from konlpy.tag import Mecab
 # import g2pk
 from flask_cors import CORS
+# from test_tasks import test
+from simple_task import add
+
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+celery = Celery('celery',
+             broker='amqp://tts:tts123@rabbit/tts_host',
+             backend='rpc://',
+             )
 
 # mecab = Mecab()
 # gp = g2pk.G2p()
@@ -37,6 +45,8 @@ def get_text():
         print(id)
         text = request.form['text']
         print(text)
+        a = add.delay(id, text)
+        print(a.id)
         return jsonify({"id": id})
         
     elif request.method == 'GET':
