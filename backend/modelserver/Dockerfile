@@ -25,14 +25,16 @@ WORKDIR /backend/modelserver
 
 # volumes로 로컬 ./ 경로랑 컨테이너 /app 경로랑 공유하는데 왜 copy가 필요한가..
 COPY requirements.txt .
-COPY requirements_air.txt .
+COPY requirements_TTS.txt .
 
 #RUN git clone --depth 1 https://github.com/sce-tts/TTS.git -b sce-tts
 
 RUN pip install -r requirements.txt
-RUN pip install -r requirements_air.txt
+RUN pip install -r requirements_TTS.txt
 
 RUN pip install celery
+RUN pip install google-cloud-storage
+
 RUN pip install nltk==3.6.7
 RUN pip install konlpy==0.6.0
 RUN pip install mecab-ko==1.0.0
