@@ -46,7 +46,7 @@ def get_text():
         print(id)
         text = params['text']
         print(text)
-        # a = add.delay(id, text)
+        a = add.delay(id, text)
         # print(a.id)
         return (params)
         

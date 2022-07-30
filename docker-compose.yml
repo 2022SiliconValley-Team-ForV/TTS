@@ -58,16 +58,16 @@ services:
     depends_on:
       - ttsmysql
 
-  modelserver:
-    platform: linux/amd64
-    build: ./backend/modelserver
-    command: flask run --host=0.0.0.0
-    ports:
-      - 5000:5000
-    volumes:
-      - ./backend/modelserver/:/backend/modelserver/
-    environment:
-      - FLASK_ENV=development
+  # modelserver:
+  #   platform: linux/amd64
+  #   build: ./backend/modelserver
+  #   command: flask run --host=0.0.0.0
+  #   ports:
+  #     - 5000:5000
+  #   volumes:
+  #     - ./backend/modelserver/:/backend/modelserver/
+  #   environment:
+  #     - FLASK_ENV=development
 
   ttsmysql:
     image: mysql
@@ -111,6 +111,8 @@ services:
     build: ./backend/modelserver
       # dockerfile: Dockerfile
     # 컨테이너를 stop 시키기 전까지 항상 재시작
+    ports:
+      - 5000:5000
     restart: unless-stopped
     # 환경변수 파일로 지정 - 아직 파일 안만들어서 주석처리함.  
     # env_file:
@@ -120,7 +122,9 @@ services:
     # 가상 네트워크 연결
     networks:
       - tts
-    command: ["celery","-A", "simple_task", "worker", "--loglevel=info"]
+    environment:
+      - FLASK_ENV=development
+    command: "flask run --host=0.0.0.0 && celery -A simple_task worker --loglevel=info"
     volumes:
       - ./backend:/backend
 
