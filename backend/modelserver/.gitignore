@@ -226,6 +226,45 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-voice_model/
+
 output/
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,flask
+voice_model/glow-tts/1/*.json
+voice_model/glow-tts/1/*.tar
+voice_model/glow-tts/1/*.config
+
+voice_model/glow-tts/2/*.json
+voice_model/glow-tts/2/*.tar
+voice_model/glow-tts/2/*.config
+
+voice_model/glow-tts/3/*.json
+voice_model/glow-tts/3/*.tar
+voice_model/glow-tts/3/*.config
+
+voice_model/glow-tts/4/*.json
+voice_model/glow-tts/4/*.tar
+voice_model/glow-tts/4/*.config
+
+voice_model/hifigan-v2/5/*.json
+voice_model/hifigan-v2/5/*.tar
+voice_model/hifigan-v2/5/*.config
+
+voice_model/hifigan-v2/1/*.json
+voice_model/hifigan-v2/1/*.tar
+voice_model/hifigan-v2/1/*.config
+
+voice_model/hifigan-v2/2/*.json
+voice_model/hifigan-v2/2/*.tar
+voice_model/hifigan-v2/2/*.config
+
+voice_model/hifigan-v2/3/*.json
+voice_model/hifigan-v2/3/*.tar
+voice_model/hifigan-v2/3/*.config
+
+voice_model/hifigan-v2/4/*.json
+voice_model/hifigan-v2/4/*.tar
+voice_model/hifigan-v2/4/*.config
+
+voice_model/hifigan-v2/5/*.json
+voice_model/hifigan-v2/5/*.tar
+voice_model/hifigan-v2/5/*.config
