@@ -124,7 +124,9 @@ services:
       - tts
     environment:
       - FLASK_ENV=development
-    command: "flask run --host=0.0.0.0 && celery -A simple_task worker --loglevel=info"
+    command: /bin/bash -c "
+      celery -A simple_task worker --loglevel=info && 
+      flask run --host=0.0.0.0"
     volumes:
       - ./backend:/backend
 

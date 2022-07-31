@@ -1,35 +1,17 @@
-'''
-cd /content
-!git clone --depth 1 https://github.com/sce-tts/TTS.git -b sce-tts
-!git clone --depth 1 https://github.com/sce-tts/g2pK.git
-
-cd /content/TTS
-!pip install -q --no-cache-dir -e .
-
-cd /content/g2pK
-!pip install -q --no-cache-dir "konlpy" "jamo" "nltk" "python-mecab-ko"
-!pip install -q --no-cache-dir -e .
-'''
 from celery import Celery
 from flask import Flask, jsonify, request
-from importlib_metadata import method_cache
-import requests
-# from konlpy.tag import Mecab
-# import g2pk
+
 from flask_cors import CORS
-# from test_tasks import test
 from simple_task import add
+import time
 
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
-celery = Celery('celery',
-             broker='amqp://tts:tts123@rabbit/tts_host',
-             backend='rpc://',
-             )
-
-# mecab = Mecab()
-# gp = g2pk.G2p()
+# # celery = Celery('celery',
+# #              broker='amqp://tts:tts123@rabbit/tts_host',
+# #              backend='rpc://',
+# #              )
 
 
 @app.route('/')
@@ -51,8 +33,10 @@ def get_text():
         return (params)
         
     elif request.method == 'GET':
-        
-        return('get')
+        a = add.delay(10, 20)
+        time.sleep(1)
+        result = a.get()
+        return {'task_id': a.id, 'task_status': a.ready(), 'task_result': result}
         
 
 # front에서 셀러리가 일을 다 했는지 확인 -> 주기적으로 flask에 요청을 보내면서 체크 (작업이 걸리는 시간을 고려해서 작업끝나기 30초 전부터 보낸다)
