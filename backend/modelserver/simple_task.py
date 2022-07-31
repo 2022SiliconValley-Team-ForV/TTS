@@ -1,9 +1,10 @@
 from celery_app import app
 
-
+print('start!')
 lst = []
 for i in range(3):
     lst.append(i)
+print('finished!')
 
 
 @app.task(name="add")

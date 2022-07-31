@@ -235,7 +235,7 @@ voice_model/glow-tts/1/*.npy
 
 voice_model/glow-tts/2/*.json
 voice_model/glow-tts/2/*.tar
-voice_model/glow-tts/2/*.config
+voice_model/glow-tts/2/*.npy
 
 voice_model/glow-tts/3/*.json
 voice_model/glow-tts/3/*.tar

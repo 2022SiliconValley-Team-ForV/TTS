@@ -2,13 +2,10 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 from test_tasks import test
+#from simple_task import add
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
-# # celery = Celery('celery',
-# #              broker='amqp://tts:tts123@rabbit/tts_host',
-# #              backend='rpc://',
-# #              )
 
 
 @app.route('/')
@@ -23,10 +20,12 @@ def get_text():
         id = params['id']
         text = params['text']
         a = test.delay(id, text)
+        #a = add.delay(id, text)
         return {'task_id': a.id, 'task_status': a.ready()}
         
     elif request.method == 'GET':
         a = test.delay(5, '안녕하세요.')
+        #a = add.delay(5, 15)
         return {'task_id': a.id, 'task_status': a.ready()}
         
 
