@@ -271,3 +271,4 @@ voice_model/hifigan-v2/5/*.npy
 
 TTS/
 micro-handler.json
+temp/

@@ -1,5 +1,3 @@
-from fileinput import filename
-
 from flask import jsonify
 from celery_app import app
 
@@ -40,11 +38,11 @@ bucket = storage_client.bucket(bucket_name)
 def test(uuid, id, text):
     count = 0
     for text in normalize_multiline_text(text, symbol):
-        wav_file = f'{uuid}_{id}sample_{count}.wav'
+        wav_file = f'{uuid}_{id}_sample_{count}.wav'
         wav = synthesizer.tts(text, None, None)
         synthesizer.save_wav(wav, f'./temp/{wav_file}')   # change wav to .wav file
         
         blob = bucket.blob(wav_file)
         blob.upload_from_filename(f'./temp/{wav_file}') # upload wav file to gcp bucket
         count+=1
-    return jsonify({'uuid': uuid, 'id': id, 'count': count})
+    return True #jsonify({'uuid': uuid, 'id': id, 'count': count})
