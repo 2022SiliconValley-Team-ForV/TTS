@@ -4,7 +4,6 @@ import Style from '../Styles/Header.module.css'
 
 function Header() {
 
-
   return (
     
     <div id={Style.wrap_logo}>

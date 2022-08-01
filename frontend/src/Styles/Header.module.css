@@ -10,6 +10,7 @@ hr{
 }
 
 .logo{
+    font-style: bold;
     margin: 10px 0px;
     font-family: space;
     font-size: 4rem;

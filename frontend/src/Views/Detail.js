@@ -2,10 +2,11 @@ import React,  { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import style from '../Styles/Detail.module.css';
 import axios from "axios";
-import Header from './Header'
+import Header from './Header';
+
+
 
 function Detail() {
-
   //loading 다 되면 setLoading에 false를 넣어서 보이게 해준다.
   const [loading, setLoading] = useState(true);
 
@@ -37,9 +38,12 @@ function Detail() {
   }
 
   //playbutton 이벤트
-  const onClick=(e)=>{
+  const onClick=(e)=>{ 
+    audio1.play();
     if(sentence==null || sentence ===""){
+     
       alert("문장을 적어주세요.");
+      
     }
     else{
       console.log(sentence);
@@ -53,6 +57,7 @@ function Detail() {
       .catch((error)=>{
         console.log(error);
       })
+
       axios.post(`http://127.0.0.1:5000/api/texts`, data)
       .then((response)=>{
         console.log(response);
@@ -60,6 +65,12 @@ function Detail() {
       })
     }
   }
+
+  //깃허브 링크 이동
+  const onClickGit=(e) =>{
+    window.open(`https://github.com/${getinfo.githubID}`, '_blank');
+  }
+
 
   return (
 
@@ -78,7 +89,7 @@ function Detail() {
             </div>
 
             <div className={style.info}> 
-           
+            
               <div className={style.deco}></div>  
               <div className={style.wrapinfo}>
                 <div className={style.info_name} style={{fontSize: '1.6rem', fontWeight:'bold'}}> 

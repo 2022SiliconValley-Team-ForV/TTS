@@ -10,40 +10,40 @@ hr{
 
 
 #wrap{
-  
+
     position:relative;
     width:1024px;
     height:100vh;
     margin: 0px auto;
-    min-height: 770px;
+    min-height:710px;
+    max-height: 710px;
     min-width: 280px;
 }
 
-#wrap_middle{
-    
+#wrap_middle{     
+    position:relative;
     flex-direction: column;
-    display:flex; 
-
+    display:flex; ;
     /* border: solid blue; */
     height:calc(100vh - 133px);
     /* position: relative; */
-    
+    align-items: center;
     /* display: inline-block; */
     /* height:77%; */
 }
 
 .profiles{
     width: 100%;
-   
+
     padding: 1.2rem auto; 
     display:flex; 
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top:18%;
-    margin-bottom:19%;
+    margin-top:6%;
+    margin-bottom:7%;
 }
-/*
+
 .tts{
      margin-top:4%;
     bottom:10%;
@@ -52,16 +52,13 @@ hr{
     text-align: center;
     margin-bottom: 6%;
 }
-
 .tts_text{
    
     bottom: 1rem;
     color:#2F2E6F;
     margin-bottom:0.8rem;
 }
-
 .tts_button{
-
     font-size: 17px;
     width: 300px;
     height: 60px;
@@ -69,13 +66,12 @@ hr{
     border-radius: 7px;
     color:white;  
 }
-*/
+
 #wrap_copyright{
- 
     bottom:50px;
-    /* border: solid purple; */
     width: 100%;
     font-size: 9px; 
+    
 
 }
 
@@ -84,8 +80,19 @@ hr{
     margin-left: 1rem;
 }
 
+.short{  
+    align-items: center;
+    justify-content: center;
+    display: flex;   
+    font-size: 15px;
+    color: #000000;
+}
 
 
+
+.long{
+    font-size: 10px;
+}
 @media screen and (min-width:1024px){
     /*PC 화면*/
     
@@ -99,6 +106,7 @@ hr{
 .short{
     display: none;
 }
+
 }
 
 @media screen and (min-width:768px) and (max-width:1023px){
@@ -109,29 +117,20 @@ hr{
      .profiles{
         padding-left: 1%;
         padding-right: 1%;
+        width: 90%;
+        margin-bottom:4%;
     }
     #wrap{
         width:100%;
         padding-bottom:1rem;
     }
-     #wrap_copyright{
-    
-        padding-left: 0%;
-         width: 100%;
-         font-size: 9px;
-         padding-bottom: 8%;
-         text-align: center;
    
-
-     }
     #wrap_middle{
         box-sizing: border-box;
         padding-bottom:2rem;
     }
     .tts{
         position:static;
-        margin-top:3rem;
-        padding-bottom: 5rem;
         /* bottom: 2rem; */
         transform: translate(0, 0);
     }
@@ -144,7 +143,16 @@ hr{
         display: none;
     
     }
+      #wrap_copyright{
     
+        padding-left: 0%;
+         width: 100%;
+         font-size: 9px;
+         padding-bottom: 8%;
+         text-align: center;
+   
+
+     }
 }
 
 @media screen and (max-width:767px){
@@ -161,16 +169,16 @@ hr{
         padding-bottom:2rem;
     }
     .tts{
-        display: none;
+     
         position:static;
         
         margin-top:3rem;
-        padding-bottom: 5rem;
+        padding-bottom: 2rem;
         /* bottom: 2rem; */
         transform: translate(0, 0);
     }
     .tts_button{
-        display: none;
+       
         width:270px;
     }
     
@@ -178,8 +186,8 @@ hr{
     text-align: center;
     width: 90%;
     font-size: 9px;
-    padding-bottom: 8%;
-    padding-left: 2%;
+    padding-bottom: 6%;
+    
     
    
 
