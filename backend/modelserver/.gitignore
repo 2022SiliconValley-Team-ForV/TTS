@@ -268,3 +268,6 @@ voice_model/hifigan-v2/4/*.npy
 voice_model/hifigan-v2/5/*.json
 voice_model/hifigan-v2/5/*.tar
 voice_model/hifigan-v2/5/*.npy
+
+TTS/
+micro-handler.json
