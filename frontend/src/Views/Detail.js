@@ -22,9 +22,6 @@ function Detail() {
 
   //사이트 :id에서 id값 가져오기
   let { id } = useParams([]);
-  
-  // uuid 넣는 곳
-  const [userid, setUserid]=useState();
 
   //url 한번만 부르기
   useEffect(()=>{
