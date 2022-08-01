@@ -15,7 +15,7 @@ function Main() {
 
   //url에서 데이터를 한번만 받아온다.
   useEffect(()=>{
-    axios.get("http://127.0.0.1:8000/api/members/")
+    axios.get("http://0.0.0.0:8000/api/members/")
     .then((response)=>{
       setMember([...response.data]);
     })

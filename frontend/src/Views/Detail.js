@@ -20,7 +20,7 @@ function Detail() {
 
   //url 한번만 부르기
   useEffect(()=>{
-    axios.get(`http://127.0.0.1:8000/api/members/${id}`)
+    axios.get(`http://0.0.0.0:8000/api/members/${id}/`)
     .then((response)=>{
       setGetinfo(response.data);
       setLoading(false);
@@ -38,14 +38,27 @@ function Detail() {
 
   //playbutton 이벤트
   const onClick=(e)=>{
-    //버튼 누르면 서버로 글씨 올리기 구현 해야함
     if(sentence==null || sentence ===""){
       alert("문장을 적어주세요.");
     }
     else{
       console.log(sentence);
+      // e.preventDefatul();
+      const data={id:`${id}`, text:sentence};
+      axios.put(`http://127.0.0.1:8000/api/texts/${id}/`, data)
+      .then((response)=>{
+        console.log(response);
+        console.log({id}, sentence);
+      })
+      .catch((error)=>{
+        console.log(error);
+      })
+      axios.post(`http://127.0.0.1:5000/api/texts`, data)
+      .then((response)=>{
+        console.log(response);
+        console.log({id}, sentence);
+      })
     }
-    
   }
 
   return (
