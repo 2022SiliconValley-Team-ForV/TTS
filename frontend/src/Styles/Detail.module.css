@@ -4,6 +4,12 @@
     width:1024px;
     height:100vh;
     margin: 0px auto;
+    min-width:1024px;
+    /* min-height: 770px; */
+    min-height:710px;
+    max-height: 710px;
+
+
 }
 
 .deco{
@@ -16,21 +22,22 @@
 }
 
 .position{
-   padding-top: 50pX;
-   padding-bottom: 18pX;
+    padding-top: 50px;
+    padding-bottom: 18px;
     height: 5%;
-    font-family:space;
+    font-family: 'YdestreetL';
     font-size:2.3rem;
 }
 
 #wrapdetail{
+    /* border:2px solid green; */
     display:flex;
     width: 100%;
     height: 65%;
 }
 
 .bigprofile{
-    /* border-style: solid; */
+    /* border: solid red; */
     text-align: center;
     display: flex;
     width: 50%;
@@ -46,34 +53,40 @@
     object-fit: cover;
 }
 
-.gitinfo{
+/* .gitinfo{
+    border: solid ;
     width: 100%;
     height: 86%;
-    border-color: aqua;
-    display:flex;
-}
+    /* border-color: aqua; 
+     display:flex; 
+}*/
 
 .info{
+    /* border: solid blue; */
+    position: relative;
+    
     align-items:center;
-    width: 50%;
+    width: 500px;
     height: 100%;
     font-size:1.1rem;
     margin-left:2rem;
 }
 
 .wrapinfo{
-    margin-top: 12%;
-    text-align: left;
+   
+    margin-top: 10%;
+    /* text-align: left; */
     margin-left: 12%;
-    width: 35%;
-    height: auto;
+    width: 75%;
+    height: fit-content;
 }
 
 .buttons{
-    display:inline-block;
-    width: 100%;
-    margin-top: 12%;
-    margin-left: 48%;
+    
+    /* display:inline-block; */
+    width: fit-content;
+    /* margin-top: 12%; */
+    /* margin-left: 48%; */
 }
 
 .botton{
@@ -85,21 +98,34 @@
     background-position: cover;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
 #github{
+    /* border: solid orange; */
+    float:right;
+    margin-top: 5px;
+    /* display: inline-block; */
     background-image: url(../Images/github48W.png);
+    font-size: 0;
 }
 
 .playbar{
+    /* border: brown solid; */
     position:absolute;
-    text-align: center;
+    /* text-align: center; */
     height:auto;
-    width:48%;  
+    /* bottom:0; */
+    transform: translate(-50%, 0);
+    width:75%;
+    bottom: -3px;
+    left: 50%;
+    
+    
 }
 
 .write{
-    width:70%;
+    width:calc(100% - 4rem);
     height:2rem;
     border-color:grey;
     border-width: 0.1rem;
@@ -109,6 +135,7 @@
 }
 
 .play{
+    float:right;
     position: relative;
     width: 2.5rem;
     height: 2.5rem;
@@ -116,12 +143,15 @@
     border-radius: 2rem;
     background-color: #2F2E6E;
     background-image: url(../Images/play40.png);
-    margin-left: 0.8rem;
-    top:0.75rem;
-    color:white;
+    bottom:1px;
+    font-size: 0;
+    /* margin-left: 0.8rem; */
+    /* top:1px; */
+    /* color:white; */
 }
 
 .space{
+    /* border:yellow solid; */
     display: none;
     width:100%;
     height:20%;
@@ -135,11 +165,9 @@
 @media screen and (max-width:1023px) and (min-width:768px){
     #wrap{
         width:100%;
-        height:150vh;
-    }
-        
-    body{
-        overflow-x: hidden;
+        height:100vh;
+        min-width:0px;
+        min-height: 930px;
     }
        
     .deco{
@@ -149,8 +177,6 @@
         
     .position{
         display: none;
-        margin-top: 6.8%;
-        height: 5%;   
     }
                 
     #wrapdetail{     
@@ -160,41 +186,31 @@
         margin-right: auto;
         width: 100%;
         height: 50%;
-            /* margin-top:rem; */
     }
         
     .bigprofile{
         width: 100%;
         height: 120%;
     }
-        
     .info{
-        width: 90%;
-        height: 30%;
+        /* border: solid blue; */
+        align-items:center;
+        width: calc(100% - 60px);
+        height: 75%;
+        font-size:1.1rem;
     }
-
     .wrapinfo{
-        margin-left: 10%;
-        margin-top: 15%;
+        /* border: solid violet; */
+        margin-top: 5%;
+        width: 75%;
+        height: fit-content;
     }
-
-    .buttons{
-        display:inline-block;
-        width: 100%;
-        margin-top: 16%;
-        margin-left: 60%;
-        /* margin-left: 5.5rem; */  
-    }
-
-    .write{
-        margin-bottom: 20px;  
-    }
-        
-    .playbar{   
-        margin-left: 8%;
+    .playbar{
+        /* border: brown solid; */
         height:auto;
-        width:100%;
-        margin-top: 18%; 
+        width:75%;
+        padding-bottom: 5%;
+        
     }
         
 }
@@ -202,11 +218,9 @@
 @media screen and (max-width:767px){
     #wrap{
         width:100%;
-        height:100%;
-    }
-        
-    body{
-        overflow-x: hidden;
+        height:100vh;
+        min-width:280px;
+        /* min-height: */
     }
        
     .deco{
@@ -215,8 +229,6 @@
   
     .position{
         display: none;
-        margin-top: 6.8%;
-        height: 5%;
     }
                 
     #wrapdetail{     
@@ -233,16 +245,24 @@
         width: 100%;
         height: 120%;
     }
-        
+     
     .info{
         font-size:0.96rem;
         width: 90%;
-        height: 30%;
+        height: 120%;
+        margin-top: 15%; 
+      
     }
 
     .wrapinfo{
-        margin-left: 10%;
-        margin-top: 15%;
+        /* border: solid violet; */
+        margin-top: 5%;
+        width: 75%;
+        height: fit-content;
+    }
+
+    .info_name{
+        font-size: 1.3rem;
     }
 
     .botton{
@@ -252,18 +272,37 @@
         margin-top: 15%;
     }
     
-    .playbar{  
+    .playbar{
+        /* border: brown solid; */
         height:auto;
-        width:90%;
+        width:75%;
+        margin: 6rem auto;
+        /* margin-bottom:2rem; */
+        /* bottom:1.5rem; */
+
     }
     
     .write{
+        width:calc(100% - 6px);
         margin-bottom: 20px;
+        height: 1.5rem;
+        font-size: 1rem;
     }
 
     .play{
-        width: 2.4rem;
-        height: 2.4rem;
+        /* position:relative; */
+        float:none;
+        background-image: none;
+        border-radius: 0.4rem;
+        font-size: 1rem;
+        color:white;
+        width: 150px;
+        height: 40px;
+        /* right:10px; */
+        transform: translate(-50%, 0);
+        top:-5px;
+        left:50%;
+        /* margin: 0 auto; */
     }
 
 }

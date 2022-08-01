@@ -1,12 +1,13 @@
 import React,  { useState,useEffect } from 'react'
-import { Link,useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import style from '../Styles/Detail.module.css';
 import axios from "axios";
 import Header from './Header'
 import { v4 as uuid } from 'uuid';
 
-function Detail() {
 
+
+function Detail() {
   //loading 다 되면 setLoading에 false를 넣어서 보이게 해준다.
   const [loading, setLoading] = useState(true);
 
@@ -24,7 +25,7 @@ function Detail() {
 
   //url 한번만 부르기
   useEffect(()=>{
-    axios.get(`http://0.0.0.0:8000/api/members/${id}/`)
+    axios.get(`http://127.0.0.1:8000/api/members/${id}`)
     .then((response)=>{
       setGetinfo(response.data);
       setLoading(false);
@@ -42,9 +43,12 @@ function Detail() {
   }
 
   //playbutton 이벤트
-  const onClick=(e)=>{
+  const onClick=(e)=>{ 
+    audio1.play();
     if(sentence==null || sentence ===""){
+     
       alert("문장을 적어주세요.");
+      
     }
     else{
       console.log(sentence);
@@ -58,6 +62,7 @@ function Detail() {
       .catch((error)=>{
         console.log(error);
       })
+
       axios.post(`http://127.0.0.1:5000/api/texts`, data)
       .then((response)=>{
         console.log(response);
@@ -66,15 +71,19 @@ function Detail() {
     }
   }
 
+  //깃허브 링크 이동
+  const onClickGit=(e) =>{
+    window.open(`https://github.com/${getinfo.githubID}`, '_blank');
+  }
+
+
   return (
 
     <div>
       {loading ? <></>:
       <div id={style.wrap}>
-        <Link to="/" style={{textDecoration:'none'}}>
-          <Header/>
-        </Link>
-      
+    
+        <Header/>
 
         <div id={style.profilewrap}>
           <div class={style.position}>FRONTEND</div>
@@ -85,27 +94,27 @@ function Detail() {
             </div>
 
             <div className={style.info}> 
-           
+            
               <div className={style.deco}></div>  
-              <div className={style.gitinfo}>
-                <div className={style.wrapinfo}>
-                  <div style={{fontSize: '1.6rem', fontWeight:'bold'}}>{getinfo.name}</div>
-                  <br/>
-                  <div>{getinfo.birth}</div>
-                  <div>{getinfo.tmi}.</div> 
-                </div> 
-
-                <div class={style.buttons}>
-                  <button id={style.github} className={style.botton}></button>
+              <div className={style.wrapinfo}>
+                <div className={style.info_name} style={{fontSize: '1.6rem', fontWeight:'bold'}}> 
+                    {getinfo.name} 
+                    <button onClick={onClickGit} id={style.github} className={style.botton}></button>
+                   
                 </div>
-              </div>
+                <div>{getinfo.birth}</div>
+                <br/>
+                <br/>
+                  
+                <div className={style.tmi_txt} style={{wordBreak:"keep-all"}}>{getinfo.tmi}.</div> 
+              </div> 
               
                
 
               <div className={style.playbar}>
                 <input placeholder=" 적고 싶은 말을 적으세요" className={style.write}
                   onChange={onChange}></input>
-                <button onClick={onClick} className={style.play}></button>
+                <button onClick={onClick} className={style.play}>play</button>
               </div>
                
                 

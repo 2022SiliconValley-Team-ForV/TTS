@@ -1,11 +1,24 @@
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+'''
+cd /content
+!git clone --depth 1 https://github.com/sce-tts/TTS.git -b sce-tts
+!git clone --depth 1 https://github.com/sce-tts/g2pK.git
 
-#from test_tasks import test
-#from simple_task import add
+cd /content/TTS
+!pip install -q --no-cache-dir -e .
+
+cd /content/g2pK
+!pip install -q --no-cache-dir "konlpy" "jamo" "nltk" "python-mecab-ko"
+!pip install -q --no-cache-dir -e .
+'''
+from flask import Flask, request
+from konlpy.tag import Mecab
+import g2pk
+
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+
+mecab = Mecab()
+gp = g2pk.G2p()
 
 
 @app.route('/')

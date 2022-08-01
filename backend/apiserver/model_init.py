@@ -18,13 +18,22 @@ for i in range(1,6):
     i = str(i)
     save_path = '../modelserver/voice_model/glow-tts/' + i   # 다운받을 파일을 저장할 경로
     modellink = ModelLink.objects.get(id=i)
+    
+    # glow 경로
+    locals()[str(i)+'g_pth_'] = modellink.glow_pth
+    locals()[str(i)+'g_config_'] = modellink.glow_config
+    locals()[str(i)+'g_scale_stats_'] = modellink.glow_scale_stats
 
-    filedownload(modellink.glow_pth, modellink.glow_config, modellink.glow_scale_stats, save_path)
+    filedownload(locals()[str(i)+'g_pth_'], locals()[str(i)+'g_config_'], locals()[str(i)+'g_scale_stats_'], save_path)
 
     # hifi 경로
     save_path = '../modelserver/voice_model/hifigan-v2/' + i    # 다운받을 파일을 저장할 경로
 
-    filedownload(modellink.hifi_pth, modellink.hifi_config, modellink.hifi_scale_stats, save_path)
+    locals()[str(i)+'h_pth_'] = modellink.hifi_pth
+    locals()[str(i)+'h_config_'] = modellink.hifi_config
+    locals()[str(i)+'h_scale_stats_'] = modellink.hifi_scale_stats
+   
+    filedownload(locals()[str(i)+'h_pth_'], locals()[str(i)+'h_config_'], locals()[str(i)+'h_scale_stats_'], save_path)
 
     
     
