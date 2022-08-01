@@ -1,24 +1,11 @@
-'''
-cd /content
-!git clone --depth 1 https://github.com/sce-tts/TTS.git -b sce-tts
-!git clone --depth 1 https://github.com/sce-tts/g2pK.git
+from flask import Flask, jsonify, request
+from flask_cors import CORS
 
-cd /content/TTS
-!pip install -q --no-cache-dir -e .
-
-cd /content/g2pK
-!pip install -q --no-cache-dir "konlpy" "jamo" "nltk" "python-mecab-ko"
-!pip install -q --no-cache-dir -e .
-'''
-from flask import Flask, request
-from konlpy.tag import Mecab
-import g2pk
-
+#from test_tasks import test
+#from simple_task import add
 
 app = Flask(__name__)
-
-mecab = Mecab()
-gp = g2pk.G2p()
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
 @app.route('/')
@@ -52,3 +39,4 @@ def get_text():
         
 
 # front에서 셀러리가 일을 다 했는지 확인 -> 주기적으로 flask에 요청을 보내면서 체크 (작업이 걸리는 시간을 고려해서 작업끝나기 30초 전부터 보낸다)
+

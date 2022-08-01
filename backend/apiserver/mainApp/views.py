@@ -20,3 +20,18 @@ class ModelLinkViewSet(viewsets.ModelViewSet):
 class TextViewSet(viewsets.ModelViewSet):
     queryset = Text.objects.all()  
     serializer_class = TextSerializer
+
+    # def update(self,request, pk=None):
+    #     id = request.data['id']
+    #     text = request.data['text']
+    #     # print(id, text)
+
+        # try :
+            
+        #     url = 'http://172.20.0.2:5000/api/texts'
+        #     params = {'id': id, 'text':text}
+        #     print(id, text)
+        #     requests.post(url, json=params)
+        #     return requests.Response
+        # except:
+        #     print('except')

@@ -2,7 +2,7 @@ import React,  { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import style from '../Styles/Detail.module.css';
 import axios from "axios";
-import Header from './Header'
+import Header from './Header';
 import { v4 as uuid } from 'uuid';
 
 
@@ -36,6 +36,9 @@ function Detail() {
     });
   },[])
 
+  // uuid 가져오기
+  useEffect(()=>{setUserid(uuid());}, []);
+
   //input 태그에 적힌 글 sentence에 저장
   const onChange=(e)=>{
     const value=e.target.value
@@ -44,9 +47,9 @@ function Detail() {
 
   //playbutton 이벤트
   const onClick=(e)=>{ 
-    audio1.play();
+    // audio1.play();
     if(sentence==null || sentence ===""){
-     
+      
       alert("문장을 적어주세요.");
       
     }
@@ -54,10 +57,12 @@ function Detail() {
       console.log(sentence);
       // e.preventDefatul();
       const data={uuid: userid, member_id:`${id}`, text:sentence};
-      axios.put(`http://127.0.0.1:8000/api/texts/${id}/`, data)
+      axios.post(`http://127.0.0.1:8000/api/texts/${id}/`, data)
+
       .then((response)=>{
         console.log(response);
         console.log({id}, sentence);
+        console.log({userid})
       })
       .catch((error)=>{
         console.log(error);

@@ -90,6 +90,7 @@ services:
     networks:
       - tts
     environment:
+      - FLASK_APP=app
       - FLASK_ENV=development
     command: flask run --host=0.0.0.0
     volumes:
