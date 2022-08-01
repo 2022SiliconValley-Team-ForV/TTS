@@ -17,8 +17,11 @@ symbol = synthesizer.tts_config.characters.characters  # normalize_text가 호�
 print('synthesizer finished!')
 
 @app.task(name="test")
-def test(id, txt):
+def test(id, text):
     count = 0
+    txt="""
+    안녕하세요.
+    """
     for text in normalize_multiline_text(txt, symbol):
         wav = synthesizer.tts(text, None, None)
         #synthesizer.save_wav(wav, f'./{id}sample_{count}.wav')   # change wav to .wav file

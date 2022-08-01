@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from test_tasks import test
+#from test_tasks import test
 #from simple_task import add
 
 app = Flask(__name__)
@@ -15,6 +15,7 @@ def hello_world():
 
 @app.route('/api/texts', methods = ['POST','GET'])
 def get_text():
+    from test_tasks import test
     if request.method == 'POST':
         params = request.get_json()
         id = params['id']
@@ -24,7 +25,10 @@ def get_text():
         return {'task_id': a.id, 'task_status': a.ready()}
         
     elif request.method == 'GET':
-        a = test.delay(5, '안녕하세요.')
+        txt = """
+        안녕하세요.
+        """
+        a = test.delay(5, txt)
         #a = add.delay(5, 15)
         return {'task_id': a.id, 'task_status': a.ready()}
         
