@@ -18,12 +18,7 @@ print('synthesizer finished!')
 
 @app.task(name="test")
 def test(id, txt):
-    print('main test')
     count = 0
-    txt = """
-    안녕하세요.
-    반갑습니다.
-    """
     for text in normalize_multiline_text(txt, symbol):
         wav = synthesizer.tts(text, None, None)
         #synthesizer.save_wav(wav, f'./{id}sample_{count}.wav')   # change wav to .wav file
