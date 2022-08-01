@@ -2,7 +2,8 @@ import React,  { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import style from '../Styles/Detail.module.css';
 import axios from "axios";
-import Header from './Header';
+import Header from './Header'
+import { v4 as uuid } from 'uuid';
 
 
 
@@ -16,6 +17,9 @@ function Detail() {
   // id값 받아서 DB에서 가져온 데이터 넣는곳
   const [getinfo, setGetinfo]=useState([]);
 
+  // uuid값 저장
+  const [userid, setUserid]=useState();
+
   //사이트 :id에서 id값 가져오기
   let { id } = useParams([]);
 
@@ -25,6 +29,7 @@ function Detail() {
     .then((response)=>{
       setGetinfo(response.data);
       setLoading(false);
+      setUserid(uuid());
     })
     .catch(function(error){
       console.log(error);
@@ -48,7 +53,7 @@ function Detail() {
     else{
       console.log(sentence);
       // e.preventDefatul();
-      const data={id:`${id}`, text:sentence};
+      const data={uuid: userid, member_id:`${id}`, text:sentence};
       axios.put(`http://127.0.0.1:8000/api/texts/${id}/`, data)
       .then((response)=>{
         console.log(response);
