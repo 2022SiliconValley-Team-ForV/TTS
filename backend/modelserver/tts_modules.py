@@ -1,16 +1,9 @@
-import os
-import sys
-from pathlib import Path
-
 import re
-import sys
 from unicodedata import normalize
 
 from TTS.TTS.utils.synthesizer import Synthesizer
 
-from konlpy.tag import Mecab
 import g2pk
-
 
 g2p = g2pk.G2p()
 
@@ -166,9 +159,9 @@ def jamo_text(text):
     return text
 
 
-def normalize_multiline_text(long_text):
+def normalize_multiline_text(long_text, symbol):
     texts = split_text(long_text)
-    normalized_texts = [normalize_text(text).strip() for text in texts]
+    normalized_texts = [normalize_text(text, symbol).strip() for text in texts]
     return [text for text in normalized_texts if len(text) > 0]
 
 def synthesize(syn, text):   # return wavs

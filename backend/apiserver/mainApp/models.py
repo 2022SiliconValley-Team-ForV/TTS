@@ -25,7 +25,8 @@ class ModelLink(models.Model):
     # updated_at = models.DateTimeField(auto_now=True) # 해당 레코드 갱신시 현재 시간 자동저장
 
 class Text(models.Model):
-    id = models.OneToOneField(Member, primary_key=True, on_delete=models.CASCADE, db_column="id")
+    member_id = models.ForeignKey(Member, on_delete=models.CASCADE)
+    uuid = models.CharField(max_length=100, default='')
     text = models.CharField(max_length=100, default='')
     # created_at = models.DateTimeField(default=datetime.now) # 해당 레코드 생성시 현재 시간 자동저장
     # updated_at = models.DateTimeField(auto_now=True) # 해당 레코드 갱신시 현재 시간 자동저장

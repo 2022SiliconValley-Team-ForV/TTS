@@ -38,11 +38,17 @@ bucket = storage_client.bucket(bucket_name)
 def test(uuid, id, text):
     count = 0
     for text in normalize_multiline_text(text, symbol):
-        wav_file = f'{uuid}_{id}_sample_{count}.wav'
+        wav_file = f'{id}_{uuid}_voice_{count}.wav'
+        wav_path = f'./temp/{wav_file}'
+
         wav = synthesizer.tts(text, None, None)
-        synthesizer.save_wav(wav, f'./temp/{wav_file}')   # change wav to .wav file
+        synthesizer.save_wav(wav, wav_path)   # change wav to .wav file
         
         blob = bucket.blob(wav_file)
-        blob.upload_from_filename(f'./temp/{wav_file}') # upload wav file to gcp bucket
+        blob.upload_from_filename(wav_path) # upload wav file to gcp bucket
+
+        if os.path.isfile(wav_path):
+            os.remove(wav_path)
+
         count+=1
     return True #jsonify({'uuid': uuid, 'id': id, 'count': count})
