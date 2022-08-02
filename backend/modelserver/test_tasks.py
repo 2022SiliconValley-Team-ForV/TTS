@@ -36,8 +36,8 @@ bucket = storage_client.bucket(bucket_name)
 ############################################################################################################
 @app.task(name="test")
 def test(uuid, member_id, text, create_at):
-    wav_file = f'{member_id}_{uuid}_{create_at}_voice.wav'
-    wav_path = f'./temp/{wav_file}'
+    wav_file = f'wav_files/{member_id}/{uuid}_{create_at}_voice.wav'
+    wav_path = f'./temp/{member_id}_{uuid}_{create_at}_voice.wav'
     n_text = normalize_text(text, symbol)
     
     wav = synthesizer.tts(n_text, None, None)
