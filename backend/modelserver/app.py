@@ -39,9 +39,9 @@ def get_text():
     #     uuid = '302db29c-d0e2-11e5-bb4c-60f81dca7676'
     #     member_id = '5'
     #     text = '안녕하세요? 저희는 for voice 팀입니다!'
-    #     create_at = '2022-08-02-18-44-33'
+    #     created_at = '2022-08-02-18-44-33'
 
-    #     a = test.delay(uuid, member_id, text, create_at)
+    #     a = test.delay(uuid, member_id, text, created_at)
         
     #     while True:
     #         if a.ready() == False:
