@@ -134,7 +134,7 @@
     font-family: apple;
 }
 
-.play{
+.send{
     float:right;
     position: relative;
     width: 2.5rem;
@@ -142,20 +142,44 @@
     border:none;
     border-radius: 2rem;
     background-color: #2F2E6E;
-    background-image: url(../Images/play40.png);
+    background-image: url(../Images/sent40.png);
     bottom:1px;
     font-size: 0;
+    display:inline-block;
     /* margin-left: 0.8rem; */
     /* top:1px; */
     /* color:white; */
 }
 
-.space{
-    /* border:yellow solid; */
-    display: none;
-    width:100%;
-    height:20%;
+.play_wrap{
+    position:relative;
+    
 }
+.playbutton{
+    position:absolute;
+    /* display: none; */
+    background-color: #2F2E6E;
+    background-image: url(../Images/play40.png);
+    border:none;
+    color:white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    font-size: 0rem;
+    margin-left:1rem;
+    bottom:1px;
+}
+/* .playbutton{
+    display: inline;
+    background-color: #2F2E6E;
+    border:none;
+    color:white;
+    width: 150px;
+    height: 40px;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+} */
+
 
 /*@media screen and (min-width:1024px){
     PC 화면
@@ -289,7 +313,7 @@
         font-size: 1rem;
     }
 
-    .play{
+    .send{
         /* position:relative; */
         float:none;
         background-image: none;
