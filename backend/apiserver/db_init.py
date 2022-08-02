@@ -11,11 +11,11 @@ django.setup()
 
 from mainApp.models import *
 
-a = Member(id=1, name='구지혜', birth='2022/07/16', tmi='휴학생', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
-b = Member(id=2, name='김혜진', birth='2022/07/16', tmi='복학생', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
-c = Member(id=3, name='배준일', birth='2022/07/16', tmi='4학년', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
-d = Member(id=4, name='이수현', birth='2022/07/16', tmi='AI 부전공', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
-e = Member(id=5, name='최준혁', birth='2022/07/16', tmi='sample 목소리 주인', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
+a = Member(id=1, name='구지혜', birth='2001/10/30', tmi='미적 감각이 뛰어난 프론트엔드 개발자', position='FRONTEND', github_link='https://github.com/jihye9549', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
+b = Member(id=2, name='김혜진', birth='2000/02/17', tmi='개발에 집중하기 위해 "M2" Mac까지 섭렵한 프론트엔드 개발자', position='FRONTEND', github_link='https://github.com/llmeajinll', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
+c = Member(id=3, name='배준일', birth='1998/03/15', tmi='안되면 될때까지 최선을 다해 이해하려고 노력하는 백엔드 개발자', position='BACKEND & DevOps', github_link='https://github.com/bjo6300',image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
+d = Member(id=4, name='이수현', birth='1999/09/21', tmi='코딩을 하기 위해 새벽 5시에 Zoom에 접속하는 DevOps 개발자', position='DevOps', github_link='https://github.com/suhyeon3484', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
+e = Member(id=5, name='최준혁', birth='1997/06/22', tmi='처음 접하는 프레임워크도 꼼꼼히 분석하는 백엔드 개발자', position='BACKEND & AI', github_link='https://github.com/hi-june', image_link='http://storage.googleapis.com/forv_bucket/seulgi_sample.jpeg')
 
 a.save()
 b.save()
