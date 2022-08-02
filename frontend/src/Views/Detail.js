@@ -57,7 +57,7 @@ function Detail() {
       console.log(sentence);
       // e.preventDefatul();
       const data={uuid: userid, member_id:`${id}`, text:sentence};
-      axios.post(`http://127.0.0.1:8000/api/texts/${id}/`, data)
+      axios.post(`http://127.0.0.1:8000/api/texts/`, data)
 
       .then((response)=>{
         console.log(response);

@@ -1,11 +1,14 @@
+from email import message
+import time
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import requests
 
 #from test_tasks import test
 #from simple_task import add
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 @app.route('/')
@@ -24,8 +27,19 @@ def get_text():
         text = params['text']
         
         a = test.delay(uuid, member_id, text)
-        #a = add.delay(id, text)
-        return {'task_id': a.id, 'task_status': a.ready()}
+
+        while True:
+            if a.ready() == False:
+                time.sleep(5)
+                continue
+            else:
+                # 프론트에 완료됐다고 전달
+                # url =f'http://127.0.0.1:3000/detail/{member_id}'
+                message = {'uuid': uuid, 'id': member_id}
+                # requests.post(url, message)
+                return message
+                
+        
         
     elif request.method == 'GET':
         txt = """
