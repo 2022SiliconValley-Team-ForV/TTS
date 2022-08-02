@@ -1,8 +1,6 @@
 import re
 from unicodedata import normalize
 
-from TTS.TTS.utils.synthesizer import Synthesizer
-
 import g2pk
 
 g2p = g2pk.G2p()

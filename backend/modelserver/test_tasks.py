@@ -4,7 +4,7 @@ from celery_app import app
 import os
 from google.cloud import storage
 
-from tts_modules import normalize_multiline_text
+from tts_modules import normalize_text
 from TTS.TTS.utils.synthesizer import Synthesizer
 
 ############################################################################################################
@@ -35,20 +35,18 @@ bucket = storage_client.bucket(bucket_name)
 
 ############################################################################################################
 @app.task(name="test")
-def test(uuid, id, text):
-    count = 0
-    for text in normalize_multiline_text(text, symbol):
-        wav_file = f'{id}_{uuid}_voice_{count}.wav'
-        wav_path = f'./temp/{wav_file}'
+def test(uuid, member_id, text, create_at):
+    wav_file = f'{member_id}_{uuid}_{create_at}_voice.wav'
+    wav_path = f'./temp/{wav_file}'
+    n_text = normalize_text(text, symbol)
+    
+    wav = synthesizer.tts(n_text, None, None)
+    synthesizer.save_wav(wav, wav_path)   # change wav to .wav file
+    
+    blob = bucket.blob(wav_file)
+    blob.upload_from_filename(wav_path) # upload wav file to gcp bucket
 
-        wav = synthesizer.tts(text, None, None)
-        synthesizer.save_wav(wav, wav_path)   # change wav to .wav file
-        
-        blob = bucket.blob(wav_file)
-        blob.upload_from_filename(wav_path) # upload wav file to gcp bucket
+    if os.path.isfile(wav_path):
+        os.remove(wav_path)
 
-        if os.path.isfile(wav_path):
-            os.remove(wav_path)
-
-        count+=1
-    return True #jsonify({'uuid': uuid, 'id': id, 'count': count})
+    return True

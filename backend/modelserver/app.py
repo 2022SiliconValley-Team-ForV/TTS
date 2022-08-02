@@ -1,8 +1,6 @@
-from email import message
 import time
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-import requests
 
 #from test_tasks import test
 #from simple_task import add
@@ -25,32 +23,30 @@ def get_text():
         uuid = params['uuid']
         member_id = params['member_id']
         text = params['text']
+        create_at = '2022-08-02-18-44-33'#params['create_at']
         
-        a = test.delay(uuid, member_id, text)
+        a = test.delay(uuid, member_id, text, create_at)
 
         while True:
             if a.ready() == False:
                 time.sleep(5)
                 continue
             else:
-                # 프론트에 완료됐다고 전달
-                # url =f'http://127.0.0.1:3000/detail/{member_id}'
-                message = {'uuid': uuid, 'id': member_id}
-                # requests.post(url, message)
-                return message
+                return {'uuid': uuid, 'member_id': member_id, 'create_at': create_at}
                 
+    elif request.method == 'GET':   # 이 부분은 테스트용입니다. 필요 없으시면 주석 처리하시고 쓰시면 됩니다!
         
-        
-    elif request.method == 'GET':
-        txt = """
-        안녕하세요.
-        반갑습니다.
-        """
-        uuid = '022db29c-d0e2-11e5-bb4c-60f81dca7676'
-        a = test.delay(uuid, 5, txt)
-        #a = add.delay(5, 15)
-        return {'task_id': a.id, 'task_status': a.ready()}
-        
+        uuid = '302db29c-d0e2-11e5-bb4c-60f81dca7676'
+        member_id = '5'
+        text = '안녕하세요? 저희는 for voice 팀입니다!'
+        create_at = '2022-08-02-18-44-33'
 
-# front에서 셀러리가 일을 다 했는지 확인 -> 주기적으로 flask에 요청을 보내면서 체크 (작업이 걸리는 시간을 고려해서 작업끝나기 30초 전부터 보낸다)
+        a = test.delay(uuid, member_id, text, create_at)
+        
+        while True:
+            if a.ready() == False:
+                time.sleep(5)
+                continue
+            else:
+                return {'uuid': uuid, 'id': member_id}
 
