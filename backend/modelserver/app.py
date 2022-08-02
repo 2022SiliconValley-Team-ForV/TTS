@@ -23,30 +23,30 @@ def get_text():
         uuid = params['uuid']
         member_id = params['member_id']
         text = params['text']
-        create_at = '2022-08-02-18-44-33'#params['create_at']
+        created_at = params['created_at']
         
-        a = test.delay(uuid, member_id, text, create_at)
+        a = test.delay(uuid, member_id, text, created_at)
 
         while True:
             if a.ready() == False:
                 time.sleep(5)
                 continue
             else:
-                return {'uuid': uuid, 'member_id': member_id, 'create_at': create_at}
+                return {'uuid': uuid, 'member_id': member_id, 'created_at': created_at}
                 
-    elif request.method == 'GET':   # 이 부분은 테스트용입니다. 필요 없으시면 주석 처리하시고 쓰시면 됩니다!
+    # elif request.method == 'GET':   # 이 부분은 테스트용입니다. 필요 없으시면 주석 처리하시고 쓰시면 됩니다!
         
-        uuid = '302db29c-d0e2-11e5-bb4c-60f81dca7676'
-        member_id = '5'
-        text = '안녕하세요? 저희는 for voice 팀입니다!'
-        create_at = '2022-08-02-18-44-33'
+    #     uuid = '302db29c-d0e2-11e5-bb4c-60f81dca7676'
+    #     member_id = '5'
+    #     text = '안녕하세요? 저희는 for voice 팀입니다!'
+    #     create_at = '2022-08-02-18-44-33'
 
-        a = test.delay(uuid, member_id, text, create_at)
+    #     a = test.delay(uuid, member_id, text, create_at)
         
-        while True:
-            if a.ready() == False:
-                time.sleep(5)
-                continue
-            else:
-                return {'uuid': uuid, 'id': member_id}
+    #     while True:
+    #         if a.ready() == False:
+    #             time.sleep(5)
+    #             continue
+    #         else:
+    #             return {'uuid': uuid, 'id': member_id}
 

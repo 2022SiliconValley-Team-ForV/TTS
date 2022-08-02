@@ -76,7 +76,7 @@ function Detail() {
       
       console.log(sentence, date);
       // const data={uuid: userid, member_id:`${id}`, text:sentence};
-      const data={uuid: userid, member_id:`${id}`, text:sentence, create_at:date};
+      const data={uuid: userid, member_id:`${id}`, text:sentence, created_at:date};
       
       axios.post(`http://127.0.0.1:8000/api/texts/`, data)
       .then((response)=>{
@@ -91,7 +91,7 @@ function Detail() {
       .then((response)=>{
         console.log(response);
         console.log(data);
-        setGeturl(`https://storage.googleapis.com/forv_bucket/wav_files/${response.data.member_id}/${response.data.uuid}_${response.data.create_at}_voice.wav`);
+        setGeturl(`https://storage.googleapis.com/forv_bucket/wav_files/${response.data.member_id}/${response.data.uuid}_${response.data.created_at}_voice.wav`);
         alert("변환이 완료되었습니다.");
         showPlay();
         
@@ -152,7 +152,6 @@ function Detail() {
               <div className={style.playbar}>
                 <input placeholder=" 적고 싶은 말을 적으세요" className={style.write}
                   onChange={onChange}></input>
-                <input type="button" placeholder="x"></input>
                 <button onClick={onClick} className={style.send}>send</button>
                 <button className={style.playbutton} onClick={onClickplay}>play</button>
               </div>
