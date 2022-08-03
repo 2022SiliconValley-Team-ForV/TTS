@@ -46,7 +46,30 @@
 - <b>Team Collaboration Tool</b>    
   <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/notion-0052CC?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/slack-D24939?style=for-the-badge&logo=slack&logoColor=white">
 
+<hr>
+
 ## 4. 실행 방법
+
+```txt
+git clone/download zip으로 파일을 다운받는다. 
+```
+```txt
+TTS/backend/apiserver/config에 **my_settings.py**를 생성하고 넣는다.
+```
+```txt
+TTS/backend/apiserver에 mnesia파일을 넣는다.
+```
+```txt
+TTS/backend/modelserver/voice_model의 **glow-tts, hifigan-v2** 각각에 **checkoutpoint.pth.tar, config.json, scale_stats.npy**파일을 넣어준다.
+```
+```txt
+TTS/front 터미널에서 **npm install**을 해준다.
+```
+```txt
+터미널에서 **docker compose up --build**을 한다.
+```
+
+<hr>
 
 ## 5. database
 ![image](https://user-images.githubusercontent.com/70627982/182619271-eba06844-0b6e-4861-8e7d-76645acf0fd0.png)
@@ -61,7 +84,61 @@
 
 ## 7. 파일 구조
 
-
+```txt
+TTS
+├── LICENSE
+├── README.md
+├── backend
+│   ├── apiserver
+│   │   ├── Dockerfile
+│   │   ├── README.md
+│   │   ├── config
+│   │   ├── db_init.py
+│   │   ├── erl_crash.dump
+│   │   ├── mainApp
+│   │   ├── manage.py
+│   │   ├── model_init.py
+│   │   ├── requirements.txt
+│   │   └── wait-for-mysql.sh
+│   └── modelserver
+│       ├── Dockerfile
+│       ├── README.md
+│       ├── TTS
+│       ├── app.py
+│       ├── celery_app.py
+│       ├── micro-handler.json
+│       ├── requirements.txt
+│       ├── requirements_TTS.txt
+│       ├── simple_task.py
+│       ├── temp
+│       ├── test_tasks.py
+│       ├── tts_modules.py
+│       └── voice_model
+├── docker-compose.yml
+└── frontend
+    ├── Dockerfile
+    ├── README.md
+    ├── package.json
+    ├── public
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
+    └── src
+        ├── App.css
+        ├── App.js
+        ├── Font
+        ├── Images
+        ├── Styles
+        ├── Views
+        ├── index.css
+        ├── index.js
+        ├── reportWebVitals.js
+        ├── reset.css
+        └── setupTests.js"
+```
 <hr>
 
 ## 8. 팀원
