@@ -26,6 +26,7 @@
 <hr>
 
 ## 3. database
+![image](https://user-images.githubusercontent.com/70627982/182619271-eba06844-0b6e-4861-8e7d-76645acf0fd0.png)
 
 <hr>
 
