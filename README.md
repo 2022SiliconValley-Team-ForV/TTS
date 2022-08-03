@@ -27,23 +27,23 @@
 <hr>
 
 ## 3. 기술 스택
-- Front-End    
+- <b>Front-End</b>  
   <img src="https://img.shields.io/badge/react-02569B?style=for-the-badge&logo=react&logoColor=white">
   
-- Back-End  
+- <b>Back-End</b>  
 <img src="https://img.shields.io/badge/django-007396?style=for-the-badge&logo=django&logoColor=white"> <img src="https://img.shields.io/badge/flask-6DB33F?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/celery-000000?style=for-the-badge&logo=celery&logoColor=white"> <img src="https://img.shields.io/badge/rabbitmq-FF6F00?style=for-the-badge&logo=rabbitmq&logoColor=white">
 
-- DevOps    
+- <b>DevOps</b>    
   <img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <!-- <img src="https://img.shields.io/badge/aws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> -->
 
 
-- AI (Tools, Env)    
+- <b>AI (Tools, Env)</b>    
   <img src="https://img.shields.io/badge/colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white"> <img src="https://img.shields.io/badge/pytorch-F7931E?style=for-the-badge&logo=pytorch&logoColor=white">  
   
-- UI/UX, MockUp Design    
+- <b>UI/UX, MockUp Design </b>    
   <img src="https://img.shields.io/badge/figma-34A7C1?style=for-the-badge&logo=figma&logoColor=white"> <img src="https://img.shields.io/badge/zeplin-31A8FF?style=for-the-badge&logo=zeplin&logoColor=white"> 
   
-- Team Collaboration Tool    
+- <b>Team Collaboration Tool</b>    
   <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/notion-0052CC?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/slack-D24939?style=for-the-badge&logo=slack&logoColor=white">
 
 ## 4. 실행 방법
