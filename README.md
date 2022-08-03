@@ -37,11 +37,70 @@
 <hr>
 
 ## 5. 실행 방법
-
+git clone/download zip으로 파일을 다운받는다.
+TTS/backend/apiserver/config에 my_settings.py를 넣는다.
+TTS/backend/apiserver에 mnesia파일을 넣는다.
+TTS/backend/modelserver/voice_model의 glow-tts, hifigan-v2 각각에 checkoutpoint.pth.tar, config.json, scale_stats.npy파일을 넣어준다.
+npm install
+docker compose up --build
 <hr>
 
 ## 6. 파일 구조
-
+```txt
+TTS
+├── LICENSE
+├── README.md
+├── backend
+│   ├── apiserver
+│   │   ├── Dockerfile
+│   │   ├── README.md
+│   │   ├── config
+│   │   ├── db_init.py
+│   │   ├── erl_crash.dump
+│   │   ├── mainApp
+│   │   ├── manage.py
+│   │   ├── model_init.py
+│   │   ├── requirements.txt
+│   │   └── wait-for-mysql.sh
+│   └── modelserver
+│       ├── Dockerfile
+│       ├── README.md
+│       ├── TTS
+│       ├── app.py
+│       ├── celery_app.py
+│       ├── micro-handler.json
+│       ├── requirements.txt
+│       ├── requirements_TTS.txt
+│       ├── simple_task.py
+│       ├── temp
+│       ├── test_tasks.py
+│       ├── tts_modules.py
+│       └── voice_model
+├── docker-compose.yml
+└── frontend
+    ├── Dockerfile
+    ├── README.md
+    ├── package.json
+    ├── public
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
+    └── src
+        ├── App.css
+        ├── App.js
+        ├── Font
+        ├── Images
+        ├── Styles
+        ├── Views
+        ├── index.css
+        ├── index.js
+        ├── reportWebVitals.js
+        ├── reset.css
+        └── setupTests.js"
+```
 <hr>
 
 ## 7. 팀원
