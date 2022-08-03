@@ -54,8 +54,8 @@ function Main() {
                 </button>
               </Link>
           </div> 
-      
        } 
+       
        <hr/> <div id={Style.wrap_copyright}>
           
   

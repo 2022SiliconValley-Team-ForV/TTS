@@ -10,7 +10,6 @@ hr{
 
 
 #wrap{
-
     position:relative;
     width:1024px;
     height:100vh;
@@ -34,7 +33,6 @@ hr{
 
 .profiles{
     width: 100%;
-
     padding: 1.2rem auto; 
     display:flex; 
     align-items: center;
@@ -45,15 +43,15 @@ hr{
 }
 
 .tts{
-     margin-top:4%;
+    margin-top:4%;
     bottom:10%;
     left: 50%;
     font-size: 16.5px;
     text-align: center;
     margin-bottom: 6%;
 }
+
 .tts_text{
-   
     bottom: 1rem;
     color:#2F2E6F;
     margin-bottom:0.8rem;
@@ -65,18 +63,16 @@ hr{
     background-color: #2F2E6F;
     border-radius: 7px;
     color:white;  
+    border:none;
 }
 
 #wrap_copyright{
     bottom:50px;
     width: 100%;
     font-size: 9px; 
-    
-
 }
 
 #wrap_copyright div{
-
     margin-left: 1rem;
 }
 
