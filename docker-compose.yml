@@ -84,8 +84,8 @@ services:
     # 환경변수 파일로 지정 - 아직 파일 안만들어서 주석처리함.  
     # env_file:
     #   - ./settings/.env
-    depends_on:
-      - rabbit
+    # depends_on:
+    #   - rabbit
     # 가상 네트워크 연결
     networks:
       - tts
@@ -116,7 +116,20 @@ services:
       networks:
         - tts
       depends_on:
-        - backend
+        - modelserver
+
+  celery:
+    platform: linux/amd64
+    build: ./backend/modelserver
+    restart: unless-stopped
+    depends_on:
+      - "rabbit"
+      - "modelserver"
+    networks:
+      - tts
+    command: ["celery","-A", "celery_app", "worker", "--loglevel=info"]
+    volumes:
+      - ./backend:/backend
 
 networks:
   tts:
