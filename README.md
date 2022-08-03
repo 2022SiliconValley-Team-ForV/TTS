@@ -31,6 +31,8 @@
 <hr>
 
 ## 4. api 문서
+![image](https://user-images.githubusercontent.com/70627982/182622232-264fd05c-487a-4ba9-98f5-5f7b2fc45344.png)
+![image](https://user-images.githubusercontent.com/70627982/182622359-09d1961c-72d5-4634-be02-abe055142fc1.png)
 
 <hr>
 
