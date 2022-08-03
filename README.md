@@ -83,6 +83,7 @@ MY_DATABASES = {
 ```
 
 ## Run
+모델파일 용량이 크므로 docker container, image, volume 공간을 확보해주세요!
 ```
 docker-compose up --build
 ```
