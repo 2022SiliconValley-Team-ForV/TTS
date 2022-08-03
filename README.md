@@ -6,13 +6,14 @@
 ## 목차
   - [1. 목적](#1-목적)
   - [2. 아키텍처](#2-아키텍처)
-  - [3. database](#3-database)
-  - [4. api 문서](#4-api-문서)
-  - [5. 실행 방법](#5-실행-방법)
-  - [6. 파일 구조](#6-파일-구조)
-  - [7. 팀원](#7-팀원)
-  - [8. reference](#8-reference)
-  - [9. copyright](#9-copyright)
+  - [3. 기술 스택](#3-기술-스택)
+  - [4. 실행 방법](#4-실행-방법)
+  - [5. database](#5-database)
+  - [6. api 문서](#6-api-문서)
+  - [7. 파일 구조](#7-파일-구조)
+  - [8. 팀원](#8-팀원)
+  - [9. reference](#9-reference)
+  - [10. copyright](#10-copyright)
 
 <hr>
 
@@ -25,85 +26,45 @@
 
 <hr>
 
-## 3. database
+## 3. 기술 스택
+- Front-End    
+  <img src="https://img.shields.io/badge/react-02569B?style=for-the-badge&logo=react&logoColor=white">
+  
+- Back-End  
+<img src="https://img.shields.io/badge/django-007396?style=for-the-badge&logo=django&logoColor=white"> <img src="https://img.shields.io/badge/flask-6DB33F?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/celery-000000?style=for-the-badge&logo=celery&logoColor=white"> <img src="https://img.shields.io/badge/rabbitmq-FF6F00?style=for-the-badge&logo=rabbitmq&logoColor=white">
+
+- DevOps    
+  <img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <!-- <img src="https://img.shields.io/badge/aws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> -->
+
+
+- AI (Tools, Env)    
+  <img src="https://img.shields.io/badge/colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white"> <img src="https://img.shields.io/badge/pytorch-F7931E?style=for-the-badge&logo=pytorch&logoColor=white">  
+  
+- UI/UX, MockUp Design    
+  <img src="https://img.shields.io/badge/figma-34A7C1?style=for-the-badge&logo=figma&logoColor=white"> <img src="https://img.shields.io/badge/zeplin-31A8FF?style=for-the-badge&logo=zeplin&logoColor=white"> 
+  
+- Team Collaboration Tool    
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/notion-0052CC?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/slack-D24939?style=for-the-badge&logo=slack&logoColor=white">
+
+## 4. 실행 방법
+
+## 5. database
 ![image](https://user-images.githubusercontent.com/70627982/182619271-eba06844-0b6e-4861-8e7d-76645acf0fd0.png)
 
 <hr>
 
-## 4. api 문서
+## 6. api 문서
 ![image](https://user-images.githubusercontent.com/70627982/182622232-264fd05c-487a-4ba9-98f5-5f7b2fc45344.png)
 ![image](https://user-images.githubusercontent.com/70627982/182622359-09d1961c-72d5-4634-be02-abe055142fc1.png)
 
 <hr>
 
-## 5. 실행 방법
-git clone/download zip으로 파일을 다운받는다.
-TTS/backend/apiserver/config에 my_settings.py를 넣는다.
-TTS/backend/apiserver에 mnesia파일을 넣는다.
-TTS/backend/modelserver/voice_model의 glow-tts, hifigan-v2 각각에 checkoutpoint.pth.tar, config.json, scale_stats.npy파일을 넣어준다.
-npm install
-docker compose up --build
+## 7. 파일 구조
+
+
 <hr>
 
-## 6. 파일 구조
-```txt
-TTS
-├── LICENSE
-├── README.md
-├── backend
-│   ├── apiserver
-│   │   ├── Dockerfile
-│   │   ├── README.md
-│   │   ├── config
-│   │   ├── db_init.py
-│   │   ├── erl_crash.dump
-│   │   ├── mainApp
-│   │   ├── manage.py
-│   │   ├── model_init.py
-│   │   ├── requirements.txt
-│   │   └── wait-for-mysql.sh
-│   └── modelserver
-│       ├── Dockerfile
-│       ├── README.md
-│       ├── TTS
-│       ├── app.py
-│       ├── celery_app.py
-│       ├── micro-handler.json
-│       ├── requirements.txt
-│       ├── requirements_TTS.txt
-│       ├── simple_task.py
-│       ├── temp
-│       ├── test_tasks.py
-│       ├── tts_modules.py
-│       └── voice_model
-├── docker-compose.yml
-└── frontend
-    ├── Dockerfile
-    ├── README.md
-    ├── package.json
-    ├── public
-    │   ├── favicon.ico
-    │   ├── index.html
-    │   ├── logo192.png
-    │   ├── logo512.png
-    │   ├── manifest.json
-    │   └── robots.txt
-    └── src
-        ├── App.css
-        ├── App.js
-        ├── Font
-        ├── Images
-        ├── Styles
-        ├── Views
-        ├── index.css
-        ├── index.js
-        ├── reportWebVitals.js
-        ├── reset.css
-        └── setupTests.js"
-```
-<hr>
-
-## 7. 팀원
+## 8. 팀원
 
 | Name    | <center>배준일</center>|<center>최준혁</center> |<center> 이수현 </center> | <center>김혜진</center> | <center>구지혜</center>
 | ------- | --------------------------------------------- | ------------------------------------ | --------------------------------------------- | --------------------------------------- | --------------------------------------- |
@@ -113,7 +74,7 @@ TTS
 
 <hr>
 
-## 8. reference
+## 9. reference
 
 <details>
 <summary>참고 자료</summary>
@@ -128,7 +89,7 @@ TTS
 
 <hr>
 
-## 9. copyright
+## 10. copyright
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
