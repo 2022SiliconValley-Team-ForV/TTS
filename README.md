@@ -1,5 +1,5 @@
 # TTS
-### 사이트에 목소리를 학습한 파일을 서버에 두어 사이트 내에서 원하는 문장을 넣어 TTS 문장을 들을 수 있습니다.
+### 팀원 5명의 목소리로 원하는 문장을 넣어 TTS 문장을 들을 수 있습니다.
 <!-- 동작하는 gif 같이 첨부 -->
 <hr>
 
@@ -18,6 +18,7 @@
 <hr>
 
 ## 1. 목적
+최애의 목소리로 자신이 입력한 문장을 읽어주는 서비스 
 
 <hr>
 
@@ -44,7 +45,7 @@
   <img src="https://img.shields.io/badge/figma-34A7C1?style=for-the-badge&logo=figma&logoColor=white"> <img src="https://img.shields.io/badge/zeplin-31A8FF?style=for-the-badge&logo=zeplin&logoColor=white"> 
   
 - <b>Team Collaboration Tool</b>    
-  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/notion-0052CC?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/slack-D24939?style=for-the-badge&logo=slack&logoColor=white">
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/notion-0052CC?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/slack-D24939?style=for-the-badge&logo=slack&logoColor=white"> <img src="https://img.shields.io/badge/zoom-2496ED?style=for-the-badge&logo=zoom&logoColor=white">
 
 <hr>
 
@@ -77,12 +78,25 @@ TTS/front 터미널에서 **npm install**을 해준다.
 <hr>
 
 ## 6. api 문서
+<details>
+<summary>swagger</summary>
+<div markdown="1">
+
+<br>
+  
 ![image](https://user-images.githubusercontent.com/70627982/182622232-264fd05c-487a-4ba9-98f5-5f7b2fc45344.png)
+  
 ![image](https://user-images.githubusercontent.com/70627982/182622359-09d1961c-72d5-4634-be02-abe055142fc1.png)
 
+</div>
+</details>
 <hr>
 
 ## 7. 파일 구조
+
+<details>
+<summary> File Tree </summary>
+<div markdown="1">
 
 ```txt
 TTS
@@ -139,6 +153,9 @@ TTS
         ├── reset.css
         └── setupTests.js"
 ```
+</div>
+</details>
+  
 <hr>
 
 ## 8. 팀원
