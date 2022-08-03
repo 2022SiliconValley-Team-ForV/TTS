@@ -39,7 +39,7 @@ services:
         DJANGO_CORS_ORIGIN_WHITELIST: "*"
       
     # command : 컨테이너가 띄워질 때 실행하는 명령어 / 서버실행
-    command: sh -c "/wait && python manage.py makemigrations && python manage.py makemigrations mainApp && python manage.py migrate && python db_init.py && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "/wait && python ./apiserver/manage.py makemigrations && python ./apiserver/manage.py makemigrations mainApp && python ./apiserver/manage.py migrate && python ./apiserver/db_init.py && python ./apiserver/model_init.py && python ./apiserver/manage.py runserver 0.0.0.0:8000"
     
     # restart : 실패하면 재시작
     restart: on-failure
@@ -50,7 +50,7 @@ services:
      # 왼쪽이 우리 컴퓨터, 오른쪽이 도커 컨테이너
      # 리눅스 컨테이너의 백엔드 폴더에 우리 컴퓨터의 백엔드 폴더를 공유하겠다.
      # 서로 바뀐 부분 적용됨
-      - ./backend/apiserver/:/backend/apiserver/
+      - ./backend:/backend
     # 가상 네트워크 연결
     networks:
       - tts
@@ -123,6 +123,7 @@ services:
     build: ./backend/modelserver
     restart: unless-stopped
     depends_on:
+      - "apiserver"
       - "rabbit"
       - "modelserver"
     networks:
