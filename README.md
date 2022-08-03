@@ -1,6 +1,6 @@
 # TTS
-### 팀원 5명의 목소리로 원하는 문장을 넣어 TTS 문장을 들을 수 있습니다.
-<!-- 동작하는 gif 같이 첨부 -->
+ 팀원 5명의 목소리로 원하는 문장을 음성 변환하는 서비스
+ <!-- 동작하는 gif 같이 첨부 -->
 <hr>
 
 ## 목차
@@ -18,7 +18,9 @@
 <hr>
 
 ## 1. 목적
-최애의 목소리로 자신이 입력한 문장을 읽어주는 서비스 
+❤️‍🔥최애의 목소리로 자신이 입력한 문장을 읽어주는 기능을 목표로 하고있습니다.  
+
+🗣️TTS를 이용해 <b>아이돌 그룹</b>이나 <b>아티스트</b>를 효과적으로 <b>홍보</b>합니다.
 
 <hr>
 
@@ -51,23 +53,38 @@
 
 ## 4. 실행 방법
 
-```txt
-git clone/download zip으로 파일을 다운받는다. 
+### Git clone
 ```
-```txt
-TTS/backend/apiserver/config에 **my_settings.py**를 생성하고 넣는다.
+git clone https://github.com/2022SiliconValley-Team-ForV/TTS.git
 ```
-```txt
-TTS/backend/apiserver에 mnesia파일을 넣는다.
+
+### Django setting
+`TTS/backend/apiserver/config` 경로에 `my_settings.py` 파일을 세팅합니다. 
+
 ```
-```txt
-TTS/backend/modelserver/voice_model의 **glow-tts, hifigan-v2** 각각에 **checkoutpoint.pth.tar, config.json, scale_stats.npy**파일을 넣어준다.
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+MY_SECRET = {
+    "SECRET_KEY" : ''
+}
+
+MY_DATABASES = {
+    'default': { 
+    	'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'tts', 
+        'USER': 'root', 
+        'PASSWORD': '1234', 
+        'HOST': 'ttsmysql', 
+        'PORT': '3306', 
+     } 
+}
 ```
-```txt
-TTS/front 터미널에서 **npm install**을 해준다.
+
+## Run
 ```
-```txt
-터미널에서 **docker compose up --build**을 한다.
+docker-compose up --build
 ```
 
 <hr>
