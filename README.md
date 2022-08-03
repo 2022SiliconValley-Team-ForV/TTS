@@ -84,6 +84,7 @@ MY_DATABASES = {
 
 ## Run
 모델파일 용량이 크므로 docker container, image, volume 공간을 확보해주세요!
+<b>처음 실행 시 시간이 오래 걸립니다!</b>
 ```
 docker-compose up --build
 ```
