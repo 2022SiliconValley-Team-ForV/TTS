@@ -1,5 +1,8 @@
 # TTS
  팀원 5명의 목소리로 원하는 문장을 음성 변환하는 서비스
+<img width="1422" alt="image" src="https://user-images.githubusercontent.com/70627982/182852365-0101dd75-bf84-4b0f-a343-4789a78f664c.png">
+
+
  <!-- 동작하는 gif 같이 첨부 -->
 <hr>
 
@@ -34,10 +37,10 @@
   <img src="https://img.shields.io/badge/react-02569B?style=for-the-badge&logo=react&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
   
 - <b>Back-End</b>  
-<img src="https://img.shields.io/badge/django-007396?style=for-the-badge&logo=django&logoColor=white"> <img src="https://img.shields.io/badge/flask-6DB33F?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/celery-000000?style=for-the-badge&logo=celery&logoColor=white"> <img src="https://img.shields.io/badge/rabbitmq-FF6F00?style=for-the-badge&logo=rabbitmq&logoColor=white">
+<img src="https://img.shields.io/badge/django-007396?style=for-the-badge&logo=django&logoColor=white"> <img src="https://img.shields.io/badge/flask-6DB33F?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/celery-000000?style=for-the-badge&logo=celery&logoColor=white"> <img src="https://img.shields.io/badge/rabbitmq-FF6F00?style=for-the-badge&logo=rabbitmq&logoColor=white"> <img src="https://img.shields.io/badge/gunicorn-499848?style=for-the-badge&logo=gunicorn&logoColor=black">
 
 - <b>DevOps</b>    
-  <img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <!-- <img src="https://img.shields.io/badge/aws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> -->
+  <img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <img src="https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=nginx&logoColor=black"> <!-- <img src="https://img.shields.io/badge/aws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> -->
 
 
 - <b>AI (Tools, Env)</b>    
