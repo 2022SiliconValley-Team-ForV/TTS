@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from .my_settings import MY_SECRET, MY_DATABASES
 
@@ -62,7 +63,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:3000', 'http://localhost:3000', 'http://0.0.0.0:3000',
                          'http://127.0.0.1:8000', 'http://localhost:8000', 'http://0.0.0.0:8000',
                          'http://127.0.0.1:81', 'http://localhost:81', 'http://0.0.0.0:81',
-                         'http://localhost', 'http://0.0.0.0', 'http://127.0.0.1']
+                         'http://localhost', 'http://0.0.0.0', 'http://127.0.0.1', 'http://127.0.0.1:5000', 'http://localhost:5000', 'http://0.0.0.0:5000',]
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'config.urls'
@@ -128,7 +129,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -136,3 +137,8 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CELERY_BROKER_URL = 'amqp://tts:tts123@rabbit/tts_host'
+
+STATIC_URL = '/staticfiles/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/mediafiles/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')

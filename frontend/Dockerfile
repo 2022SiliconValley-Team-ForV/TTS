@@ -7,6 +7,7 @@ WORKDIR /frontend
 COPY . /frontend
 
 RUN yarn install
+RUN npm install
 RUN npm install uuid
 
 # Make variable API_URL to put uri into url

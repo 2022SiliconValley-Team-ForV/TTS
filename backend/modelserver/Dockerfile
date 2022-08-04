@@ -1,4 +1,4 @@
-FROM python:3.6.15
+FROM --platform=linux/amd64 python:3.6.15
 
 # Python
 RUN apt-get update && \
