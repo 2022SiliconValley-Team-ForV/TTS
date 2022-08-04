@@ -88,6 +88,7 @@ function Detail() {
       })
       
       .catch((error)=>{
+        setShowloading(true);
         console.log(error);
       })
       

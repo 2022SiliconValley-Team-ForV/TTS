@@ -73,7 +73,7 @@ services:
     environment:
       - FLASK_APP=app
       - FLASK_ENV=development
-    command: ["python3", "-m","gunicorn", "app:app", "--bind", "0.0.0.0:5000", "--timeout", "240"]
+    command: ["python3", "-m","gunicorn", "app:app", "--bind", "0.0.0.0:5000", "--timeout", "500"]
     volumes:
       - media_volume:/backend/mediafiles
       #- ./backend/modelserver:/backend/modelserver
@@ -103,8 +103,8 @@ services:
     build: ./backend/modelserver
     restart: unless-stopped
     depends_on:
-      - "rabbit"
-      - "modelserver"
+      - rabbit
+      - modelserver
     command: ["celery","-A", "celery_app", "worker", "--loglevel=info"]
     volumes:
       - ./backend:/backend
