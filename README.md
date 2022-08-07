@@ -27,7 +27,6 @@ src="https://user-images.githubusercontent.com/98803599/183290740-dac7a128-f51b-
 
 ## 0. 개요
 <img 
-width="1422" 
 width="70%"
 height="70%"
 alt="image" 
