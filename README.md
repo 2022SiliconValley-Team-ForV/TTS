@@ -5,7 +5,50 @@ width="1422"
 alt="image" 
 src="https://user-images.githubusercontent.com/98803599/183290740-dac7a128-f51b-450d-b935-d4b319f1971b.png"><br>
 
-https://user-images.githubusercontent.com/98803599/183302094-d0a24c8f-bf18-4213-948f-b1a0d730e016.mp4
+<details>
+<summary>구지혜(Frontend)</summary>
+<div markdown="1">
+
+https://user-images.githubusercontent.com/98803599/183303257-b6b80703-8b44-4a67-b246-0e9409ab2f61.mp4
+
+</div>
+</details>
+
+<details>
+<summary>김혜진(Frontend)</summary>
+<div markdown="1">
+
+https://user-images.githubusercontent.com/98803599/183303293-8f7bfd5f-8346-43da-8e0c-9583494d4439.mp4
+
+</div>
+</details>
+
+<details>
+<summary>배준일(Backend/Devops)</summary>
+<div markdown="1">
+
+https://user-images.githubusercontent.com/98803599/183303314-586c09b4-104c-4129-b56f-037e2c82fbaf.mp4
+
+</div>
+</details>
+
+<details>
+<summary>이수현(Devops)</summary>
+<div markdown="1">
+
+https://user-images.githubusercontent.com/98803599/183303339-baedf0e7-ee48-4687-9a5b-8502b39bbf72.mp4
+
+</div>
+</details>
+
+<details>
+<summary>최준혁(Backend/AI)</summary>
+<div markdown="1">
+
+https://user-images.githubusercontent.com/98803599/183303361-b56a8b58-7301-4b73-879d-8db957ab7f21.mp4
+
+</div>
+</details>
 
 
  <!-- 동작하는 gif 같이 첨부 -->
