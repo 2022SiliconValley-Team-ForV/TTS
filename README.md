@@ -30,19 +30,22 @@ src="https://user-images.githubusercontent.com/98803599/183290740-dac7a128-f51b-
 width="1422" 
 alt="image" 
 src="https://user-images.githubusercontent.com/98803599/183291331-9e93c3e2-1322-4c60-8c2c-91d832f1280a.png">
-네이버에서 진행하는 개발자 컨퍼런스 DEVIEW의 '연예인의 목소리로 책 읽어주기' 발표를 보고 아이디어를 얻었습니다.
+
+### 네이버에서 진행하는 개발자 컨퍼런스 DEVIEW의 '연예인의 목소리로 책 읽어주기' 발표를 보고 아이디어를 얻었습니다.
 
 <img 
 width="1422" 
 alt="image" 
 src="https://user-images.githubusercontent.com/98803599/183292314-633687cd-a018-4002-9368-2d3a8f6654ab.png">
-K-pop의 위상이 날이 갈수록 올라가고 있는 만큼, 기획사들도 소비자들을 확보하기 위해 다양한 노력을 기울이고 있습니다.
+
+ ### K-pop의 위상이 날이 갈수록 올라가고 있는 만큼, 기획사들도 소비자들을 확보하기 위해 다양한 노력을 기울이고 있습니다.
 
 <img 
 width="1422" 
 alt="image" 
 src="https://user-images.githubusercontent.com/98803599/183292813-2cf2b6e8-1dad-4998-9047-b1e311fc646d.png">
-'직접 목소리를 학습시켜 TTS(Text To Speech)를 만드는 서비스'를 '새로운, 그리고 색다른 엔터테인먼트 사업의 홍보수단'으로 활용해본다면 어떨까하는 생각이 들어서 이 프로젝트를 시작하게 되었습니다.
+
+### '직접 목소리를 학습시켜 TTS(Text To Speech)를 만드는 서비스'를 '새로운, 그리고 색다른 엔터테인먼트 사업의 홍보수단'으로 활용해본다면 어떨까하는 생각이 들어서 이 프로젝트를 시작하게 되었습니다.
 
 <hr>
 
@@ -83,19 +86,23 @@ src="https://user-images.githubusercontent.com/98803599/183292813-2cf2b6e8-1dad-
 <hr>
 
 ## 4. 세부 구성
-- main page
-  <img width="921" alt="image" src="https://user-images.githubusercontent.com/98803599/183294022-d443edd6-ea36-4454-94ef-b2aca8f1e1ce.png">
+- ### main page
+<br>
+  <img width="70%" height="70%" alt="image" src="https://user-images.githubusercontent.com/98803599/183294022-d443edd6-ea36-4454-94ef-b2aca8f1e1ce.png">
 
-- detail page
-  <img width="921" alt="image" src="https://user-images.githubusercontent.com/98803599/183294063-44e278f3-9ba7-41c2-951a-f4dc522252e5.png">
+- ### detail page
+<br>
+  <img width="70%" height="70%" alt="image" src="https://user-images.githubusercontent.com/98803599/183294063-44e278f3-9ba7-41c2-951a-f4dc522252e5.png">
 
-- make-tts page
-  <img width="921" alt="image" src="https://user-images.githubusercontent.com/98803599/183294106-8ae8bada-a52d-406c-a35e-34d318bc393b.png">
+- ### make-tts page
+<br>
+  <img width="70%" height="70%" alt="image" src="https://user-images.githubusercontent.com/98803599/183294106-8ae8bada-a52d-406c-a35e-34d318bc393b.png">
 
-- responsive web
-  <img width="921" src="https://user-images.githubusercontent.com/98803599/183294274-d0c7a378-536c-4fe6-8522-1e82d89f9294.gif">
+- ### responsive web
+<br>
+  <img width="70%" height="70%" src="https://user-images.githubusercontent.com/98803599/183294274-d0c7a378-536c-4fe6-8522-1e82d89f9294.gif">
 
-  <img width="921" src="https://user-images.githubusercontent.com/98803599/183294585-a59fa2c3-b9c6-463c-b211-0042fd356c9a.gif">
+  <img width="70%" height="70%" src="https://user-images.githubusercontent.com/98803599/183294585-a59fa2c3-b9c6-463c-b211-0042fd356c9a.gif">
 
 <hr>
 
