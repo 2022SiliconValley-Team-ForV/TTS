@@ -5,7 +5,7 @@ width="1422"
 alt="image" 
 src="https://user-images.githubusercontent.com/98803599/183290740-dac7a128-f51b-450d-b935-d4b319f1971b.png"><br>
 
-[![Watch the video](https://user-images.githubusercontent.com/98803599/183301791-3df9e957-a112-46ca-9a4c-a940e9f4db6b.png)](https://user-images.githubusercontent.com/98803599/183300602-27ebf1ef-19bf-44b6-ac9e-130e1dea88e2.mov)
+https://user-images.githubusercontent.com/98803599/183302094-d0a24c8f-bf18-4213-948f-b1a0d730e016.mp4
 
 
  <!-- 동작하는 gif 같이 첨부 -->
