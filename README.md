@@ -3,7 +3,9 @@
 <img 
 width="1422" 
 alt="image" 
-src="https://user-images.githubusercontent.com/98803599/183290740-dac7a128-f51b-450d-b935-d4b319f1971b.png">
+src="https://user-images.githubusercontent.com/98803599/183290740-dac7a128-f51b-450d-b935-d4b319f1971b.png"><br>
+
+https://user-images.githubusercontent.com/98803599/183300602-27ebf1ef-19bf-44b6-ac9e-130e1dea88e2.mov
 
 
  <!-- 동작하는 gif 같이 첨부 -->
