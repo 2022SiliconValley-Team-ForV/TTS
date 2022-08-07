@@ -93,9 +93,9 @@ src="https://user-images.githubusercontent.com/98803599/183292813-2cf2b6e8-1dad-
   <img width="1422" alt="image" src="https://user-images.githubusercontent.com/98803599/183294106-8ae8bada-a52d-406c-a35e-34d318bc393b.png">
 
 - responsive web
-  <img width="711" src="https://user-images.githubusercontent.com/98803599/183294274-d0c7a378-536c-4fe6-8522-1e82d89f9294.gif">
-  
-  <img width="711" align="right" src="https://user-images.githubusercontent.com/98803599/183294585-a59fa2c3-b9c6-463c-b211-0042fd356c9a.gif">
+  <img src="https://user-images.githubusercontent.com/98803599/183294274-d0c7a378-536c-4fe6-8522-1e82d89f9294.gif" />
+
+  <img src="https://user-images.githubusercontent.com/98803599/183294585-a59fa2c3-b9c6-463c-b211-0042fd356c9a.gif">
 
 <hr>
 
