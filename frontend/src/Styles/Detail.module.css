@@ -2,14 +2,14 @@
     position:absolute;
     /* border: solid red; */
     width:100vw;
-    height:100vh;
+    height:105vh;
     background-color: rgba(255,255,255,0.5);
     transform: translate(-50%, -50%);
     /* width:50%;
     height:50%; */
     left:50%;
     /* display: none; */
-    top:500px;
+    top: 400px;
     min-height:710px;
     min-width:280px;
     /* max-height: 710px; */
