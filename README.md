@@ -193,6 +193,9 @@ MY_DATABASES = {
 docker-compose up --build
 ```
 
+## Demo
+https://youtu.be/HNyv6iGliqA
+
 <hr>
 
 ## 6. database
