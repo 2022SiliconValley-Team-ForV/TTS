@@ -1,29 +1,57 @@
 # TTS
  팀원 5명의 목소리로 원하는 문장을 음성 변환하는 서비스
-<img width="1422" alt="image" src="https://user-images.githubusercontent.com/70627982/182852365-0101dd75-bf84-4b0f-a343-4789a78f664c.png">
+<img 
+width="1422" 
+alt="image" 
+src="https://user-images.githubusercontent.com/98803599/183290740-dac7a128-f51b-450d-b935-d4b319f1971b.png">
 
 
  <!-- 동작하는 gif 같이 첨부 -->
 <hr>
 
 ## 목차
+  - [0. 개요](#0-개요)
   - [1. 목적](#1-목적)
   - [2. 아키텍처](#2-아키텍처)
   - [3. 기술 스택](#3-기술-스택)
-  - [4. 실행 방법](#4-실행-방법)
-  - [5. database](#5-database)
-  - [6. api 문서](#6-api-문서)
-  - [7. 파일 구조](#7-파일-구조)
-  - [8. 팀원](#8-팀원)
-  - [9. reference](#9-reference)
-  - [10. copyright](#10-copyright)
+  - [4. 세부 구성](#4-세부-구성)
+  - [5. 실행 방법](#5-실행-방법)
+  - [6. database](#6-database)
+  - [7. api 문서](#7-api-문서)
+  - [8. 파일 구조](#8-파일-구조)
+  - [9. 팀원](#9-팀원)
+  - [10. reference](#10-reference)
+  - [11. copyright](#11-copyright)
+
+<hr>
+
+## 0. 개요
+<img 
+width="1422" 
+alt="image" 
+src="https://user-images.githubusercontent.com/98803599/183291331-9e93c3e2-1322-4c60-8c2c-91d832f1280a.png">
+네이버에서 진행하는 개발자 컨퍼런스 DEVIEW의 '연예인의 목소리로 책 읽어주기' 발표를 보고 아이디어를 얻었습니다.
+
+<img 
+width="1422" 
+alt="image" 
+src="https://user-images.githubusercontent.com/98803599/183292314-633687cd-a018-4002-9368-2d3a8f6654ab.png">
+K-pop의 위상이 날이 갈수록 올라가고 있는 만큼, 기획사들도 소비자들을 확보하기 위해 다양한 노력을 기울이고 있습니다.
+
+<img 
+width="1422" 
+alt="image" 
+src="https://user-images.githubusercontent.com/98803599/183292813-2cf2b6e8-1dad-4998-9047-b1e311fc646d.png">
+'직접 목소리를 학습시켜 TTS(Text To Speech)를 만드는 서비스'를 '새로운, 그리고 색다른 엔터테인먼트 사업의 홍보수단'으로 활용해본다면 어떨까하는 생각이 들어서 이 프로젝트를 시작하게 되었습니다.
 
 <hr>
 
 ## 1. 목적
 ❤️‍🔥최애의 목소리로 자신이 입력한 문장을 읽어주는 기능을 목표로 하고있습니다.  
 
-🗣️TTS를 이용해 <b>아이돌 그룹</b>이나 <b>아티스트</b>를 효과적으로 <b>홍보</b>합니다.
+🗣️'팀원들의 목소리로 TTS 서비스를 제공하는 프로젝트'를 아티스트 홍보 페이지의 한 예시로써 제시합니다.
+
+🎵TTS를 이용해 <b>아이돌 그룹</b>이나 <b>아티스트</b>를 효과적으로 <b>홍보</b>합니다.
 
 <hr>
 
@@ -54,7 +82,24 @@
 
 <hr>
 
-## 4. 실행 방법
+## 4. 세부 구성
+- main page
+  <img width="1422" alt="image" src="https://user-images.githubusercontent.com/98803599/183294022-d443edd6-ea36-4454-94ef-b2aca8f1e1ce.png">
+
+- detail page
+  <img width="1422" alt="image" src="https://user-images.githubusercontent.com/98803599/183294063-44e278f3-9ba7-41c2-951a-f4dc522252e5.png">
+
+- make-tts page
+  <img width="1422" alt="image" src="https://user-images.githubusercontent.com/98803599/183294106-8ae8bada-a52d-406c-a35e-34d318bc393b.png">
+
+- responsive web
+  <img width="711" src="https://user-images.githubusercontent.com/98803599/183294274-d0c7a378-536c-4fe6-8522-1e82d89f9294.gif">
+  
+  <img width="711" align="right" src="https://user-images.githubusercontent.com/98803599/183294585-a59fa2c3-b9c6-463c-b211-0042fd356c9a.gif">
+
+<hr>
+
+## 5. 실행 방법
 
 ### Git clone
 ```
@@ -94,12 +139,12 @@ docker-compose up --build
 
 <hr>
 
-## 5. database
+## 6. database
 ![image](https://user-images.githubusercontent.com/70627982/182619271-eba06844-0b6e-4861-8e7d-76645acf0fd0.png)
 
 <hr>
 
-## 6. api 문서
+## 7. api 문서
 <details>
 <summary>swagger</summary>
 <div markdown="1">
@@ -114,7 +159,7 @@ docker-compose up --build
 </details>
 <hr>
 
-## 7. 파일 구조
+## 8. 파일 구조
 
 <details>
 <summary> File Tree </summary>
@@ -180,7 +225,7 @@ TTS
   
 <hr>
 
-## 8. 팀원
+## 9. 팀원
 
 | Name    | <center>배준일</center>|<center>최준혁</center> |<center> 이수현 </center> | <center>김혜진</center> | <center>구지혜</center>
 | ------- | --------------------------------------------- | ------------------------------------ | --------------------------------------------- | --------------------------------------- | --------------------------------------- |
@@ -190,7 +235,7 @@ TTS
 
 <hr>
 
-## 9. reference
+## 10. reference
 
 <details>
 <summary>참고 자료</summary>
@@ -205,7 +250,7 @@ TTS
 
 <hr>
 
-## 10. copyright
+## 11. copyright
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
