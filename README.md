@@ -194,7 +194,7 @@ docker-compose up --build
 ```
 
 ## Demo
-https://youtu.be/HNyv6iGliqA
+[![Watch the video](https://user-images.githubusercontent.com/98803599/183304851-777ca5c1-0e54-44f3-83c9-e00f659173a6.png)](https://youtu.be/HNyv6iGliqA)
 
 <hr>
 
