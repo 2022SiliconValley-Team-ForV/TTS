@@ -5,6 +5,8 @@ width="1422"
 alt="image" 
 src="https://user-images.githubusercontent.com/98803599/183290740-dac7a128-f51b-450d-b935-d4b319f1971b.png"><br>
 
+
+#### 💜 아래 토글을 열어 ***Team_ForV의 목소리*** 를 들어보세요! 💜
 <details>
 <summary>구지혜(Frontend)</summary>
 <div markdown="1">
