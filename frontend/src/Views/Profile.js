@@ -18,8 +18,6 @@ function Profile({id, name, img}) {
       </div>
     </Link>
 
-
-
   )
 }
 

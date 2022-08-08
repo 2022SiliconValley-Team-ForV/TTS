@@ -4,10 +4,10 @@ import BarLoader from "react-spinners/BarLoader";
 function Loading() {
   return (
     <div class="contentWrap">
-        <BarLoader
+        <BarLoader 
           color="#2F2E6F"
-          height={4}
-          width={380}
+          height={5}
+          width={600}
         />
       </div>
   );
